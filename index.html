@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- reset css -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/darkmode.css">
+    <!-- link style -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- embed font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- aos library -->
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+      <!-- animetion -->
+        <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <title>Truyện Chữ</title>
+  </head>
+  <body >
+    <!----------------- Code Phần Header--------------->
+    <header class="header fixed">
+      <div class="main-content">
+        <div class="header-content">
+          <!-- logo -->
+          <a href="#!">
+            <img 
+              src="./assets/img/472b36052a2c35ca98d49c66bf7626991da83643.png"
+              alt="logo"
+              class="header__logo animate__animated animate__tada" 
+            />
+          </a>
+          <!-- navbar -->
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a href="#!" class="header__nav-item--text"> Thể Loại</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#!" class="header__nav-item--text"
+                  >Bối cảnh thế giới
+                </a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#!" class="header__nav-item--text">Lưu Phái</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#!" class="header__nav-item--text">Danh sách</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- action -->
+          <ul class="header__list-icon">
+            <!-- Toggle Dark/Light Mode -->
+<div class="toggleWrapper">
+  <input class="input" id="dn" type="checkbox" />
+  <label class="toggle" for="dn">
+    <span class="toggle__handler">
+      <span class="crater crater--1"></span>
+      <span class="crater crater--2"></span>
+      <span class="crater crater--3"></span>
+    </span>
+    <span class="star star--1"></span>
+    <span class="star star--2"></span>
+    <span class="star star--3"></span>
+    <span class="star star--4"></span>
+    <span class="star star--5"></span>
+    <span class="star star--6"></span>
+  </label>
+</div>
+            <li class="header__list-icon--search">
+              <a href="#!" class="header__list--icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <g opacity="0.5">
+                    <path
+                      d="M21 21L15.803 15.803M15.803 15.803C17.2096 14.3965 17.9998 12.4887 17.9998 10.4995C17.9998 8.51035 17.2096 6.60262 15.803 5.19605C14.3964 3.78947 12.4887 2.99927 10.4995 2.99927C8.51031 2.99927 6.60258 3.78947 5.196 5.19605C3.78943 6.60262 2.99922 8.51035 2.99922 10.4995C2.99922 12.4887 3.78943 14.3965 5.196 15.803C6.60258 17.2096 8.51031 17.9998 10.4995 17.9998C12.4887 17.9998 14.3964 17.2096 15.803 15.803Z"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </a>
+            </li>
+            <li class="header__list-icon--profile">
+              <a href="#!" class="header__list--icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M17.982 18.7249C17.2833 17.7998 16.3792 17.0496 15.3412 16.5333C14.3031 16.0171 13.1594 15.7489 12 15.7499C10.8406 15.7489 9.69688 16.0171 8.65882 16.5333C7.62075 17.0496 6.71674 17.7998 6.018 18.7249M17.982 18.7249C19.3455 17.5121 20.3071 15.9135 20.7412 14.141C21.1752 12.3686 21.0603 10.506 20.4115 8.80043C19.7627 7.09482 18.6107 5.62673 17.1084 4.59085C15.6061 3.55497 13.8243 3.00024 11.9995 3.00024C10.1747 3.00024 8.39293 3.55497 6.8906 4.59085C5.38827 5.62673 4.23633 7.09482 3.58753 8.80043C2.93874 10.506 2.82375 12.3686 3.25782 14.141C3.69188 15.9135 4.6545 17.5121 6.018 18.7249M17.982 18.7249C16.336 20.1931 14.2056 21.0031 12 20.9999C9.79403 21.0033 7.66423 20.1934 6.018 18.7249M15 9.74995C15 10.5456 14.6839 11.3087 14.1213 11.8713C13.5587 12.4339 12.7956 12.7499 12 12.7499C11.2043 12.7499 10.4413 12.4339 9.87868 11.8713C9.31607 11.3087 9 10.5456 9 9.74995C9 8.9543 9.31607 8.19124 9.87868 7.62863C10.4413 7.06602 11.2043 6.74995 12 6.74995C12.7956 6.74995 13.5587 7.06602 14.1213 7.62863C14.6839 8.19124 15 8.9543 15 9.74995Z"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="header__list-icon--setting">
+              <a href="#!" class="header__list--icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M9.59399 3.94C9.68399 3.398 10.154 3 10.704 3H13.297C13.847 3 14.317 3.398 14.407 3.94L14.62 5.221C14.683 5.595 14.933 5.907 15.265 6.091C15.339 6.131 15.412 6.174 15.485 6.218C15.809 6.414 16.205 6.475 16.56 6.342L17.777 5.886C18.0264 5.79221 18.301 5.78998 18.5519 5.87971C18.8028 5.96945 19.0136 6.14531 19.147 6.376L20.443 8.623C20.576 8.8537 20.6229 9.12413 20.5753 9.38617C20.5277 9.6482 20.3887 9.88485 20.183 10.054L19.18 10.881C18.887 11.121 18.742 11.494 18.749 11.873C18.7506 11.958 18.7506 12.043 18.749 12.128C18.742 12.506 18.887 12.878 19.179 13.118L20.184 13.946C20.608 14.296 20.718 14.9 20.444 15.376L19.146 17.623C19.0128 17.8536 18.8022 18.0296 18.5515 18.1195C18.3008 18.2094 18.0264 18.2074 17.777 18.114L16.56 17.658C16.205 17.525 15.81 17.586 15.484 17.782C15.4115 17.8261 15.3381 17.8688 15.264 17.91C14.933 18.093 14.683 18.405 14.62 18.779L14.407 20.059C14.317 20.602 13.847 21 13.297 21H10.703C10.153 21 9.68299 20.602 9.59299 20.06L9.37999 18.779C9.31799 18.405 9.06799 18.093 8.73599 17.909C8.66184 17.8681 8.58849 17.8258 8.51599 17.782C8.19099 17.586 7.79599 17.525 7.43999 17.658L6.22299 18.114C5.97372 18.2075 5.69936 18.2096 5.44869 18.1199C5.19803 18.0302 4.9873 17.8545 4.85399 17.624L3.55699 15.377C3.42394 15.1463 3.37704 14.8759 3.42465 14.6138C3.47226 14.3518 3.61128 14.1152 3.81699 13.946L4.82099 13.119C5.11299 12.879 5.25799 12.506 5.25099 12.127C5.24943 12.042 5.24943 11.957 5.25099 11.872C5.25799 11.494 5.11299 11.122 4.82099 10.882L3.81699 10.054C3.61153 9.88489 3.47267 9.64843 3.42506 9.38662C3.37746 9.12481 3.42421 8.8546 3.55699 8.624L4.85399 6.377C4.98718 6.14614 5.198 5.97006 5.4489 5.88014C5.6998 5.79021 5.97448 5.79229 6.22399 5.886L7.43999 6.342C7.79599 6.475 8.19099 6.414 8.51599 6.218C8.58799 6.174 8.66199 6.131 8.73599 6.09C9.06799 5.907 9.31799 5.595 9.37999 5.221L9.59399 3.94Z"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M15 12C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 15 12 15C11.2044 15 10.4413 14.6839 9.87868 14.1213C9.31607 13.5587 9 12.7956 9 12C9 11.2044 9.31607 10.4413 9.87868 9.87868C10.4413 9.31607 11.2044 9 12 9C12.7956 9 13.5587 9.31607 14.1213 9.87868C14.6839 10.4413 15 11.2044 15 12Z"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!----------------- Code Phần promotion--------------->
+
+   <section class="promotion">
+  <div class="promotion__wrapper">
+    <h1 class="promotion__heading">
+      <span>Website Đọc truyện chữ, truyện dịch, truyện convert, truyện full hay nhất</span>
+      <span>Website Đọc truyện chữ, truyện dịch, truyện convert, truyện full hay nhất</span>
+    </h1>
+  </div>
+</section>
+
+    <!----------------- Code Phần novel--------------->
+    <section class="novel">
+      <div class="main-content">
+       <section class="novel-content">
+     <!-- Left editor-recommendations-->
+  <section class="novel__list--left">
+    <h1 class="novel__heading-left">Biên tập viên đề cử</h1>
+    <!-- novel row 1 -->
+     <div class="novel-row">
+      <!-- row-left -->
+<article class="novel-item">
+  <a href="#!">
+    <img src="./assets/img/quái đàm cửa hàn.jpg" alt="novel-logo" class="novel__avatar" data-aos-offset="50" data-aos="zoom-in">
+  </a>
+  <div class="novel__content">
+    <h2 ><a class="novel__heading" href="#!">Quái đàm cửa hàng phố kinh doanh hằng ngày</a>
+</h2>
+    <p> <a class="novel__desc" href="#!">ĐQL không được tự sửa raw/up file/xóa file bao gồm thêm tên phó bản etc M…</a></p>
+   
+<div class="novel__more">
+      <div class="novel__more-left">
+        <span class="novel__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+  <path d="M5.82999 4.5H13.83M5.82999 8H13.83M5.82999 11.5H13.83M2.82999 4.5H2.83465V4.50533H2.82999V4.5ZM3.07999 4.5C3.07999 4.5663 3.05365 4.62989 3.00676 4.67678C2.95988 4.72366 2.89629 4.75 2.82999 4.75C2.76368 4.75 2.70009 4.72366 2.65321 4.67678C2.60633 4.62989 2.57999 4.5663 2.57999 4.5C2.57999 4.4337 2.60633 4.37011 2.65321 4.32322C2.70009 4.27634 2.76368 4.25 2.82999 4.25C2.89629 4.25 2.95988 4.27634 3.00676 4.32322C3.05365 4.37011 3.07999 4.4337 3.07999 4.5ZM2.82999 8H2.83465V8.00533H2.82999V8ZM3.07999 8C3.07999 8.0663 3.05365 8.12989 3.00676 8.17678C2.95988 8.22366 2.89629 8.25 2.82999 8.25C2.76368 8.25 2.70009 8.22366 2.65321 8.17678C2.60633 8.12989 2.57999 8.0663 2.57999 8C2.57999 7.9337 2.60633 7.87011 2.65321 7.82322C2.70009 7.77634 2.76368 7.75 2.82999 7.75C2.89629 7.75 2.95988 7.77634 3.00676 7.82322C3.05365 7.87011 3.07999 7.9337 3.07999 8ZM2.82999 11.5H2.83465V11.5053H2.82999V11.5ZM3.07999 11.5C3.07999 11.5663 3.05365 11.6299 3.00676 11.6768C2.95988 11.7237 2.89629 11.75 2.82999 11.75C2.76368 11.75 2.70009 11.7237 2.65321 11.6768C2.60633 11.6299 2.57999 11.5663 2.57999 11.5C2.57999 11.4337 2.60633 11.3701 2.65321 11.3232C2.70009 11.2763 2.76368 11.25 2.82999 11.25C2.89629 11.25 2.95988 11.2763 3.00676 11.3232C3.05365 11.3701 3.07999 11.4337 3.07999 11.5Z" stroke="#2B2B2B" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+        </span>
+        <span class="novel__chapter">108 chương</span>
+      </div>
+      <span class="novel__genre">Khoa huyễn</span>
+    </div>
+  </div>
+</article>
+      <!-- row-right -->
+       <article class="novel-item">
+  <a href="#!">
+    <img src="./assets/img/sono mono.jpg" alt="novel-logo" class="novel__avatar" data-aos-offset="50" data-aos="zoom-in">
+  </a>
+  <div class="novel__content">
+    <h2><a href="#!"class="novel__heading">Sono Mono Nochi Ni…</a></h2>
+    <p><a href="#!"class="novel__desc">Wazu một người thành thị bình thường,vì một vài nguyên nhân anh đã tự bế q…</a></p>
+
+    <div class="novel__more">
+      <div class="novel__more-left">
+        <span class="novel__icon"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+  <path d="M5.82999 4.5H13.83M5.82999 8H13.83M5.82999 11.5H13.83M2.82999 4.5H2.83465V4.50533H2.82999V4.5ZM3.07999 4.5C3.07999 4.5663 3.05365 4.62989 3.00676 4.67678C2.95988 4.72366 2.89629 4.75 2.82999 4.75C2.76368 4.75 2.70009 4.72366 2.65321 4.67678C2.60633 4.62989 2.57999 4.5663 2.57999 4.5C2.57999 4.4337 2.60633 4.37011 2.65321 4.32322C2.70009 4.27634 2.76368 4.25 2.82999 4.25C2.89629 4.25 2.95988 4.27634 3.00676 4.32322C3.05365 4.37011 3.07999 4.4337 3.07999 4.5ZM2.82999 8H2.83465V8.00533H2.82999V8ZM3.07999 8C3.07999 8.0663 3.05365 8.12989 3.00676 8.17678C2.95988 8.22366 2.89629 8.25 2.82999 8.25C2.76368 8.25 2.70009 8.22366 2.65321 8.17678C2.60633 8.12989 2.57999 8.0663 2.57999 8C2.57999 7.9337 2.60633 7.87011 2.65321 7.82322C2.70009 7.77634 2.76368 7.75 2.82999 7.75C2.89629 7.75 2.95988 7.77634 3.00676 7.82322C3.05365 7.87011 3.07999 7.9337 3.07999 8ZM2.82999 11.5H2.83465V11.5053H2.82999V11.5ZM3.07999 11.5C3.07999 11.5663 3.05365 11.6299 3.00676 11.6768C2.95988 11.7237 2.89629 11.75 2.82999 11.75C2.76368 11.75 2.70009 11.7237 2.65321 11.6768C2.60633 11.6299 2.57999 11.5663 2.57999 11.5C2.57999 11.4337 2.60633 11.3701 2.65321 11.3232C2.70009 11.2763 2.76368 11.25 2.82999 11.25C2.89629 11.25 2.95988 11.2763 3.00676 11.3232C3.05365 11.3701 3.07999 11.4337 3.07999 11.5Z" stroke="#2B2B2B" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span>
+        <span class="novel__chapter">8 chương</span>
+      </div>
+      <span class="novel__genre">Sắc</span>
+    </div>
+  </div>
+       </article>
+     </div>
+     <!-- row2 -->
+     <div class="novel-row">
+      <!-- row-left -->
+<article class="novel-item">
+  <a href="#!">
+    <img src="./assets/img/sinh hoạt chức....jpg" alt="novel-logo" class="novel__avatar" data-aos-offset="50" data-aos="zoom-in">
+  </a>
+  <div class="novel__content">
+    <h2><a href="#!"class="novel__heading">Sinh hoạt chức nghiệp nhất phế? Nhưng ta có thần cấp thiên phú!</a></h2>
+    <p><a href="#!"class="novel__desc">Văn án toàn dân chuyển chức trò chơi xâm lấn mạt thế sảng văn nữ cường vô…</a></p>
+    <div class="novel__more">
+      <div class="novel__more-left">
+        <span class="novel__icon"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+  <path d="M5.82999 4.5H13.83M5.82999 8H13.83M5.82999 11.5H13.83M2.82999 4.5H2.83465V4.50533H2.82999V4.5ZM3.07999 4.5C3.07999 4.5663 3.05365 4.62989 3.00676 4.67678C2.95988 4.72366 2.89629 4.75 2.82999 4.75C2.76368 4.75 2.70009 4.72366 2.65321 4.67678C2.60633 4.62989 2.57999 4.5663 2.57999 4.5C2.57999 4.4337 2.60633 4.37011 2.65321 4.32322C2.70009 4.27634 2.76368 4.25 2.82999 4.25C2.89629 4.25 2.95988 4.27634 3.00676 4.32322C3.05365 4.37011 3.07999 4.4337 3.07999 4.5ZM2.82999 8H2.83465V8.00533H2.82999V8ZM3.07999 8C3.07999 8.0663 3.05365 8.12989 3.00676 8.17678C2.95988 8.22366 2.89629 8.25 2.82999 8.25C2.76368 8.25 2.70009 8.22366 2.65321 8.17678C2.60633 8.12989 2.57999 8.0663 2.57999 8C2.57999 7.9337 2.60633 7.87011 2.65321 7.82322C2.70009 7.77634 2.76368 7.75 2.82999 7.75C2.89629 7.75 2.95988 7.77634 3.00676 7.82322C3.05365 7.87011 3.07999 7.9337 3.07999 8ZM2.82999 11.5H2.83465V11.5053H2.82999V11.5ZM3.07999 11.5C3.07999 11.5663 3.05365 11.6299 3.00676 11.6768C2.95988 11.7237 2.89629 11.75 2.82999 11.75C2.76368 11.75 2.70009 11.7237 2.65321 11.6768C2.60633 11.6299 2.57999 11.5663 2.57999 11.5C2.57999 11.4337 2.60633 11.3701 2.65321 11.3232C2.70009 11.2763 2.76368 11.25 2.82999 11.25C2.89629 11.25 2.95988 11.2763 3.00676 11.3232C3.05365 11.3701 3.07999 11.4337 3.07999 11.5Z" stroke="#2B2B2B" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span>
+        <span class="novel__chapter">160 chương</span>
+      </div>
+      <span class="novel__genre">Huyền huyễn</span>
+    </div>
+  </div>
+</article>
+      <!-- row-right -->
+       <article class="novel-item">
+  <a href="#!">
+    <img src="./assets/img/tang thi.jpg" alt="novel-logo" class="novel__avatar" data-aos-offset="50" data-aos="zoom-in">
+  </a>
+  <div class="novel__content">
+    <h2><a href="#!"class="novel__heading">Tang thi? Thiêu ủ phân</a></h2>
+    <p><a href="#!" class="novel__desc" >Bảo hộ khu ra ngoài thám hiểm nhân viên trong rừng rậm lạc đường ngoài mu…</a></p>
+    <div class="novel__more">
+      <div class="novel__more-left">
+        <span class="novel__icon"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+  <path d="M5.82999 4.5H13.83M5.82999 8H13.83M5.82999 11.5H13.83M2.82999 4.5H2.83465V4.50533H2.82999V4.5ZM3.07999 4.5C3.07999 4.5663 3.05365 4.62989 3.00676 4.67678C2.95988 4.72366 2.89629 4.75 2.82999 4.75C2.76368 4.75 2.70009 4.72366 2.65321 4.67678C2.60633 4.62989 2.57999 4.5663 2.57999 4.5C2.57999 4.4337 2.60633 4.37011 2.65321 4.32322C2.70009 4.27634 2.76368 4.25 2.82999 4.25C2.89629 4.25 2.95988 4.27634 3.00676 4.32322C3.05365 4.37011 3.07999 4.4337 3.07999 4.5ZM2.82999 8H2.83465V8.00533H2.82999V8ZM3.07999 8C3.07999 8.0663 3.05365 8.12989 3.00676 8.17678C2.95988 8.22366 2.89629 8.25 2.82999 8.25C2.76368 8.25 2.70009 8.22366 2.65321 8.17678C2.60633 8.12989 2.57999 8.0663 2.57999 8C2.57999 7.9337 2.60633 7.87011 2.65321 7.82322C2.70009 7.77634 2.76368 7.75 2.82999 7.75C2.89629 7.75 2.95988 7.77634 3.00676 7.82322C3.05365 7.87011 3.07999 7.9337 3.07999 8ZM2.82999 11.5H2.83465V11.5053H2.82999V11.5ZM3.07999 11.5C3.07999 11.5663 3.05365 11.6299 3.00676 11.6768C2.95988 11.7237 2.89629 11.75 2.82999 11.75C2.76368 11.75 2.70009 11.7237 2.65321 11.6768C2.60633 11.6299 2.57999 11.5663 2.57999 11.5C2.57999 11.4337 2.60633 11.3701 2.65321 11.3232C2.70009 11.2763 2.76368 11.25 2.82999 11.25C2.89629 11.25 2.95988 11.2763 3.00676 11.3232C3.05365 11.3701 3.07999 11.4337 3.07999 11.5Z" stroke="#2B2B2B" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span>
+        <span class="novel__chapter">137 chương</span>
+      </div>
+      <span class="novel__genre">Huyền huyễn</span>
+    </div>
+  </div>
+       </article>
+     </div>
+     <!-- row3 -->
+     <div class="novel-row">
+      <!-- row-left -->
+<article class="novel-item">
+  <a href="#!">
+    <img src="./assets/img/chết thảm trọng sinh.jpg" alt="novel-logo" class="novel__avatar" data-aos-offset="50" data-aos="zoom-in">
+  </a>
+  <div class="novel__content">
+    <h2><a href="#!"class="novel__heading">Chết thảm trọng sinh sau, thành vai ác quyền thần chưởng thượng kiều</a></h2>
+    <p><a href="#!"class="novel__desc">Lâm vọng thư mẫu thân chết sớm phụ không từ hầu phủ gian nan độ nhật vài …</a></p>
+    <div class="novel__more">
+      <div class="novel__more-left">
+        <span class="novel__icon"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+  <path d="M5.82999 4.5H13.83M5.82999 8H13.83M5.82999 11.5H13.83M2.82999 4.5H2.83465V4.50533H2.82999V4.5ZM3.07999 4.5C3.07999 4.5663 3.05365 4.62989 3.00676 4.67678C2.95988 4.72366 2.89629 4.75 2.82999 4.75C2.76368 4.75 2.70009 4.72366 2.65321 4.67678C2.60633 4.62989 2.57999 4.5663 2.57999 4.5C2.57999 4.4337 2.60633 4.37011 2.65321 4.32322C2.70009 4.27634 2.76368 4.25 2.82999 4.25C2.89629 4.25 2.95988 4.27634 3.00676 4.32322C3.05365 4.37011 3.07999 4.4337 3.07999 4.5ZM2.82999 8H2.83465V8.00533H2.82999V8ZM3.07999 8C3.07999 8.0663 3.05365 8.12989 3.00676 8.17678C2.95988 8.22366 2.89629 8.25 2.82999 8.25C2.76368 8.25 2.70009 8.22366 2.65321 8.17678C2.60633 8.12989 2.57999 8.0663 2.57999 8C2.57999 7.9337 2.60633 7.87011 2.65321 7.82322C2.70009 7.77634 2.76368 7.75 2.82999 7.75C2.89629 7.75 2.95988 7.77634 3.00676 7.82322C3.05365 7.87011 3.07999 7.9337 3.07999 8ZM2.82999 11.5H2.83465V11.5053H2.82999V11.5ZM3.07999 11.5C3.07999 11.5663 3.05365 11.6299 3.00676 11.6768C2.95988 11.7237 2.89629 11.75 2.82999 11.75C2.76368 11.75 2.70009 11.7237 2.65321 11.6768C2.60633 11.6299 2.57999 11.5663 2.57999 11.5C2.57999 11.4337 2.60633 11.3701 2.65321 11.3232C2.70009 11.2763 2.76368 11.25 2.82999 11.25C2.89629 11.25 2.95988 11.2763 3.00676 11.3232C3.05365 11.3701 3.07999 11.4337 3.07999 11.5Z" stroke="#2B2B2B" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span>
+        <span class="novel__chapter">385 chương</span>
+      </div>
+      <span class="novel__genre">Huyền huyễn</span>
+    </div>
+  </div>
+</article>
+      <!-- row-right -->
+       <article class="novel-item">
+  <a href="#!">
+    <img src="./assets/img/nhà giàu số 1.jpg" alt="novel-logo" class="novel__avatar" data-aos-offset="50" data-aos="zoom-in">
+  </a>
+  <div class="novel__content">
+    <h2><a href="#!"class="novel__heading">Nhà giàu số một ba mẹ bị đoạt,manh nhãi con mê điên đại lão c…</a></h2>
+    <p><a href="#!"class="novel__desc">đoàn sủng ba tuổi rưỡi vô CP vạn nhân mê ngọt sủng thân tình văn Manh ma…</a></p>
+    <div class="novel__more">
+      <div class="novel__more-left">
+        <span class="novel__icon"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+  <path d="M5.82999 4.5H13.83M5.82999 8H13.83M5.82999 11.5H13.83M2.82999 4.5H2.83465V4.50533H2.82999V4.5ZM3.07999 4.5C3.07999 4.5663 3.05365 4.62989 3.00676 4.67678C2.95988 4.72366 2.89629 4.75 2.82999 4.75C2.76368 4.75 2.70009 4.72366 2.65321 4.67678C2.60633 4.62989 2.57999 4.5663 2.57999 4.5C2.57999 4.4337 2.60633 4.37011 2.65321 4.32322C2.70009 4.27634 2.76368 4.25 2.82999 4.25C2.89629 4.25 2.95988 4.27634 3.00676 4.32322C3.05365 4.37011 3.07999 4.4337 3.07999 4.5ZM2.82999 8H2.83465V8.00533H2.82999V8ZM3.07999 8C3.07999 8.0663 3.05365 8.12989 3.00676 8.17678C2.95988 8.22366 2.89629 8.25 2.82999 8.25C2.76368 8.25 2.70009 8.22366 2.65321 8.17678C2.60633 8.12989 2.57999 8.0663 2.57999 8C2.57999 7.9337 2.60633 7.87011 2.65321 7.82322C2.70009 7.77634 2.76368 7.75 2.82999 7.75C2.89629 7.75 2.95988 7.77634 3.00676 7.82322C3.05365 7.87011 3.07999 7.9337 3.07999 8ZM2.82999 11.5H2.83465V11.5053H2.82999V11.5ZM3.07999 11.5C3.07999 11.5663 3.05365 11.6299 3.00676 11.6768C2.95988 11.7237 2.89629 11.75 2.82999 11.75C2.76368 11.75 2.70009 11.7237 2.65321 11.6768C2.60633 11.6299 2.57999 11.5663 2.57999 11.5C2.57999 11.4337 2.60633 11.3701 2.65321 11.3232C2.70009 11.2763 2.76368 11.25 2.82999 11.25C2.89629 11.25 2.95988 11.2763 3.00676 11.3232C3.05365 11.3701 3.07999 11.4337 3.07999 11.5Z" stroke="#2B2B2B" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span>
+        <span class="novel__chapter">320 chương</span>
+      </div>
+      <span class="novel__genre">Đô thị</span>
+    </div>
+  </div>
+       </article>
+     </div>
+     <!-- row4 -->
+           <div class="novel-row">
+      <!-- row-left -->
+<article class="novel-item">
+  <a href="#!">
+    <img src="./assets/img/lấy cái gì cứu vớt.jpg" alt="novel-logo" class="novel__avatar" data-aos-offset="50" data-aos="zoom-in">
+  </a>
+  <div class="novel__content">
+    <h2><a href="#!"class="novel__heading">Lấy cái gì cứu vớt ta đồng học</a></h2>
+    <p><a href="#!" class="novel__desc">mất trí nhớ là một loại cái gì thể nghiệm Thương kiều duy rất khó hình dung nh…</a></p>
+    <div class="novel__more">
+      <div class="novel__more-left">
+        <span class="novel__icon"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+  <path d="M5.82999 4.5H13.83M5.82999 8H13.83M5.82999 11.5H13.83M2.82999 4.5H2.83465V4.50533H2.82999V4.5ZM3.07999 4.5C3.07999 4.5663 3.05365 4.62989 3.00676 4.67678C2.95988 4.72366 2.89629 4.75 2.82999 4.75C2.76368 4.75 2.70009 4.72366 2.65321 4.67678C2.60633 4.62989 2.57999 4.5663 2.57999 4.5C2.57999 4.4337 2.60633 4.37011 2.65321 4.32322C2.70009 4.27634 2.76368 4.25 2.82999 4.25C2.89629 4.25 2.95988 4.27634 3.00676 4.32322C3.05365 4.37011 3.07999 4.4337 3.07999 4.5ZM2.82999 8H2.83465V8.00533H2.82999V8ZM3.07999 8C3.07999 8.0663 3.05365 8.12989 3.00676 8.17678C2.95988 8.22366 2.89629 8.25 2.82999 8.25C2.76368 8.25 2.70009 8.22366 2.65321 8.17678C2.60633 8.12989 2.57999 8.0663 2.57999 8C2.57999 7.9337 2.60633 7.87011 2.65321 7.82322C2.70009 7.77634 2.76368 7.75 2.82999 7.75C2.89629 7.75 2.95988 7.77634 3.00676 7.82322C3.05365 7.87011 3.07999 7.9337 3.07999 8ZM2.82999 11.5H2.83465V11.5053H2.82999V11.5ZM3.07999 11.5C3.07999 11.5663 3.05365 11.6299 3.00676 11.6768C2.95988 11.7237 2.89629 11.75 2.82999 11.75C2.76368 11.75 2.70009 11.7237 2.65321 11.6768C2.60633 11.6299 2.57999 11.5663 2.57999 11.5C2.57999 11.4337 2.60633 11.3701 2.65321 11.3232C2.70009 11.2763 2.76368 11.25 2.82999 11.25C2.89629 11.25 2.95988 11.2763 3.00676 11.3232C3.05365 11.3701 3.07999 11.4337 3.07999 11.5Z" stroke="#2B2B2B" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span>
+        <span class="novel__chapter">133 chương</span>
+      </div>
+      <span class="novel__genre">Đô thị</span>
+    </div>
+  </div>
+</article>
+      <!-- row-right -->
+       <article class="novel-item">
+  <a href="#!">
+    <img src="./assets/img/trò chơi xâm lấn.jpg" alt="novel-logo" class="novel__avatar" data-aos-offset="50" data-aos="zoom-in">
+  </a>
+  <div class="novel__content">
+    <h2><a href="#!"class="novel__heading">Trò chơi xâm lấn: Khai cục tùy cơ rút ra một hệ thống</a></h2>
+    <p><a href="#!"class="novel__desc" >Văn án vô CP sảng văn vả mặt vô địch thăng cấp lưu một đường hoành đẩy T…</a></p>
+    <div class="novel__more">
+      <div class="novel__more-left">
+        <span class="novel__icon"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+  <path d="M5.82999 4.5H13.83M5.82999 8H13.83M5.82999 11.5H13.83M2.82999 4.5H2.83465V4.50533H2.82999V4.5ZM3.07999 4.5C3.07999 4.5663 3.05365 4.62989 3.00676 4.67678C2.95988 4.72366 2.89629 4.75 2.82999 4.75C2.76368 4.75 2.70009 4.72366 2.65321 4.67678C2.60633 4.62989 2.57999 4.5663 2.57999 4.5C2.57999 4.4337 2.60633 4.37011 2.65321 4.32322C2.70009 4.27634 2.76368 4.25 2.82999 4.25C2.89629 4.25 2.95988 4.27634 3.00676 4.32322C3.05365 4.37011 3.07999 4.4337 3.07999 4.5ZM2.82999 8H2.83465V8.00533H2.82999V8ZM3.07999 8C3.07999 8.0663 3.05365 8.12989 3.00676 8.17678C2.95988 8.22366 2.89629 8.25 2.82999 8.25C2.76368 8.25 2.70009 8.22366 2.65321 8.17678C2.60633 8.12989 2.57999 8.0663 2.57999 8C2.57999 7.9337 2.60633 7.87011 2.65321 7.82322C2.70009 7.77634 2.76368 7.75 2.82999 7.75C2.89629 7.75 2.95988 7.77634 3.00676 7.82322C3.05365 7.87011 3.07999 7.9337 3.07999 8ZM2.82999 11.5H2.83465V11.5053H2.82999V11.5ZM3.07999 11.5C3.07999 11.5663 3.05365 11.6299 3.00676 11.6768C2.95988 11.7237 2.89629 11.75 2.82999 11.75C2.76368 11.75 2.70009 11.7237 2.65321 11.6768C2.60633 11.6299 2.57999 11.5663 2.57999 11.5C2.57999 11.4337 2.60633 11.3701 2.65321 11.3232C2.70009 11.2763 2.76368 11.25 2.82999 11.25C2.89629 11.25 2.95988 11.2763 3.00676 11.3232C3.05365 11.3701 3.07999 11.4337 3.07999 11.5Z" stroke="#2B2B2B" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span>
+        <span class="novel__chapter">114 chương</span>
+      </div>
+      <span class="novel__genre">Khoa huyễn</span>
+    </div>
+  </div>
+       </article>
+     </div>
+  </section>
+     <!-- right novel reading -->
+      <section class="novel-reading">
+        <h1 class="novel__heading-right">Đang đọc</h1>
+       <div class="novel__continue-box">
+          <!-- row1 -->
+          <section class="novel__continue">
+            <h2><a href="#!"class="novel__continue-title" >Hoàng thúc hảo eo nhỏ, kiều kiều vương phi…</a></h2>
+            <span><a class="novel__continue-read" href="#!">Đọc tiếp</a> </span>
+          </section>
+          <!-- row2 -->
+  <section class="novel__continue">
+            <h2><a href="#!" class="novel__continue-title" >Đại đế thế gia nghèo dưỡng ta? Nhưng ta ngộ…</a></h2>
+            <span><a class="novel__continue-read" href="#!">Đọc tiếp</a> </span>
+          </section>
+          <!-- row3 -->
+  <section class="novel__continue">
+            <h2><a href="#!"class="novel__continue-title" >Cùng đối thủ một mất một còn thành hôn sau</a></h2>
+            <span><a class="novel__continue-read" href="#!">Đọc tiếp</a> </span>
+          </section>
+          <!-- row4 -->
+  <section class="novel__continue">
+            <h2><a href="#!"class="novel__continue-title">Ở sinh tồn trò chơi bị khắc kim đại lão theo dõi</a></h2>
+            <span><a class="novel__continue-read" href="#!">Đọc tiếp</a> </span>
+          </section>
+          <!-- row5 -->
+  <section class="novel__continue">
+            <h2><a href="#!"class="novel__continue-title">Bị quốc đủ phong sát sau, ở tây giáp gan thuộc…</a></h2>
+            <span><a class="novel__continue-read" href="#!">Đọc tiếp</a> </span>
+          </section>
+          <!-- row6 -->
+  <section class="novel__continue">
+            <h2><a href="#!"class="novel__continue-title" >Luyến ái muốn ở nạp đao sau Sakamoto Days </a></h2>
+            <span><a class="novel__continue-read" href="#!">Đọc tiếp</a> </span>
+          </section>
+          <!-- row7 -->
+  <section class="novel__continue">
+            <h2><a href="#!"class="novel__continue-title">Người chơi đã buông xuống, đạo hữu thỉnh chịu…</a></h2>
+            <span><a class="novel__continue-read" href="#!">Đọc tiếp</a> </span>
+          </section>
+          <!-- row8 -->
+           <section class="novel__continue">
+            <h2><a href="#!"class="novel__continue-title">Mỗi người đều muốn giết ta chứng đạo</a></h2>
+            <span><a class="novel__continue-read" href="#!">Đọc tiếp</a> </span>
+          </section>
+       </div>
+      </section>
+       </section>
+             </section>
+   <!----------------- Code Phần new-update--------------->
+   
+<section class="update">
+    <div class="main-content">
+      <!-- update-top -->
+      <section class="update-top">
+        <h1 class="update-top__heading" data-aos-duration="600" data-aos="flip-left"
+     data-aos-offset="100"
+     data-aos-easing="ease-in-sine">Mới cập nhật</h1>
+        <span class="update-top__next-icon">
+          <a data-aos-duration='3000' href="#!">
+            <svg data-aos="fade-left"
+     data-aos-anchor="#example-anchor"
+     data-aos-offset="500"
+     data-aos-duration="500"  xmlns="http://www.w3.org/2000/svg" width="32" height="24" viewBox="0 0 32 24" fill="none">
+    <path d="M21.25 8.25L25 12M25 12L21.25 15.75M25 12H7" stroke="#9CA3AF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+          </a>
+        </span>
+      </section>
+      <!--- update-list -->
+      <section class="update__list">
+        <!-- row1 -->
+         <article class="update__row">
+          <ul class="update__row-bg-yelow">
+            <li><a class="update__genre" href="#!">Huyền huyễn</a></li>
+            <li><a class="update__heading" href="#!">Cái này kiều thê goá phụ ta đương định…</a></li>
+            <li><a class="update__chapter" href="#!">Phần 131</a></li>
+            <li><a class="update__author" href="#!">Phong Đích Linh Đang </a></li>
+            <li> <span class="update__time">8 giờ trước</span></li>
+          </ul>
+         </article>
+         <!-- row2 -->
+ <article class="update__row">
+          <ul class="update__row-bg-white">
+            <li><a class="update__genre" href="#!">Sắc</a></li>
+            <li ><a class="update__heading" href="#!">Akuyaku Reijou no Ani ni Tensei…</a></li>
+            <li><a class="update__chapter" href="#!">Chương 166: Ngày bận rộn</a></li>
+            <li><a class="update__author" href="#!">Uchikawa Hiroko (内河弘児)</a></li>
+            <li> <span class="update__time">8 giờ trước</span></li>
+          </ul>
+         </article>
+         <!-- row3 -->
+<article class="update__row">
+          <ul class="update__row-bg-yelow">
+            <li><a class="update__genre" href="#!">Sắc</a> </li>
+            <li><a class="update__heading" href="#!">Vĩnh Thoái Hiệp Sĩ</a></li>
+            <li><a class="update__chapter" href="#!">Ester - Esther</a></li>
+            <li><a class="update__author" href="#!">lee hyunmin, ga nara</a></li>
+            <li> <span class="update__time">8 giờ trước</span></li>
+          </ul>
+         </article>
+         <!-- row4 -->
+ <article class="update__row">
+          <ul class="update__row-bg-white">
+            <li><a class="update__genre" href="#!">Sắc</a> </li>
+            <li><a class="update__heading" href="#!">Sống sót với tư cách nhân viên văn…</a></li>
+            <li><a class="update__chapter" href="#!">Minh họa một số dị thể quản thúc và hiện tượng</a></li>
+            <li><a class="update__author" href="#!">静舟小妖</a></li>
+            <li> <span class="update__time">8 giờ trước</span></li>
+          </ul>
+         </article>
+         <!-- row5 -->
+<article class="update__row">
+          <ul class="update__row-bg-yelow">
+            <li><a class="update__genre" href="#!">Khoa huyễn</a> </li>
+            <li><a class="update__heading" href="#!">Quái đàm cửa hàng phố kinh doanh hằ…</a></li>
+            <li><a class="update__chapter" href="#!">Phần 108</a></li>
+            <li><a class="update__author" href="#!">Y Lại Đường Phân</a></li>
+            <li> <span class="update__time">8 giờ trước</span></li>
+          </ul>
+         </article>
+         <!-- row6 -->
+<article class="update__row">
+          <ul class="update__row-bg-white">
+            <li><a class="update__genre" href="#!">Sắc</a> </li>
+            <li><a class="update__heading" href="#!">Nhà Giả Kim Tinh Anh: Làm Lại Cuộc Đ…</a></li>
+            <li><a class="update__chapter" href="#!">Chương 22: Tái thiết chi nhánh</a></li>
+            <li><a class="update__author" href="#!">Izumo Daikichi</a></li>
+            <li> <span class="update__time">8 giờ trước</span></li>
+          </ul>
+         </article>
+         <!-- row7 -->
+<article class="update__row">
+          <ul class="update__row-bg-yelow">
+            <li><a class="update__genre" href="#!">Sắc</a> </li>
+            <li><a class="update__heading" href="#!">Tái sinh thành chiến binh vô danh trong…</a></li>
+            <li><a class="update__chapter" href="#!">Chap 70</a></li>
+            <li><a class="update__author" href="#!">鉄鋼怪人</a></li>
+            <li> <span class="update__time">8 giờ trước</span></li>
+          </ul>
+         </article>
+         <!-- row8 -->
+<article class="update__row">
+          <ul class="update__row-bg-white">
+            <li><a class="update__genre" href="#!">Sắc</a> </li>
+            <li><a class="update__heading" href="#!">Tôi sẽ không bao giờ nhượng bộ trước…</a></li>
+            <li><a class="update__chapter" href="#!">Chương 13 - Dư âm cuối cùng</a></li>
+            <li><a class="update__author" href="#!">静舟小妖</a></li>
+            <li> <span class="update__time">8 giờ trước</span></li>
+          </ul>
+         </article>
+         <!-- row9 -->
+<article class="update__row">
+          <ul class="update__row-bg-yelow">
+            <li><a class="update__genre" href="#!">Sắc</a> </li>
+            <li><a class="update__heading" href="#!">Corrupted Blood Salvatore: TS Villain’s…</a></li>
+            <li><a class="update__chapter" href="#!">Chương 08 Một Trái Tim Rung Động, Một Ý Nghĩ Rối…</a></li>
+            <li><a class="update__author" href="#!">WhatSoon</a></li>
+            <li> <span class="update__time">8 giờ trước</span></li>
+          </ul>
+         </article>
+         <!-- row10 -->
+<article class="update__row">
+          <ul class="update__row-bg-white">
+            <li><a class="update__genre" href="#!">Sắc</a> </li>
+            <li><a class="update__heading" href="#!">Trùng Sinh Rồi Mới Phát Hiện Mình Có…</a></li>
+            <li><a class="update__chapter" href="#!">Chương 11</a></li>
+            <li><a class="update__author" href="#!">Tào Man Quân</a></li>
+            <li> <span class="update__time">8 giờ trước</span></li>
+          </ul>
+         </article>
+         <!-- row11 -->
+<article class="update__row">
+          <ul class="update__row-bg-yelow">
+            <li><a class="update__genre" href="#!">Sắc</a> </li>
+            <li><a class="update__heading" href="#!">Trở thành tên phản diện NTR nữ chính</a></li>
+            <li><a class="update__chapter" href="#!">Chương 17: Giáo sư Ferzen (1)</a></li>
+            <li><a class="update__author" href="#!">静舟小妖</a></li>
+            <li> <span class="update__time">8 giờ trước</span></li>
+          </ul>
+         </article>
+         <!-- row12 -->
+<article class="update__row">
+          <ul class="update__row-bg-white">
+            <li><a class="update__genre" href="#!">Sắc</a> </li>
+            <li><a class="update__heading" href="#!">Thiếu nữ muốn được chết</a></li>
+            <li><a class="update__chapter" href="#!">Chương 17. Sự thật bị chôn vùi.</a></li>
+            <li><a class="update__author" href="#!">静舟小妖</a></li>
+            <li> <span class="update__time">8 giờ trước</span></li>
+          </ul>
+         </article>
+         <!-- row13 -->
+<article class="update__row">
+          <ul class="update__row-bg-yelow">
+            <li><a class="update__genre" href="#!">Sắc</a></li>
+            <li><a class="update__heading" href="#!">Trở về năm 2000: Thanh mai nữ thần tu…</a></li>
+            <li><a class="update__chapter" href="#!">Chương 191: Bản thỏa thuận đánh cược này, không…</a></li>
+            <li><a class="update__author" href="#!">Phấn Đấu Lão Cửu</a></li>
+            <li><span class="update__time">8 giờ trước</span></li>
+          </ul>
+         </article>
+         <!-- row14 -->
+        <article class="update__row">
+          <ul class="update__row-bg-white">
+            <li><a class="update__genre" href="#!">Sắc</a> </li>
+            <li><a class="update__heading" href="#!">Sắc Nét Chiến Cơ</a></li>
+            <li><a class="update__chapter" href="#!">Chương 105: Cuộc gặp mặt</a></li>
+            <li><a class="update__author" href="#!">ML &quot;Exlor&quot; Duong</a></li>
+            <li> <span class="update__time">8 giờ trước</span></li>
+          </ul>
+         </article>
+         <!-- row15 -->
+          <article class="update__row">
+          <ul class="update__row-bg-yelow">
+            <li><a class="update__genre" href="#!">Sắc</a> </li>
+            <li><a class="update__heading" href="#!">Hôm nay kẻ phản diện thìa lại bị ám ản…</a></li>
+            <li><a class="update__chapter" href="#!">Chương 39: Trận đấu đánh giá(1)</a></li>
+            <li><a class="update__author" href="#!">静舟小妖</a></li>
+            <li> <span class="update__time">8 giờ trước</span></li>
+          </ul>
+         </article>
+      </section>
+    </div>
+   </section>
+     <!----------------- Code Phần 	Novel-rank--------------->
+     <section class="rank">
+      <div class="main-content">
+        <div class="rank__list">
+          <!-- Đọc nhiều -->
+<section class="rank__list-popular">
+  <h2 class="rank__heading">Đọc nhiều</h2>
+  <div class="rank__popular">
+    <!-- row1 -->
+<div class="rank__top rank__top1">
+<img class="rank__icon" src="./assets/img/medal-1.svg.png" alt="top1">
+<ul class="rank__info">
+  <li><a href="#!" class="rank__heading-top1">Làm ngươi đưa cơm hộp, ngươi nơi nơi trê…</a></li>
+  <div class="rank__icon-user-author">
+    <img  src="./assets/img/user-icon.svg" alt="user" class="rank__icon-user"></img>
+    <span class="rank__author">Hữu Kính Bất Chiếu Yêu</span>
+  </div>
+  <div class="rank__icon-list-genre">
+    <img  src="./assets/img/list-icon.svg" alt="user" class="rank__icon-list"></img>
+    <span class="rank__genre">Đô thị</span>
+  </div>
+</ul>
+<figure class="rank__pseudo"> <img class="rank__img" data-aos-duration='2000' data-aos="flip-left" src="./assets/img/anhtop1docnhieu.jpg" alt="avatar-novel"></figure>
+  </div>
+    <!-- row2  -->
+<div class="rank__low">
+  <img class="rank__icon-low" src="./assets/img/medal-2.svg.svg" alt="top2">
+  <a href="#!" class="rank__heading-low">Người ở mỹ thực, bắt đầu từ con số 0…</a>
+</div>
+    <!-- row3 -->
+<div class="rank__low">
+  <img class="rank__icon-low" src="./assets/img/medal-3.svg.svg" alt="top3">
+  <a href="#!" class="rank__heading-low">Đốt Thiên Tiên Đạo</a>
+</div>
+    <!-- row4 -->
+<div class="rank__low">
+<strong class="rank__strong" >4</strong>
+  <a href="#!" class="rank__heading-low">Lam Long hoàng đế: Lôi đình chủ quân</a>
+</div>
+    <!-- row5 -->
+<div class="rank__low">
+<strong class="rank__strong" >5</strong>
+  <a href="#!" class="rank__heading-low">Thần chỉ trò chơi</a>
+</div>
+    <!-- row6 -->
+<div class="rank__low">
+<strong class="rank__strong" >6</strong>
+  <a href="#!" class="rank__heading-low">Bảo nhưng mộng: Người thường lữ…</a>
+</div>
+    <!-- row7 -->
+<div class="rank__low">
+<strong class="rank__strong" >7</strong>
+  <a href="#!" class="rank__heading-low">Lúc tuổi già đại thành thánh thể, ta có…</a>
+</div>
+    <!-- row8 -->
+<div class="rank__low">
+<strong class="rank__strong" >8</strong>
+  <a href="#!" class="rank__heading-low">Đích Nữ "Phế Vật"</a>
+</div>
+    <!-- row9 -->
+<div class="rank__low">
+<strong class="rank__strong" >9</strong>
+  <a href="#!" class="rank__heading-low">Thế thân mười năm! Nay rời đi, nàng l…</a>
+</div>
+    <!-- row10 -->
+     <div class="rank__low">
+<strong class="rank__strong" >10</strong>
+  <a href="#!" class="rank__heading-low">Thế Giới Này - Ta Là Chủ</a>
+</div>
+  </div>
+</section>
+          <!-- Thịnh Hành -->
+<section class="rank__list-trend">
+    <h2 class="rank__heading">Thịnh hành</h2>
+    <!-- row1 -->
+     <div class="rank__trend"><div class="rank__top rank__top1">
+<img class="rank__icon" src="./assets/img/medal-1.svg.png" alt="top1">
+<ul class="rank__info">
+  <li><a href="#!" class="rank__heading-top1">Đỉnh Cấp Khí Vận, Lặng Lẽ Tu Luyện Ngàn Năm</a></li>
+  <div class="rank__icon-user-author">
+    <img  src="./assets/img/user-icon.svg" alt="user" class="rank__icon-user"></img>
+    <span class="rank__author">Nhâm Ngã Tiếu</span>
+  </div>
+  <div class="rank__icon-list-genre">
+    <img  src="./assets/img/list-icon.svg" alt="user" class="rank__icon-list"></img>
+    <span class="rank__genre">Tiên hiệp</span>
+  </div>
+</ul>
+<figure class="rank__pseudo"> <img class="rank__img" data-aos-duration='2000' data-aos="flip-left" src="./assets/img/dinhcapkhivan.jpg" alt="avatar-novel"></figure>
+  </div>
+  <!-- row2 -->
+<div class="rank__low">
+  <img class="rank__icon-low" src="./assets/img/medal-2.svg.svg" alt="top2">
+  <a href="#!" class="rank__heading-low">Vạn Cổ Thần Đế</a>
+</div>
+    <!-- row3 -->
+<div class="rank__low">
+  <img class="rank__icon-low" src="./assets/img/medal-3.svg.svg" alt="top3">
+  <a href="#!" class="rank__heading-low">Vừa Thành Tiên Thần, Con Cháu Cầu …</a>
+</div>
+     <!-- row4 -->
+<div class="rank__low">
+<strong class="rank__strong" >4</strong>
+  <a href="#!" class="rank__heading-low">Quang Âm Chi Ngoại</a>
+</div>
+    <!-- row5 -->
+<div class="rank__low">
+<strong class="rank__strong" >5</strong>
+  <a href="#!" class="rank__heading-low">Đế Bá</a>
+</div>
+    <!-- row6 -->
+<div class="rank__low">
+<strong class="rank__strong" >6</strong>
+  <a href="#!" class="rank__heading-low">Từ Hài Nhi Bắt Đầu Nhập Đạo</a>
+</div>
+    <!-- row7 -->
+<div class="rank__low">
+<strong class="rank__strong" >7</strong>
+  <a href="#!" class="rank__heading-low">Bắt Đầu Đánh Dấu Hoang Cổ Thánh Thể</a>
+</div>
+    <!-- row8 -->
+<div class="rank__low">
+<strong class="rank__strong" >8</strong>
+  <a href="#!" class="rank__heading-low">Cẩu Thả Tại Nữ Ma Đầu Bên Người…</a>
+</div>
+    <!-- row9 -->
+<div class="rank__low">
+<strong class="rank__strong" >9</strong>
+  <a href="#!" class="rank__heading-low">Đấu La Đại Lục Ⅴ Trùng Sinh Đường…</a>
+</div>
+    <!-- row10 -->
+     <div class="rank__low">
+<strong class="rank__strong" >10</strong>
+  <a href="#!" class="rank__heading-low">Xích Tâm Tuần Thiên</a>
+</div>
+</div>
+</section>
+          <!-- Đề cử -->
+<section class="rank__list-suggested">
+    <h2 class="rank__heading">Đề cử</h2>
+    <!-- row1 -->
+     <div class="rank__suggested"><div class="rank__top rank__top1">
+<img class="rank__icon" src="./assets/img/medal-1.svg.png" alt="top1">
+<ul class="rank__info">
+  <li><a href="#!" class="rank__heading-top1">Người Đang Cao Võ Ta Có Thể Mô Phỏng…</a></li>
+  <div class="rank__icon-user-author">
+    <img  src="./assets/img/user-icon.svg" alt="user" class="rank__icon-user"></img>
+    <span class="rank__author">Nguyệt Hồn Tai Họa</span>
+  </div>
+  <div class="rank__icon-list-genre">
+    <img  src="./assets/img/list-icon.svg" alt="user" class="rank__icon-list"></img>
+    <span class="rank__genre">Huyền huyễn</span>
+  </div>
+</ul>
+<figure class="rank__pseudo"> <img class="rank__img" data-aos-duration='2000' data-aos="flip-left" src="./assets/img/nguoidangcaovo.png" alt="avatar-novel"></figure>
+  </div>
+    <!-- row2 -->
+<div class="rank__low">
+  <img class="rank__icon-low" src="./assets/img/medal-2.svg.svg" alt="top2">
+  <a href="#!" class="rank__heading-low">Phản Phái Npc: Bị Người Chơi Công…</a>
+</div>
+    <!-- row3 -->
+<div class="rank__low">
+  <img class="rank__icon-low" src="./assets/img/medal-3.svg.svg" alt="top3">
+  <a href="#!" class="rank__heading-low">Ta Ở Thế Giới Khác Ở Trong Giới</a>
+</div>
+      <!-- row4 -->
+<div class="rank__low">
+<strong class="rank__strong" >4</strong>
+  <a href="#!" class="rank__heading-low">Đại Đạo Thù Cần : Từ Tam Quốc Bắt…</a>
+</div>
+    <!-- row5 -->
+<div class="rank__low">
+<strong class="rank__strong" >5</strong>
+  <a href="#!" class="rank__heading-low">Giết Một Người Bạo Một Binh, Bắt Đầ…</a>
+</div>
+    <!-- row6 -->
+<div class="rank__low">
+<strong class="rank__strong" >6</strong>
+  <a href="#!" class="rank__heading-low">Thôn Thiên Võ Thần</a>
+</div>
+    <!-- row7 -->
+<div class="rank__low">
+<strong class="rank__strong" >7</strong>
+  <a href="#!" class="rank__heading-low">Kẻ Hèn Này Chỉ Muốn Kiếm Tiền, Cản…</a>
+</div>
+    <!-- row8 -->
+<div class="rank__low">
+<strong class="rank__strong" >8</strong>
+  <a href="#!" class="rank__heading-low">Võng Du: Ta Tiễn Thuật Phụ Gia Vô H…</a>
+</div>
+    <!-- row9 -->
+<div class="rank__low">
+<strong class="rank__strong" >9</strong>
+  <a href="#!" class="rank__heading-low">Vừa Thành Nhân Tiên, Nữ Đế Quỳ Cầ…</a>
+</div>
+    <!-- row10 -->
+     <div class="rank__low">
+<strong class="rank__strong" >10</strong>
+  <a href="#!" class="rank__heading-low">Ta Tại Dị Thế Giới Xây Dựng Chủ Thành</a>
+</div>
+</div>
+</section>
+
+        </div>
+      </div>
+     </section>
+     <!----------------- Code Phần 	story-highlights--------------->
+     <section class="story-highlights">
+      <div class="main-content">
+          <!--  -->     
+<section class="novel-content story-highlights-content">
+     <!-- Left editor-recommendations-->
+  <section class="novel__list--left  story-highlights__list--left ">
+    <h1 class="novel__heading-left story-highlights__heading-left">Đánh giá cao</h1>
+    <!-- novel row 1 -->
+     <div class="novel-row story-highlights-row">
+      <!-- row-left -->
+<article class="novel-item">
+  <a href="#!">
+    <img src="./assets/img/tranhoitruongsinh.png" alt="novel-logo" class="novel__avatar" data-aos-offset="50" data-aos="zoom-in">
+  </a>
+  <div class="novel__content">
+    <h2 ><a class="novel__heading" href="#!">Trận Hỏi Trường Sinh</a>
+</h2>
+    <p> <a class="novel__desc" href="#!">Tu đạo giai tầng sâm nghiêm tán tu sinh hoạt khốn khổ Mười tuổi Mặc Họa thứ…</a></p>
+   
+<div class="novel__more">
+      <div class="novel__more-left">
+        <span class="novel__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+  <path d="M5.82999 4.5H13.83M5.82999 8H13.83M5.82999 11.5H13.83M2.82999 4.5H2.83465V4.50533H2.82999V4.5ZM3.07999 4.5C3.07999 4.5663 3.05365 4.62989 3.00676 4.67678C2.95988 4.72366 2.89629 4.75 2.82999 4.75C2.76368 4.75 2.70009 4.72366 2.65321 4.67678C2.60633 4.62989 2.57999 4.5663 2.57999 4.5C2.57999 4.4337 2.60633 4.37011 2.65321 4.32322C2.70009 4.27634 2.76368 4.25 2.82999 4.25C2.89629 4.25 2.95988 4.27634 3.00676 4.32322C3.05365 4.37011 3.07999 4.4337 3.07999 4.5ZM2.82999 8H2.83465V8.00533H2.82999V8ZM3.07999 8C3.07999 8.0663 3.05365 8.12989 3.00676 8.17678C2.95988 8.22366 2.89629 8.25 2.82999 8.25C2.76368 8.25 2.70009 8.22366 2.65321 8.17678C2.60633 8.12989 2.57999 8.0663 2.57999 8C2.57999 7.9337 2.60633 7.87011 2.65321 7.82322C2.70009 7.77634 2.76368 7.75 2.82999 7.75C2.89629 7.75 2.95988 7.77634 3.00676 7.82322C3.05365 7.87011 3.07999 7.9337 3.07999 8ZM2.82999 11.5H2.83465V11.5053H2.82999V11.5ZM3.07999 11.5C3.07999 11.5663 3.05365 11.6299 3.00676 11.6768C2.95988 11.7237 2.89629 11.75 2.82999 11.75C2.76368 11.75 2.70009 11.7237 2.65321 11.6768C2.60633 11.6299 2.57999 11.5663 2.57999 11.5C2.57999 11.4337 2.60633 11.3701 2.65321 11.3232C2.70009 11.2763 2.76368 11.25 2.82999 11.25C2.89629 11.25 2.95988 11.2763 3.00676 11.3232C3.05365 11.3701 3.07999 11.4337 3.07999 11.5Z" stroke="#2B2B2B" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+        </span>
+        <span class="novel__chapter">1115 chương</span>
+      </div>
+      <span class="novel__genre">Tiên hiệp</span>
+    </div>
+  </div>
+</article>
+      <!-- row-right -->
+       <article class="novel-item">
+  <a href="#!">
+    <img src="./assets/img/quybichichu.png" alt="novel-logo" class="novel__avatar" data-aos-offset="50" data-aos="zoom-in">
+  </a>
+  <div class="novel__content">
+    <h2><a href="#!"class="novel__heading">Quỷ Bí Chi Chủ</a></h2>
+    <p><a href="#!"class="novel__desc">Hơi nước cùng máy móc thủy triều bên trong ai có thể chạm đến phi phàm Lịc…</a></p>
+
+    <div class="novel__more">
+      <div class="novel__more-left">
+        <span class="novel__icon"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+  <path d="M5.82999 4.5H13.83M5.82999 8H13.83M5.82999 11.5H13.83M2.82999 4.5H2.83465V4.50533H2.82999V4.5ZM3.07999 4.5C3.07999 4.5663 3.05365 4.62989 3.00676 4.67678C2.95988 4.72366 2.89629 4.75 2.82999 4.75C2.76368 4.75 2.70009 4.72366 2.65321 4.67678C2.60633 4.62989 2.57999 4.5663 2.57999 4.5C2.57999 4.4337 2.60633 4.37011 2.65321 4.32322C2.70009 4.27634 2.76368 4.25 2.82999 4.25C2.89629 4.25 2.95988 4.27634 3.00676 4.32322C3.05365 4.37011 3.07999 4.4337 3.07999 4.5ZM2.82999 8H2.83465V8.00533H2.82999V8ZM3.07999 8C3.07999 8.0663 3.05365 8.12989 3.00676 8.17678C2.95988 8.22366 2.89629 8.25 2.82999 8.25C2.76368 8.25 2.70009 8.22366 2.65321 8.17678C2.60633 8.12989 2.57999 8.0663 2.57999 8C2.57999 7.9337 2.60633 7.87011 2.65321 7.82322C2.70009 7.77634 2.76368 7.75 2.82999 7.75C2.89629 7.75 2.95988 7.77634 3.00676 7.82322C3.05365 7.87011 3.07999 7.9337 3.07999 8ZM2.82999 11.5H2.83465V11.5053H2.82999V11.5ZM3.07999 11.5C3.07999 11.5663 3.05365 11.6299 3.00676 11.6768C2.95988 11.7237 2.89629 11.75 2.82999 11.75C2.76368 11.75 2.70009 11.7237 2.65321 11.6768C2.60633 11.6299 2.57999 11.5663 2.57999 11.5C2.57999 11.4337 2.60633 11.3701 2.65321 11.3232C2.70009 11.2763 2.76368 11.25 2.82999 11.25C2.89629 11.25 2.95988 11.2763 3.00676 11.3232C3.05365 11.3701 3.07999 11.4337 3.07999 11.5Z" stroke="#2B2B2B" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span>
+        <span class="novel__chapter">1412 chương</span>
+      </div>
+      <span class="novel__genre">Huyền huyễn</span>
+    </div>
+  </div>
+       </article>
+     </div>
+     <!-- row2 -->
+     <div class="novel-row story-highlights-row">
+      <!-- row-left -->
+<article class="novel-item">
+  <a href="#!">
+    <img src="./assets/img/tathatkhongphaicaij.png" alt="novel-logo" class="novel__avatar" data-aos-offset="50" data-aos="zoom-in">
+  </a>
+  <div class="novel__content">
+    <h2><a href="#!"class="novel__heading">Ta Thật Không Phải Cái Thế Cao Nhân</a></h2>
+    <p><a href="#!"class="novel__desc">Cái gì Ta nuôi gà đất là thuần huyết Phượng Hoàng Cái gì Ta nuôi cá chép đề…</a></p>
+    <div class="novel__more">
+      <div class="novel__more-left">
+        <span class="novel__icon"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+  <path d="M5.82999 4.5H13.83M5.82999 8H13.83M5.82999 11.5H13.83M2.82999 4.5H2.83465V4.50533H2.82999V4.5ZM3.07999 4.5C3.07999 4.5663 3.05365 4.62989 3.00676 4.67678C2.95988 4.72366 2.89629 4.75 2.82999 4.75C2.76368 4.75 2.70009 4.72366 2.65321 4.67678C2.60633 4.62989 2.57999 4.5663 2.57999 4.5C2.57999 4.4337 2.60633 4.37011 2.65321 4.32322C2.70009 4.27634 2.76368 4.25 2.82999 4.25C2.89629 4.25 2.95988 4.27634 3.00676 4.32322C3.05365 4.37011 3.07999 4.4337 3.07999 4.5ZM2.82999 8H2.83465V8.00533H2.82999V8ZM3.07999 8C3.07999 8.0663 3.05365 8.12989 3.00676 8.17678C2.95988 8.22366 2.89629 8.25 2.82999 8.25C2.76368 8.25 2.70009 8.22366 2.65321 8.17678C2.60633 8.12989 2.57999 8.0663 2.57999 8C2.57999 7.9337 2.60633 7.87011 2.65321 7.82322C2.70009 7.77634 2.76368 7.75 2.82999 7.75C2.89629 7.75 2.95988 7.77634 3.00676 7.82322C3.05365 7.87011 3.07999 7.9337 3.07999 8ZM2.82999 11.5H2.83465V11.5053H2.82999V11.5ZM3.07999 11.5C3.07999 11.5663 3.05365 11.6299 3.00676 11.6768C2.95988 11.7237 2.89629 11.75 2.82999 11.75C2.76368 11.75 2.70009 11.7237 2.65321 11.6768C2.60633 11.6299 2.57999 11.5663 2.57999 11.5C2.57999 11.4337 2.60633 11.3701 2.65321 11.3232C2.70009 11.2763 2.76368 11.25 2.82999 11.25C2.89629 11.25 2.95988 11.2763 3.00676 11.3232C3.05365 11.3701 3.07999 11.4337 3.07999 11.5Z" stroke="#2B2B2B" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span>
+        <span class="novel__chapter">1243 chương</span>
+      </div>
+      <span class="novel__genre">Huyền huyễn</span>
+    </div>
+  </div>
+</article>
+      <!-- row-right -->
+       <article class="novel-item">
+  <a href="#!">
+    <img src="./assets/img/tudaithubatdautienhoa.png" alt="novel-logo" class="novel__avatar" data-aos-offset="50" data-aos="zoom-in">
+  </a>
+  <div class="novel__content">
+    <h2><a href="#!"class="novel__heading">Từ Đại Thụ Bắt Đầu Tiến Hóa</a></h2>
+    <p><a href="#!" class="novel__desc" >mạng tiểu thuyết độc nhất vô nhị ký hợp đồng tiểu thuyết Từ đại thụ bắt đầu tiế…</a></p>
+    <div class="novel__more">
+      <div class="novel__more-left">
+        <span class="novel__icon"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+  <path d="M5.82999 4.5H13.83M5.82999 8H13.83M5.82999 11.5H13.83M2.82999 4.5H2.83465V4.50533H2.82999V4.5ZM3.07999 4.5C3.07999 4.5663 3.05365 4.62989 3.00676 4.67678C2.95988 4.72366 2.89629 4.75 2.82999 4.75C2.76368 4.75 2.70009 4.72366 2.65321 4.67678C2.60633 4.62989 2.57999 4.5663 2.57999 4.5C2.57999 4.4337 2.60633 4.37011 2.65321 4.32322C2.70009 4.27634 2.76368 4.25 2.82999 4.25C2.89629 4.25 2.95988 4.27634 3.00676 4.32322C3.05365 4.37011 3.07999 4.4337 3.07999 4.5ZM2.82999 8H2.83465V8.00533H2.82999V8ZM3.07999 8C3.07999 8.0663 3.05365 8.12989 3.00676 8.17678C2.95988 8.22366 2.89629 8.25 2.82999 8.25C2.76368 8.25 2.70009 8.22366 2.65321 8.17678C2.60633 8.12989 2.57999 8.0663 2.57999 8C2.57999 7.9337 2.60633 7.87011 2.65321 7.82322C2.70009 7.77634 2.76368 7.75 2.82999 7.75C2.89629 7.75 2.95988 7.77634 3.00676 7.82322C3.05365 7.87011 3.07999 7.9337 3.07999 8ZM2.82999 11.5H2.83465V11.5053H2.82999V11.5ZM3.07999 11.5C3.07999 11.5663 3.05365 11.6299 3.00676 11.6768C2.95988 11.7237 2.89629 11.75 2.82999 11.75C2.76368 11.75 2.70009 11.7237 2.65321 11.6768C2.60633 11.6299 2.57999 11.5663 2.57999 11.5C2.57999 11.4337 2.60633 11.3701 2.65321 11.3232C2.70009 11.2763 2.76368 11.25 2.82999 11.25C2.89629 11.25 2.95988 11.2763 3.00676 11.3232C3.05365 11.3701 3.07999 11.4337 3.07999 11.5Z" stroke="#2B2B2B" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span>
+        <span class="novel__chapter">3883 chương</span>
+      </div>
+      <span class="novel__genre">Huyền huyễn</span>
+    </div>
+  </div>
+       </article>
+     </div>
+     <!-- row3 -->
+     <div class="novel-row story-highlights-row">
+      <!-- row-left -->
+<article class="novel-item">
+  <a href="#!">
+    <img src="./assets/img/noaavt.png" alt="novel-logo" class="novel__avatar" data-aos-offset="50" data-aos="zoom-in">
+  </a>
+  <div class="novel__content">
+    <h2><a href="#!"class="novel__heading">Phán Quyết Của Thẩm Phán 3</a></h2>
+    <p><a href="#!"class="novel__desc">PHÁN QUYẾT CỦA THẨM PHÁN Tác giả 别搞笑了 Edit Beta Nhược Ảnh *****…</a></p>
+    <div class="novel__more">
+      <div class="novel__more-left">
+        <span class="novel__icon"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+  <path d="M5.82999 4.5H13.83M5.82999 8H13.83M5.82999 11.5H13.83M2.82999 4.5H2.83465V4.50533H2.82999V4.5ZM3.07999 4.5C3.07999 4.5663 3.05365 4.62989 3.00676 4.67678C2.95988 4.72366 2.89629 4.75 2.82999 4.75C2.76368 4.75 2.70009 4.72366 2.65321 4.67678C2.60633 4.62989 2.57999 4.5663 2.57999 4.5C2.57999 4.4337 2.60633 4.37011 2.65321 4.32322C2.70009 4.27634 2.76368 4.25 2.82999 4.25C2.89629 4.25 2.95988 4.27634 3.00676 4.32322C3.05365 4.37011 3.07999 4.4337 3.07999 4.5ZM2.82999 8H2.83465V8.00533H2.82999V8ZM3.07999 8C3.07999 8.0663 3.05365 8.12989 3.00676 8.17678C2.95988 8.22366 2.89629 8.25 2.82999 8.25C2.76368 8.25 2.70009 8.22366 2.65321 8.17678C2.60633 8.12989 2.57999 8.0663 2.57999 8C2.57999 7.9337 2.60633 7.87011 2.65321 7.82322C2.70009 7.77634 2.76368 7.75 2.82999 7.75C2.89629 7.75 2.95988 7.77634 3.00676 7.82322C3.05365 7.87011 3.07999 7.9337 3.07999 8ZM2.82999 11.5H2.83465V11.5053H2.82999V11.5ZM3.07999 11.5C3.07999 11.5663 3.05365 11.6299 3.00676 11.6768C2.95988 11.7237 2.89629 11.75 2.82999 11.75C2.76368 11.75 2.70009 11.7237 2.65321 11.6768C2.60633 11.6299 2.57999 11.5663 2.57999 11.5C2.57999 11.4337 2.60633 11.3701 2.65321 11.3232C2.70009 11.2763 2.76368 11.25 2.82999 11.25C2.89629 11.25 2.95988 11.2763 3.00676 11.3232C3.05365 11.3701 3.07999 11.4337 3.07999 11.5Z" stroke="#2B2B2B" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span>
+        <span class="novel__chapter">3 chương</span>
+      </div>
+      <span class="novel__genre">Huyền huyễn</span>
+    </div>
+  </div>
+</article>
+      <!-- row-right -->
+       <article class="novel-item">
+  <a href="#!">
+    <img src="./assets/img/noaavt.png" alt="novel-logo" class="novel__avatar" data-aos-offset="50" data-aos="zoom-in">
+  </a>
+  <div class="novel__content">
+    <h2><a href="#!"class="novel__heading">Sau Khi Trà Xanh Xuyên Vào Tiểu Thuyết Kinh Dị (Phần 3)</a></h2>
+    <p><a href="#!"class="novel__desc">Tác giả 木奶果/Mộc Nãi Quả Thể loại Xuyên sách linh dị hài hước Số chương …</a></p>
+    <div class="novel__more">
+      <div class="novel__more-left">
+        <span class="novel__icon"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+  <path d="M5.82999 4.5H13.83M5.82999 8H13.83M5.82999 11.5H13.83M2.82999 4.5H2.83465V4.50533H2.82999V4.5ZM3.07999 4.5C3.07999 4.5663 3.05365 4.62989 3.00676 4.67678C2.95988 4.72366 2.89629 4.75 2.82999 4.75C2.76368 4.75 2.70009 4.72366 2.65321 4.67678C2.60633 4.62989 2.57999 4.5663 2.57999 4.5C2.57999 4.4337 2.60633 4.37011 2.65321 4.32322C2.70009 4.27634 2.76368 4.25 2.82999 4.25C2.89629 4.25 2.95988 4.27634 3.00676 4.32322C3.05365 4.37011 3.07999 4.4337 3.07999 4.5ZM2.82999 8H2.83465V8.00533H2.82999V8ZM3.07999 8C3.07999 8.0663 3.05365 8.12989 3.00676 8.17678C2.95988 8.22366 2.89629 8.25 2.82999 8.25C2.76368 8.25 2.70009 8.22366 2.65321 8.17678C2.60633 8.12989 2.57999 8.0663 2.57999 8C2.57999 7.9337 2.60633 7.87011 2.65321 7.82322C2.70009 7.77634 2.76368 7.75 2.82999 7.75C2.89629 7.75 2.95988 7.77634 3.00676 7.82322C3.05365 7.87011 3.07999 7.9337 3.07999 8ZM2.82999 11.5H2.83465V11.5053H2.82999V11.5ZM3.07999 11.5C3.07999 11.5663 3.05365 11.6299 3.00676 11.6768C2.95988 11.7237 2.89629 11.75 2.82999 11.75C2.76368 11.75 2.70009 11.7237 2.65321 11.6768C2.60633 11.6299 2.57999 11.5663 2.57999 11.5C2.57999 11.4337 2.60633 11.3701 2.65321 11.3232C2.70009 11.2763 2.76368 11.25 2.82999 11.25C2.89629 11.25 2.95988 11.2763 3.00676 11.3232C3.05365 11.3701 3.07999 11.4337 3.07999 11.5Z" stroke="#2B2B2B" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span>
+        <span class="novel__chapter">5 chương</span>
+      </div>
+      <span class="novel__genre">Hài hước</span>
+    </div>
+  </div>
+       </article>
+     </div>
+     <!-- row4 -->
+           <div class="novel-row story-highlights-row">
+      <!-- row-left -->
+<article class="novel-item">
+  <a href="#!">
+    <img src="./assets/img/noaavt.png" alt="novel-logo" class="novel__avatar" data-aos-offset="50" data-aos="zoom-in">
+  </a>
+  <div class="novel__content">
+    <h2><a href="#!"class="novel__heading">Tiếng Mõ Canh Đổ Đều Đều</a></h2>
+    <p><a href="#!" class="novel__desc">Cha mẹ khuất núi ta nhờ bán đậu hũ mà dành dụm được chút tiền lộ phí khăn …</a></p>
+    <div class="novel__more">
+      <div class="novel__more-left">
+        <span class="novel__icon"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+  <path d="M5.82999 4.5H13.83M5.82999 8H13.83M5.82999 11.5H13.83M2.82999 4.5H2.83465V4.50533H2.82999V4.5ZM3.07999 4.5C3.07999 4.5663 3.05365 4.62989 3.00676 4.67678C2.95988 4.72366 2.89629 4.75 2.82999 4.75C2.76368 4.75 2.70009 4.72366 2.65321 4.67678C2.60633 4.62989 2.57999 4.5663 2.57999 4.5C2.57999 4.4337 2.60633 4.37011 2.65321 4.32322C2.70009 4.27634 2.76368 4.25 2.82999 4.25C2.89629 4.25 2.95988 4.27634 3.00676 4.32322C3.05365 4.37011 3.07999 4.4337 3.07999 4.5ZM2.82999 8H2.83465V8.00533H2.82999V8ZM3.07999 8C3.07999 8.0663 3.05365 8.12989 3.00676 8.17678C2.95988 8.22366 2.89629 8.25 2.82999 8.25C2.76368 8.25 2.70009 8.22366 2.65321 8.17678C2.60633 8.12989 2.57999 8.0663 2.57999 8C2.57999 7.9337 2.60633 7.87011 2.65321 7.82322C2.70009 7.77634 2.76368 7.75 2.82999 7.75C2.89629 7.75 2.95988 7.77634 3.00676 7.82322C3.05365 7.87011 3.07999 7.9337 3.07999 8ZM2.82999 11.5H2.83465V11.5053H2.82999V11.5ZM3.07999 11.5C3.07999 11.5663 3.05365 11.6299 3.00676 11.6768C2.95988 11.7237 2.89629 11.75 2.82999 11.75C2.76368 11.75 2.70009 11.7237 2.65321 11.6768C2.60633 11.6299 2.57999 11.5663 2.57999 11.5C2.57999 11.4337 2.60633 11.3701 2.65321 11.3232C2.70009 11.2763 2.76368 11.25 2.82999 11.25C2.89629 11.25 2.95988 11.2763 3.00676 11.3232C3.05365 11.3701 3.07999 11.4337 3.07999 11.5Z" stroke="#2B2B2B" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span>
+        <span class="novel__chapter">18 chương</span>
+      </div>
+      <span class="novel__genre">Đô thị</span>
+    </div>
+  </div>
+</article>
+      <!-- row-right -->
+       <article class="novel-item">
+  <a href="#!">
+    <img src="./assets/img/noaavt.png" alt="novel-logo" class="novel__avatar" data-aos-offset="50" data-aos="zoom-in">
+  </a>
+  <div class="novel__content">
+    <h2><a href="#!"class="novel__heading">Công Chúa Không Dễ Dàng: Trần Tố Ngọc</a></h2>
+    <p><a href="#!"class="novel__desc" >CÔNG CHÚA KHÔNG DỄ DÀNG TRẦN TỐ NGỌC FULL Tên gốc Công chúa …</a></p>
+    <div class="novel__more">
+      <div class="novel__more-left">
+        <span class="novel__icon"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+  <path d="M5.82999 4.5H13.83M5.82999 8H13.83M5.82999 11.5H13.83M2.82999 4.5H2.83465V4.50533H2.82999V4.5ZM3.07999 4.5C3.07999 4.5663 3.05365 4.62989 3.00676 4.67678C2.95988 4.72366 2.89629 4.75 2.82999 4.75C2.76368 4.75 2.70009 4.72366 2.65321 4.67678C2.60633 4.62989 2.57999 4.5663 2.57999 4.5C2.57999 4.4337 2.60633 4.37011 2.65321 4.32322C2.70009 4.27634 2.76368 4.25 2.82999 4.25C2.89629 4.25 2.95988 4.27634 3.00676 4.32322C3.05365 4.37011 3.07999 4.4337 3.07999 4.5ZM2.82999 8H2.83465V8.00533H2.82999V8ZM3.07999 8C3.07999 8.0663 3.05365 8.12989 3.00676 8.17678C2.95988 8.22366 2.89629 8.25 2.82999 8.25C2.76368 8.25 2.70009 8.22366 2.65321 8.17678C2.60633 8.12989 2.57999 8.0663 2.57999 8C2.57999 7.9337 2.60633 7.87011 2.65321 7.82322C2.70009 7.77634 2.76368 7.75 2.82999 7.75C2.89629 7.75 2.95988 7.77634 3.00676 7.82322C3.05365 7.87011 3.07999 7.9337 3.07999 8ZM2.82999 11.5H2.83465V11.5053H2.82999V11.5ZM3.07999 11.5C3.07999 11.5663 3.05365 11.6299 3.00676 11.6768C2.95988 11.7237 2.89629 11.75 2.82999 11.75C2.76368 11.75 2.70009 11.7237 2.65321 11.6768C2.60633 11.6299 2.57999 11.5663 2.57999 11.5C2.57999 11.4337 2.60633 11.3701 2.65321 11.3232C2.70009 11.2763 2.76368 11.25 2.82999 11.25C2.89629 11.25 2.95988 11.2763 3.00676 11.3232C3.05365 11.3701 3.07999 11.4337 3.07999 11.5Z" stroke="#2B2B2B" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span>
+        <span class="novel__chapter">5 chương</span>
+      </div>
+      <span class="novel__genre">Huyền huyễn</span>
+    </div>
+  </div>
+       </article>
+     </div>
+  </section>
+     <!-- right novel reading complete -->
+      <section class="completed-stories">
+        <h1 class="novel__heading-right  completed-stories__heading-right ">Mới hoàn thành</h1>
+       <div class=" completed-stories-list">
+        <!-- 1 -->
+ <article class="novel-item complete-item">
+  <a href="#!">
+    <img src="./assets/img/cainaykieuthe.jpg" alt="novel-logo" class="novel__avatar" data-aos-offset="50" data-aos="zoom-in">
+  </a>
+  <div class="novel__content">
+    <h2><a href="#!"class="novel__heading">Cái này kiều thê goá phụ ta đương định rồi</a></h2>
+    <p><a href="#!"class="novel__desc">️ ĐQL không được tự sửa raw/up file/xóa file bao gồm thêm tên phó bản etc M…</a></p>
+
+    <div class="novel__more">
+      <div class="novel__more-left">
+        <span class="novel__icon"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+  <path d="M5.82999 4.5H13.83M5.82999 8H13.83M5.82999 11.5H13.83M2.82999 4.5H2.83465V4.50533H2.82999V4.5ZM3.07999 4.5C3.07999 4.5663 3.05365 4.62989 3.00676 4.67678C2.95988 4.72366 2.89629 4.75 2.82999 4.75C2.76368 4.75 2.70009 4.72366 2.65321 4.67678C2.60633 4.62989 2.57999 4.5663 2.57999 4.5C2.57999 4.4337 2.60633 4.37011 2.65321 4.32322C2.70009 4.27634 2.76368 4.25 2.82999 4.25C2.89629 4.25 2.95988 4.27634 3.00676 4.32322C3.05365 4.37011 3.07999 4.4337 3.07999 4.5ZM2.82999 8H2.83465V8.00533H2.82999V8ZM3.07999 8C3.07999 8.0663 3.05365 8.12989 3.00676 8.17678C2.95988 8.22366 2.89629 8.25 2.82999 8.25C2.76368 8.25 2.70009 8.22366 2.65321 8.17678C2.60633 8.12989 2.57999 8.0663 2.57999 8C2.57999 7.9337 2.60633 7.87011 2.65321 7.82322C2.70009 7.77634 2.76368 7.75 2.82999 7.75C2.89629 7.75 2.95988 7.77634 3.00676 7.82322C3.05365 7.87011 3.07999 7.9337 3.07999 8ZM2.82999 11.5H2.83465V11.5053H2.82999V11.5ZM3.07999 11.5C3.07999 11.5663 3.05365 11.6299 3.00676 11.6768C2.95988 11.7237 2.89629 11.75 2.82999 11.75C2.76368 11.75 2.70009 11.7237 2.65321 11.6768C2.60633 11.6299 2.57999 11.5663 2.57999 11.5C2.57999 11.4337 2.60633 11.3701 2.65321 11.3232C2.70009 11.2763 2.76368 11.25 2.82999 11.25C2.89629 11.25 2.95988 11.2763 3.00676 11.3232C3.05365 11.3701 3.07999 11.4337 3.07999 11.5Z" stroke="#2B2B2B" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span>
+        <span class="novel__chapter">131 chương</span>
+      </div>
+      <span class="novel__genre">Huyền huyễn</span>
+    </div>
+  </div>
+       </article>
+        <!-- 2 -->
+ <article class="novel-item complete-item">
+  <a href="#!">
+    <img src="./assets/img/nieuniencahanh.jpg" alt="novel-logo" class="novel__avatar" data-aos-offset="50" data-aos="zoom-in">
+  </a>
+  <div class="novel__content">
+    <h2><a href="#!"class="novel__heading">Thiếu Niên Ca Hành - Chu Mộc Nam</a></h2>
+    <p><a href="#!"class="novel__desc">Thể loại võ hiệp nam chủ Sau cái chết của Vong Ưu đại sư một chiếc kim qua…</a></p>
+
+    <div class="novel__more">
+      <div class="novel__more-left">
+        <span class="novel__icon"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+  <path d="M5.82999 4.5H13.83M5.82999 8H13.83M5.82999 11.5H13.83M2.82999 4.5H2.83465V4.50533H2.82999V4.5ZM3.07999 4.5C3.07999 4.5663 3.05365 4.62989 3.00676 4.67678C2.95988 4.72366 2.89629 4.75 2.82999 4.75C2.76368 4.75 2.70009 4.72366 2.65321 4.67678C2.60633 4.62989 2.57999 4.5663 2.57999 4.5C2.57999 4.4337 2.60633 4.37011 2.65321 4.32322C2.70009 4.27634 2.76368 4.25 2.82999 4.25C2.89629 4.25 2.95988 4.27634 3.00676 4.32322C3.05365 4.37011 3.07999 4.4337 3.07999 4.5ZM2.82999 8H2.83465V8.00533H2.82999V8ZM3.07999 8C3.07999 8.0663 3.05365 8.12989 3.00676 8.17678C2.95988 8.22366 2.89629 8.25 2.82999 8.25C2.76368 8.25 2.70009 8.22366 2.65321 8.17678C2.60633 8.12989 2.57999 8.0663 2.57999 8C2.57999 7.9337 2.60633 7.87011 2.65321 7.82322C2.70009 7.77634 2.76368 7.75 2.82999 7.75C2.89629 7.75 2.95988 7.77634 3.00676 7.82322C3.05365 7.87011 3.07999 7.9337 3.07999 8ZM2.82999 11.5H2.83465V11.5053H2.82999V11.5ZM3.07999 11.5C3.07999 11.5663 3.05365 11.6299 3.00676 11.6768C2.95988 11.7237 2.89629 11.75 2.82999 11.75C2.76368 11.75 2.70009 11.7237 2.65321 11.6768C2.60633 11.6299 2.57999 11.5663 2.57999 11.5C2.57999 11.4337 2.60633 11.3701 2.65321 11.3232C2.70009 11.2763 2.76368 11.25 2.82999 11.25C2.89629 11.25 2.95988 11.2763 3.00676 11.3232C3.05365 11.3701 3.07999 11.4337 3.07999 11.5Z" stroke="#2B2B2B" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span>
+        <span class="novel__chapter">468 chương</span>
+      </div>
+      <span class="novel__genre">Huyền huyễn</span>
+    </div>
+  </div>
+       </article>
+        <!-- 3 -->
+ <article class="novel-item complete-item">
+  <a href="#!">
+    <img src="./assets/img/quybichichu.png" alt="novel-logo" class="novel__avatar" data-aos-offset="50" data-aos="zoom-in">
+  </a>
+  <div class="novel__content">
+    <h2><a href="#!"class="novel__heading">Quỷ Bí Chi Chủ</a></h2>
+    <p><a href="#!"class="novel__desc">Hơi nước cùng máy móc thủy triều bên trong ai có thể chạm đến phi phàm Lịc…</a></p>
+
+    <div class="novel__more">
+      <div class="novel__more-left">
+        <span class="novel__icon"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+  <path d="M5.82999 4.5H13.83M5.82999 8H13.83M5.82999 11.5H13.83M2.82999 4.5H2.83465V4.50533H2.82999V4.5ZM3.07999 4.5C3.07999 4.5663 3.05365 4.62989 3.00676 4.67678C2.95988 4.72366 2.89629 4.75 2.82999 4.75C2.76368 4.75 2.70009 4.72366 2.65321 4.67678C2.60633 4.62989 2.57999 4.5663 2.57999 4.5C2.57999 4.4337 2.60633 4.37011 2.65321 4.32322C2.70009 4.27634 2.76368 4.25 2.82999 4.25C2.89629 4.25 2.95988 4.27634 3.00676 4.32322C3.05365 4.37011 3.07999 4.4337 3.07999 4.5ZM2.82999 8H2.83465V8.00533H2.82999V8ZM3.07999 8C3.07999 8.0663 3.05365 8.12989 3.00676 8.17678C2.95988 8.22366 2.89629 8.25 2.82999 8.25C2.76368 8.25 2.70009 8.22366 2.65321 8.17678C2.60633 8.12989 2.57999 8.0663 2.57999 8C2.57999 7.9337 2.60633 7.87011 2.65321 7.82322C2.70009 7.77634 2.76368 7.75 2.82999 7.75C2.89629 7.75 2.95988 7.77634 3.00676 7.82322C3.05365 7.87011 3.07999 7.9337 3.07999 8ZM2.82999 11.5H2.83465V11.5053H2.82999V11.5ZM3.07999 11.5C3.07999 11.5663 3.05365 11.6299 3.00676 11.6768C2.95988 11.7237 2.89629 11.75 2.82999 11.75C2.76368 11.75 2.70009 11.7237 2.65321 11.6768C2.60633 11.6299 2.57999 11.5663 2.57999 11.5C2.57999 11.4337 2.60633 11.3701 2.65321 11.3232C2.70009 11.2763 2.76368 11.25 2.82999 11.25C2.89629 11.25 2.95988 11.2763 3.00676 11.3232C3.05365 11.3701 3.07999 11.4337 3.07999 11.5Z" stroke="#2B2B2B" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span>
+        <span class="novel__chapter">1412 chương</span>
+      </div>
+      <span class="novel__genre">Huyền huyễn</span>
+    </div>
+  </div>
+       </article>
+        <!-- 4 -->
+ <article class="novel-item complete-item">
+  <a href="#!">
+    <img src="./assets/img/noaavt.png" alt="novel-logo" class="novel__avatar" data-aos-offset="50" data-aos="zoom-in">
+  </a>
+  <div class="novel__content">
+    <h2><a href="#!"class="novel__heading">Năm Thứ Hai Sau Khi Kết Hôn</a></h2>
+    <p><a href="#!"class="novel__desc">Năm thứ hai sau khi kết hôn Ôn Dạng phát hiện Trình Ngôn Vũ ngoại tình đối …</a></p>
+
+    <div class="novel__more">
+      <div class="novel__more-left">
+        <span class="novel__icon"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+  <path d="M5.82999 4.5H13.83M5.82999 8H13.83M5.82999 11.5H13.83M2.82999 4.5H2.83465V4.50533H2.82999V4.5ZM3.07999 4.5C3.07999 4.5663 3.05365 4.62989 3.00676 4.67678C2.95988 4.72366 2.89629 4.75 2.82999 4.75C2.76368 4.75 2.70009 4.72366 2.65321 4.67678C2.60633 4.62989 2.57999 4.5663 2.57999 4.5C2.57999 4.4337 2.60633 4.37011 2.65321 4.32322C2.70009 4.27634 2.76368 4.25 2.82999 4.25C2.89629 4.25 2.95988 4.27634 3.00676 4.32322C3.05365 4.37011 3.07999 4.4337 3.07999 4.5ZM2.82999 8H2.83465V8.00533H2.82999V8ZM3.07999 8C3.07999 8.0663 3.05365 8.12989 3.00676 8.17678C2.95988 8.22366 2.89629 8.25 2.82999 8.25C2.76368 8.25 2.70009 8.22366 2.65321 8.17678C2.60633 8.12989 2.57999 8.0663 2.57999 8C2.57999 7.9337 2.60633 7.87011 2.65321 7.82322C2.70009 7.77634 2.76368 7.75 2.82999 7.75C2.89629 7.75 2.95988 7.77634 3.00676 7.82322C3.05365 7.87011 3.07999 7.9337 3.07999 8ZM2.82999 11.5H2.83465V11.5053H2.82999V11.5ZM3.07999 11.5C3.07999 11.5663 3.05365 11.6299 3.00676 11.6768C2.95988 11.7237 2.89629 11.75 2.82999 11.75C2.76368 11.75 2.70009 11.7237 2.65321 11.6768C2.60633 11.6299 2.57999 11.5663 2.57999 11.5C2.57999 11.4337 2.60633 11.3701 2.65321 11.3232C2.70009 11.2763 2.76368 11.25 2.82999 11.25C2.89629 11.25 2.95988 11.2763 3.00676 11.3232C3.05365 11.3701 3.07999 11.4337 3.07999 11.5Z" stroke="#2B2B2B" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span>
+        <span class="novel__chapter">86 chương</span>
+      </div>
+      <span class="novel__genre">Đô thị</span>
+    </div>
+  </div>
+       </article>
+        <!--  -->
+       </div>
+      </section>
+       </section>
+
+   
+       
+      </div>
+     </section>
+     <!----------------- Code Phần 	truyenchu-info--------------->
+     <section class="truyenchu-info">
+      <div class="main-content">
+       <div class="truyenchu-info__text"> 
+<h2 class="truyenchu-info__heading">
+  <span class="truyenchu-info__heading-span">Truyenchu.com.vn</span> - Trang Web đọc
+  <span class="truyenchu-info__heading-span">truyện chữ</span> online
+</h2>
+
+<p class="truyenchu-info__desc">
+  Truyenchu.com.vn là website đọc truyện online đang được nhiều đọc giả yêu thích nhất. Tại đây bạn có thể thoải mái lựa chọn rất nhiều thể loại truyện như: Tiên Hiệp, Kiếm Hiệp, Ngôn Tình, Đam Mỹ, Huyền Huyễn,... Đồng thời bạn còn có thể tìm thấy tại trang những bộ truyện HOT nhất và mới nhất trên thị trường.
+</p>
+
+<h2 class="truyenchu-info__heading">Tổng quan giới thiệu Truyện là gì?</h2>
+
+<p class="truyenchu-info__desc truyenchu-info__desc-ertop">
+  <a class="truyenchu-info__desc-span">Truyện</a> là một thể loại văn học có lịch sử rất lâu đời tại nước ta. Ban đầu truyện xuất phát từ Trung Quốc và sau đó mới du nhập vào Việt Nam. Thời điểm ấy các tác phẩm truyện thường là những lời văn tự sự, các truyện cổ tích, truyện thơ, truyện ngụ ngôn,... Đến thời điểm hiện tại, truyện văn học mạng chính là thể loại được nhiều đọc giả yêu thích và quan tâm nhất.
+</p>
+
+<p class="truyenchu-info__desc  ">
+  Đặc biệt là với giới trẻ, những bạn từ lứa tuổi dậy thì đến học sinh sinh viên, các bạn luôn là những đối tượng đọc truyện online nhiều nhất. Bởi trong độ tuổi này, các bạn hay tò mò về những câu chuyện tình cảm hoặc có sở thích khám phá, tìm hiểu những gì kích thích, ly kỳ, huyền ảo,...
+</p>
+
+<p class="truyenchu-info__desc">
+  Trong khi đó các nội dung của truyện thường rất phong phú và đa dạng. Nó có thể nói về những câu chuyện tình cảm thời cổ đại hoặc hiện đại, kể về thế giới thần tiên, thế giới huyền huyễn, thời kỳ mạt thế, thế giới võng du, thế giới tâm linh,...
+</p>
+
+<p class="truyenchu-info__desc">
+  Ngoài xoay quanh câu chuyện tình cảm của nhân vật chính truyện còn có nhiều tình tiết thú vị khác. Theo đó, người đọc có thể cảm nhận và hiểu ra nhiều thông điệp ý nghĩa về cuộc sống.
+</p>
+
+<h2 class="truyenchu-info__heading">Giới thiệu về trang đọc truyện Truyenchu.com.vn</h2>
+
+<p class="truyenchu-info__desc truyenchu-info__desc-ertop">
+  Truyenchu.com.vn là <a class="truyenchu-info__desc-span">website đọc truyện online</a> dành cho tất cả mọi người và hoàn toàn miễn phí. Tại đây bạn có thể tìm thấy rất nhiều truyện ngắn, truyện dài kỳ, truyện ngôn tình, truyện teen, truyện tiên hiệp, truyện kiếm hiệp,… Có thể nói trang web này cũng được đánh giá là một trang đọc truyện hay đáng đọc hiện nay.
+</p>
+
+<p class="truyenchu-info__desc">
+  Hiện tại, Truyenchu.com.vn là một website đọc truyện online trên điện thoại di động và máy tính bảng. Trang web có giao diện rất thân thiện với người dùng đặc biệt công cụ tìm kiếm truyện được tối ưu tối đa và dễ sử dụng. Ngay từ lần truy cập đầu tiên bạn sẽ biết được mình nên lựa chọn truyện như thế nào.
+</p>
+
+<p class="truyenchu-info__desc">
+  Đặc biệt, với rất nhiều thể loại truyện được sưu tầm từ nhiều nguồn khác nhau, Truyenchu.com.vn đảm bảo đáp ứng mọi nhu cầu đọc truyện của mọi đối tượng sử dụng mạng. Với đầy đủ các thể loại, bạn sẽ luôn cảm thấy cả thế giới truyện như nằm trong tầm tay.
+</p>
+
+<p class="truyenchu-info__desc">
+  Ngoài ra, nhằm mang lại cho người đọc những bộ truyện hay nhất, trang web không ngừng cập nhật những tác phẩm mới, truyện hay và truyện Hot để thỏa mãn nhu cầu của đọc giả.
+</p>
+
+<p class="truyenchu-info__desc">
+  Bên cạnh đó, bạn có thể tùy chỉnh lọc truyện bằng nhiều bộ lọc như: Thể loại, số chương, tình trạng phiên dịch,... Đồng thời, người đọc còn được phép tùy chỉnh giao diện của trang web đọc truyện. Cụ thể bạn có thể tùy chỉnh màu nền, cỡ chữ, font chữ, chiều rộng khung, dãn cách dòng,...
+</p>
+
+<h2 class="truyenchu-info__heading">Những thể loại truyện được yêu thích nhất tại Truyenchu.com.vn</h2>
+
+<h3 class="truyenchu-info__heading-h3"><strong>Thể loại truyện Tiên Hiệp</strong></h3>
+
+<p class="truyenchu-info__desc">
+  Tiên Hiệp là thể loại truyện lấy bối cảnh về thời cổ đại và có nội dung kể về con đường cầu tiên tu đạo. Nhân vật chính sẽ phải đấu tranh sinh tồn và trải qua nhiều thử thách để mạnh mẽ hơn.
+</p>
+
+<p class="truyenchu-info__desc">
+  <a class="truyenchu-info__desc-span">Truyện Tiên Hiệp</a> sẽ có nhiều tình tiết sử dụng kiếm thuật, tiên phép và võ thuật. Một số tác phẩm Tiên Hiệp sẽ có đan xen cả yếu tố tình cảm nhưng không nhiều. Tuy nhiên khi đọc thể loại truyện này bạn vẫn bị thu hút bởi những cảnh đánh nhau kỳ ảo.
+</p>
+
+<p class="truyenchu-info__desc truyenchu-info__desc-height-low ">
+  Truyện Tiên hiệp có bối cảnh thế giới giả tưởng.
+</p>
+
+<p class="truyenchu-info__desc truyenchu-info__desc-height-low">
+  Tiên hiệp hay tu chân là một thể loại truyện có xuất xứ từ Trung Quốc. Vì thế bạn sẽ thấy các nét văn hóa trong truyện đều thể hiện yếu tố Trung Hoa.
+</p>
+
+<p class="truyenchu-info__desc">
+  Nhân vật chính của truyện Tiên Hiệp thường là người tu luyện và đang trên con đường trở thành tiên. Mục đích của việc này là đạt được sự sống vĩnh cửu và có sức mạnh đáng kinh ngạc. Vì thế các câu chuyện hay bao gồm những yếu tố như: Thần, ma, yêu quái, tiên, công pháp, đan dược, pháp khí,...
+</p>
+
+<h3 class="truyenchu-info__heading-h3"><strong>Thể loại truyện Ngôn Tình</strong></h3>
+
+<p class="truyenchu-info__desc">
+  Ngôn tình luôn là thể loại truyện ăn khách tại trang web Truyenchu.com.vn. Đây là một thể loại truyện tình cảm có nguồn gốc từ Trung Quốc. Hoàn cảnh xảy ra của truyện ngôn tình rất đa dạng và phong phú. Ví dụ như: Hiện Đại, Cổ Đại, Mạt Thế, Vườn Trường, Thần Tiên, Võng Du,...
+</p>
+
+<p class="truyenchu-info__desc truyenchu-info__desc-ertop">
+  <a class="truyenchu-info__desc-span">Truyện Ngôn Tình</a> sẽ mang đến cho đọc giả nhiều mức độ nói về tình cảm khác nhau. Có tác phẩm thể hiện tình cảm sến súa, có tác phẩm lại nhẹ nhàng và cũng có tác phẩm hài hước. Ngoài ra truyện ngôn tình còn có thể loại ngược. Đó là thể loại yêu đơn phương, hay yêu mà còn dày vò người khác hoặc hành hạ thân xác.
+</p>
+
+<p class="truyenchu-info__desc">
+  Về mối quan hệ tình cảm, trong truyện ngôn tình phần lớn là tình yêu giữa nam và nữ. Nhưng cũng có một số loại khác lại viết về tình yêu nam với nam hoặc nữ với nữ. Hai dạng này sẽ được gọi là truyện Đam Mỹ và truyện Bách Hợp.
+</p>
+
+<h3 class="truyenchu-info__heading-h3"><strong>Thể loại truyện Đô Thị</strong></h3>
+
+<p class="truyenchu-info__desc truyenchu-info__desc-ertop">
+  <a class="truyenchu-info__desc-span">Truyện đô thị</a> luôn là thể loại được nhiều đọc giả đón nhận và yêu thích nhất hiện nay. Vì truyện về đô thị mang đến những nội dung rất thực tế tại các thành phố nhộn nhịp. Không chỉ gửi gắm những thông điệp ý nghĩa về triết lý sống, truyện thành thị còn phản ánh nhiều chủ đề về xã hội hiện đại. Do đó, nếu bạn đang tìm kiếm một tác phẩm đô thị hay xuất sắc thì hãy xem ngay bài viết dưới đây.
+</p>
+
+<p class="truyenchu-info__desc truyenchu-info__desc-ertop">
+  Truyện Đô Thị là những tác phẩm có bối cảnh nội dung xoay quanh các tình tiết tại các đô thị, thành phố. Bạn có thể hiểu rằng đây là truyện thời hiện đại và rất gần gũi với cuộc sống thực tại. Đặc trưng của truyện về đô thị là sẽ đi quanh nam nữ chính là một người xuất sắc về mặt nào đó. Chẳng hạn như: IQ cao, tổng tài, y thuật, cảnh sát, quân nhân, pháp y, xã hội đen, bác sĩ,...
+</p>
+<h3 class="truyenchu-info__heading-h3">Thể loại truyện Hệ Thống</h3>
+<p class="truyenchu-info__desc">
+  Truyện <a class="truyenchu-info__desc-span" href="#!">hệ thống</a> là truyện thường có nhân vật chính mang trong người một hệ thống. Hệ thống này thường cộng sinh với nhân vật chính, nhờ hoàn thành nhiệm vụ/yêu cầu thông qua nó, nhân vật chính có thể đạt được nhiều lợi ích.
+</p>
+
+<p class="truyenchu-info__desc">
+  Truyện <a class="truyenchu-info__desc-span" href="#!">hệ thống</a> là nhân vật chính khi sắm vai ở thế giới khác thường bị ràng buộc bởi một hệ thống các nhiệm vụ và phần thưởng, hạn chế hành động tự do của họ.
+</p>
+
+<p class="truyenchu-info__desc">
+  Có thể nói truyện <a class="truyenchu-info__desc-span" href="#!">hệ thống</a> tương tự như một game nhập vai, tuy nhiên nhân vật xuyên là sống bằng cuộc đời thực của họ, trả giá bằng sinh mệnh của chính họ khi nhập vai.
+</p>
+
+<p class="truyenchu-info__desc">
+  Trong truyện <a class="truyenchu-info__desc-span" href="#!">hệ thống</a> có đan xen nhiều thể loại khác như cung đấu, mạt thế, hiện đại, đô thị, võng du, dị giới… đem lại cảm giác mới mẻ độc đáo cho người đọc, nhân vật sắm vai người khác thay họ nghịch tập hoặc làm những nhiệm vụ mà hệ thống giao phó.
+</p>
+
+<h3 class="truyenchu-info__heading-h3">Thể loại truyện Đam Mỹ</h3>
+<p class="truyenchu-info__desc">
+  <a class="truyenchu-info__desc-span" href="#!">Đam mỹ</a> là một thể loại truyện tình cảm rất nổi tiếng trên Truyenchu.com.vn trong những năm gần đây. Thể loại này tập trung chính vào mối quan hệ tình cảm của cặp đôi đồng tính luyến ái nam.
+</p>
+
+<p class="truyenchu-info__desc truyenchu-info__desc-height-low">
+  Truyện <a class="truyenchu-info__desc-span" href="#!">đam mỹ</a> kể về tình cảm của nam với nam.
+</p>
+
+<p class="truyenchu-info__desc">
+  Trong truyện <a class="truyenchu-info__desc-span" href="#!">đam mỹ</a>, hai nam nhân vật chính sẽ là Công và Thụ. Công là nhân vật đóng vai trò phái mạnh còn Thụ là nhân vật đóng vai trò của phái yếu. Vì phong trào đọc truyện <a class="truyenchu-info__desc-span" href="#!">đam mỹ</a> xuất phát từ Trung Quốc nên các câu chuyện đều bám rất sát vào văn hóa Trung Quốc.
+</p>
+
+<p class="truyenchu-info__desc">
+  Hơn thế nữa, đọc truyện <a class="truyenchu-info__desc-span" href="#!">đam mỹ</a> sẽ giúp các bạn hiểu rõ được cảm nhận của cộng đồng LGBT. Bạn sẽ hiểu được những trở ngại và khó khăn của các nhân vật chính trong cuộc sống. Đồng thời qua đó bạn sẽ biết được các cặp đôi <a class="truyenchu-info__desc-span" href="#!">đam mỹ</a> luôn mạnh mẽ như thế nào.
+</p>
+<h3 class="truyenchu-info__heading-h3">Thể loại truyện Kiếm Hiệp</h3>
+<p class="truyenchu-info__desc">
+  <a class="truyenchu-info__desc-span" href="#!">Kiếm hiệp</a> là truyện kể về cuộc phiêu lưu của những cao thủ, kiếm khách hay hiệp khách sống trên giang hồ. <a class="truyenchu-info__desc-span" href="#!">Kiếm hiệp</a> là một thể loại văn học và đã có sức ảnh hưởng lan rộng từ nhiều năm trước. Do đó tại web Truyenchu.com.vn luôn có nhiều đọc giả ghé thăm đọc truyện <a class="truyenchu-info__desc-span" href="#!">kiếm hiệp</a> mỗi ngày.
+</p>
+
+<p class="truyenchu-info__desc">
+  Truyện <a class="truyenchu-info__desc-span" href="#!">kiếm hiệp</a> thường nói về những nhân vật sau này sẽ thành anh hùng có tài năng xuất chúng. Nhưng trước đấy các nam nữ chính lại có xuất thân từ những tầng lớp thấp hoặc rất khó khăn.
+</p>
+
+<p class="truyenchu-info__desc">
+  Nhân vật chính sẽ làm việc hành hiệp trượng nghĩa và cứu giúp người nghèo. Bên cạnh đó, họ luôn có những đức tính tốt như: Sự tự lập, đáng tin, vị tha, dũng cảm, không màng tiền bạc, danh lợi, chân thành và chung thủy.
+</p>
+
+<p class="truyenchu-info__desc">
+  Thể loại <a class="truyenchu-info__desc-span" href="#!">kiếm hiệp</a> thường hay bị nhầm lẫn với thể loại tiên hiệp. Tiên hiệp là kể về con đường tu tiên đắc đạo còn <a class="truyenchu-info__desc-span" href="#!">kiếm hiệp</a> là kể về con đường hành hiệp trượng nghĩa. Điều giống là cả hai thể loại đều có yếu tố tu luyện và nhân vật chính đều trải qua nhiều khó khăn.
+</p>
+
+<p class="truyenchu-info__desc truyenchu-info__desc-height-low">
+  Truyện <a class="truyenchu-info__desc-span" href="#!">Kiếm hiệp</a> kể về hành trình tu luyện võ thuật.
+</p>
+<h2 class="truyenchu-info__heading">Kết luận về đọc truyện</h2>
+<p class="truyenchu-info__desc">
+  Truyenchu.com.vn đảm bảo sẽ là nơi các bạn đọc truyện thoải mái, dễ dàng và thích thú nhất. Tại đây bạn có thể tìm kiếm bất kỳ tác phẩm truyện nào mà mình thích để thưởng thức. Không những thế, bạn còn được phép để lại bình luận và tương tác với nhiều bạn bè trực tuyến khác trên trang web.
+</p>
+      </div>
+      </div>
+     </section>
+         <!----------------- Code Phần footer--------------->
+<footer class="footer">
+  <div class="footer__body">
+    <strong class="footer__about">VỀ TRUYỆN CHỮ</strong>
+    <p class="footer__desc">Truyện Chữ - Đọc truyện chữ online, mê đọc truyện chữ, truyện chữ hay. Website luôn cập nhật những bộ truyện chữ dịch hoặc convert đang cập nhật hoặc truyện full thuộc các thể loại đặc sắc như truyện Tiên Hiệp, truyện Kiếm Hiệp, , truyện hệ thống hay truyện Ngôn Tình một cách nhanh nhất. Hỗ trợ mọi thiết bị như di động và máy tính bảng.</p>
+    <p class="footer__etc">Truyenchu, truyenfull, lightnovel, truyen full</p>
+    <ul class="footer__call">
+    <li>Điều khoản dịch vụ</li>
+    <li>Về chúng tôi</li>
+    <li>Liên hệ</li>
+  </ul>
+  </div>
+</footer>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+<script src="darkmode.js"></script>
+  </body>
+</html>
