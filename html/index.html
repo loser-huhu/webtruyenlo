@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Header - Website Truyện Chữ</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
+    <!-- link reset -->
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <!-- link style -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <!-- link thame css -->
+    <link rel="stylesheet" href="../assets/css/thame.css" />
+  </head>
+  <body class="theme-light">
+    <!-- Header -->
+    <header class="main-header sticky-top">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <!-- Logo -->
+          <a class="navbar-brand" href="#">
+            <img
+              src="https://placehold.co/191x36?text=TRUYENCHU.VN"
+              alt="Website Truyện Chữ"
+              class="site-logo"
+            />
+          </a>
+
+          <!-- Nút hamburger cho mobile -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent"
+          >
+            <i class="bi bi-list text-white"></i>
+          </button>
+
+          <!-- Nội dung navbar -->
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <!-- Menu điều hướng -->
+            <ul class="navbar-nav me-auto">
+              <!-- Menu dropdown Thể loại -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  id="theLoaiBtn"
+                >
+                  Thể loại
+                </a>
+              </li>
+
+              <!-- Menu dropdown Bối cảnh thế giới -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  id="boiCanhBtn"
+                >
+                  Bối cảnh thế giới
+                </a>
+              </li>
+
+              <!-- Menu dropdown Lưu phái -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  id="luuPhaiBtn"
+                >
+                  Lưu phái
+                </a>
+              </li>
+
+              <!-- Menu dropdown Danh sách -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  id="danhSachBtn"
+                >
+                  Danh sách
+                </a>
+              </li>
+            </ul>
+
+            <!-- Thanh tìm kiếm -->
+            <div class="search-container">
+              <i class="bi bi-search search-icon" id="searchIcon"></i>
+              <!-- Thêm id="searchIcon" -->
+              <input
+                type="text"
+                class="search-input"
+                placeholder="Tìm kiếm truyện..."
+              />
+            </div>
+
+            <!-- Các icon bên phải -->
+            <div class="header-icons">
+              <!-- Icon cài đặt với dropdown -->
+              <div class="dropdown icon-container">
+                <i
+                  class="bi bi-gear header-icon"
+                  id="settingsDropdown"
+                  data-bs-toggle="dropdown"
+                ></i>
+                <ul class="dropdown-menu settings-menu">
+                  <li><h6 class="dropdown-header">Chọn màu nền</h6></li>
+                  <li>
+                    <a
+                      class="dropdown-item theme-select"
+                      href="#"
+                      data-theme="light"
+                    >
+                      <span class="theme-option theme-light"></span> Sáng
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item theme-select"
+                      href="#"
+                      data-theme="dark"
+                    >
+                      <span class="theme-option theme-dark"></span> Tối
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item theme-select"
+                      href="#"
+                      data-theme="blue"
+                    >
+                      <span class="theme-option theme-blue"></span> Xanh dương
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item theme-select"
+                      href="#"
+                      data-theme="pink"
+                    >
+                      <span class="theme-option theme-pink"></span> Hồng
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item theme-select"
+                      href="#"
+                      data-theme="purple"
+                    >
+                      <span class="theme-option theme-purple"></span> Tím
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item theme-select"
+                      href="#"
+                      data-theme="green"
+                    >
+                      <span class="theme-option theme-green"></span> Xanh lá
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Icon đăng nhập -->
+              <div class="icon-container">
+                <i class="bi bi-person header-icon"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Mega menu cho Thể loại -->
+    <div class="mega-menu" id="theLoaiMenu">
+      <span class="mega-close-btn">&times;</span>
+      <div class="container">
+        <div class="row">
+          <!-- Cột 1 -->
+          <div class="col">
+            <ul class="menu-list">
+              <li><a href="category.html?genre=Tiên Hiệp">Tiên Hiệp</a></li>
+              <li><a href="category.html?genre=Huyền Huyễn">Huyền Huyễn</a></li>
+              <li><a href="category.html?genre=Khoa Huyễn">Khoa Huyễn</a></li>
+              <li><a href="category.html?genre=Võng Du">Võng Du</a></li>
+              <li><a href="category.html?genre=Đô Thị">Đô Thị</a></li>
+            </ul>
+          </div>
+
+          <!-- Cột 2 -->
+          <div class="col">
+            <ul class="menu-list">
+              <li><a href="category.html?genre=Đồng Nhân">Đồng Nhân</a></li>
+              <li><a href="category.html?genre=Dã Sử">Dã Sử</a></li>
+              <li><a href="category.html?genre=Cạnh Kỹ">Cạnh Kỹ</a></li>
+              <li><a href="category.html?genre=Huyền Nghi">Huyền Nghi</a></li>
+              <li><a href="category.html?genre=Kiếm Hiệp">Kiếm Hiệp</a></li>
+            </ul>
+          </div>
+
+          <!-- Cột 3 -->
+          <div class="col">
+            <ul class="menu-list">
+              <li><a href="category.html?genre=Kỳ Ảo">Kỳ Ảo</a></li>
+              <li><a href="category.html?genre=Sắc">Sắc</a></li>
+              <li><a href="category.html?genre=Ngôn Tình">Ngôn Tình</a></li>
+              <li><a href="category.html?genre=Đam Mỹ">Đam Mỹ</a></li>
+              <li><a href="category.html?genre=Bách Hợp">Bách Hợp</a></li>
+            </ul>
+          </div>
+
+          <!-- Cột 4 -->
+          <div class="col">
+            <ul class="menu-list">
+              <li><a href="category.html?genre=Truyện Teen">Truyện Teen</a></li>
+              <li><a href="category.html?genre=Light Novel">Light Novel</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mega menu cho Bối cảnh thế giới -->
+    <div class="mega-menu" id="boiCanhMenu">
+      <span class="mega-close-btn">&times;</span>
+      <div class="container">
+        <div class="row">
+          <!-- Cột 1 -->
+          <div class="col">
+            <ul class="menu-list">
+              <li>
+                <a href="category.html?genre=Chư Thiên Vạn Giới"
+                  >Chư Thiên Vạn Giới</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Linh Khí Khôi Phục"
+                  >Linh Khí Khôi Phục</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Tinh Tế Luyến Ca"
+                  >Tinh Tế Luyến Ca</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Ma Pháp Huyễn Tình"
+                  >Ma Pháp Huyễn Tình</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Dị Tộc Luyến Tính"
+                  >Dị Tộc Luyến Tính</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Hào Môn Thế Gia"
+                  >Hào Môn Thế Gia</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Tiên Lữ Kỳ Duyên"
+                  >Tiên Lữ Kỳ Duyên</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Kinh Thương Chủng Điền"
+                  >Kinh Thương Chủng Điền</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Cung Vi Trạch Đấu"
+                  >Cung Vi Trạch Đấu</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Thám Hiểm Sinh Tồn"
+                  >Thám Hiểm Sinh Tồn</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cột 2 -->
+          <div class="col">
+            <ul class="menu-list">
+              <li>
+                <a href="category.html?genre=Trinh Thám Thôi Lý"
+                  >Trinh Thám Thôi Lý</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Kỳ Diệu Thế Giới"
+                  >Kỳ Diệu Thế Giới</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Quỷ Bí Huyền Nghi"
+                  >Quỷ Bí Huyền Nghi</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Thời Không Xuyên Toa"
+                  >Thời Không Xuyên Toa</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Mạt Thế Nguy Cơ"
+                  >Mạt Thế Nguy Cơ</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Tiến Hóa Biến Dị"
+                  >Tiến Hóa Biến Dị</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Tinh Tế Văn Minh"
+                  >Tinh Tế Văn Minh</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Thế Giới Tương Lai"
+                  >Thế Giới Tương Lai</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Cổ Võ Cơ Giáp">Cổ Võ Cơ Giáp</a>
+              </li>
+              <li>
+                <a href="category.html?genre=Thể Dục Cạnh Kỹ"
+                  >Thể Dục Cạnh Kỹ</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cột 3 -->
+          <div class="col">
+            <ul class="menu-list">
+              <li>
+                <a href="category.html?genre=Điện Tử Cạnh Kỹ"
+                  >Điện Tử Cạnh Kỹ</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Du Hí Dị Giới">Du Hí Dị Giới</a>
+              </li>
+              <li>
+                <a href="category.html?genre=Hư Nghĩ Võng Du"
+                  >Hư Nghĩ Võng Du</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Lịch Sử Quan Trường"
+                  >Lịch Sử Quan Trường</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Dân Gian Truyền Thuyết"
+                  >Dân Gian Truyền Thuyết</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Lịch Sử Quân Sự"
+                  >Lịch Sử Quân Sự</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Giả Không Lịch Sử"
+                  >Giả Không Lịch Sử</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Thương Chiến Chức Tràng"
+                  >Thương Chiến Chức Tràng</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Ngu Nhạc Minh Tinh"
+                  >Ngu Nhạc Minh Tinh</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Thanh Xuân Vườn Trường"
+                  >Thanh Xuân Vườn Trường</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cột 4 -->
+          <div class="col">
+            <ul class="menu-list">
+              <li>
+                <a href="category.html?genre=Đô Thị Dị Năng">Đô Thị Dị Năng</a>
+              </li>
+              <li>
+                <a href="category.html?genre=Đô Thị Sinh Hoạt"
+                  >Đô Thị Sinh Hoạt</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Viễn Cổ Hồng Hoang"
+                  >Viễn Cổ Hồng Hoang</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Cổ Điển Tiên Hiệp"
+                  >Cổ Điển Tiên Hiệp</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Thần Thoại Tu Chân"
+                  >Thần Thoại Tu Chân</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Hiện Đại Tu Chân"
+                  >Hiện Đại Tu Chân</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Huyễn Tưởng Tu Tiên"
+                  >Huyễn Tưởng Tu Tiên</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Tu Chân Văn Minh"
+                  >Tu Chân Văn Minh</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Cổ Võ Tương Lai"
+                  >Cổ Võ Tương Lai</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Võ Hiệp Huyễn Tưởng"
+                  >Võ Hiệp Huyễn Tưởng</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cột 5 -->
+          <div class="col">
+            <ul class="menu-list">
+              <li>
+                <a href="category.html?genre=Lịch Sử Thần Thoại"
+                  >Lịch Sử Thần Thoại</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Hắc Ám Huyễn Tưởng"
+                  >Hắc Ám Huyễn Tưởng</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Hiện Đại Ma Pháp"
+                  >Hiện Đại Ma Pháp</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Tây Phương Kỳ Duyên"
+                  >Tây Phương Kỳ Duyên</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Cao Võ Thế Giới"
+                  >Cao Võ Thế Giới</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Vương Triều Tranh Bá"
+                  >Vương Triều Tranh Bá</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Dị Thế Đại Lục">Dị Thế Đại Lục</a>
+              </li>
+              <li>
+                <a href="category.html?genre=Đông Phương Huyền Huyễn"
+                  >Đông Phương Huyền Huyễn</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mega menu cho Lưu phái -->
+    <div class="mega-menu" id="luuPhaiMenu">
+      <span class="mega-close-btn">&times;</span>
+      <div class="container">
+        <div class="row">
+          <!-- Cột 1 -->
+          <div class="col">
+            <ul class="menu-list">
+              <li><a href="category.html?genre=Sau Màn">Sau Màn</a></li>
+              <li><a href="category.html?genre=Phản Phái">Phản Phái</a></li>
+              <li><a href="category.html?genre=Mỹ Thực">Mỹ Thực</a></li>
+              <li><a href="category.html?genre=Toàn Dân">Toàn Dân</a></li>
+              <li><a href="category.html?genre=Điền Viên">Điền Viên</a></li>
+              <li><a href="category.html?genre=Ngự Thú">Ngự Thú</a></li>
+              <li><a href="category.html?genre=Ngọt Sủng">Ngọt Sủng</a></li>
+              <li><a href="category.html?genre=Xuyên Không">Xuyên Không</a></li>
+            </ul>
+          </div>
+
+          <!-- Cột 2 -->
+          <div class="col">
+            <ul class="menu-list">
+              <li><a href="category.html?genre=Sảng Văn">Sảng Văn</a></li>
+              <li><a href="category.html?genre=Vả Mặt">Vả Mặt</a></li>
+              <li><a href="category.html?genre=Nữ Phụ">Nữ Phụ</a></li>
+              <li><a href="category.html?genre=Xuyên Nhanh">Xuyên Nhanh</a></li>
+              <li>
+                <a href="category.html?genre=Xây Dựng Thế Lực"
+                  >Xây Dựng Thế Lực</a
+                >
+              </li>
+              <li><a href="category.html?genre=Cá Mặn">Cá Mặn</a></li>
+              <li><a href="category.html?genre=Marry Sue">Marry Sue</a></li>
+              <li><a href="category.html?genre=Vô Hạn">Vô Hạn</a></li>
+            </ul>
+          </div>
+
+          <!-- Cột 3 -->
+          <div class="col">
+            <ul class="menu-list">
+              <li><a href="category.html?genre=Cơm Mềm">Cơm Mềm</a></li>
+              <li><a href="category.html?genre=Dưỡng Thành">Dưỡng Thành</a></li>
+              <li><a href="category.html?genre=Phế Tài">Phế Tài</a></li>
+              <li><a href="category.html?genre=Đàn Xuyên">Đàn Xuyên</a></li>
+              <li><a href="category.html?genre=Xuyên Sách">Xuyên Sách</a></li>
+              <li><a href="category.html?genre=Chuyển Thế">Chuyển Thế</a></li>
+              <li><a href="category.html?genre=Cố Ngu">Cố Ngu</a></li>
+              <li><a href="category.html?genre=Biến Thân">Biến Thân</a></li>
+            </ul>
+          </div>
+
+          <!-- Cột 4 -->
+          <div class="col">
+            <ul class="menu-list">
+              <li><a href="category.html?genre=Học Viện">Học Viện</a></li>
+              <li><a href="category.html?genre=Hồng Lâu">Hồng Lâu</a></li>
+              <li><a href="category.html?genre=Trọng Sinh">Trọng Sinh</a></li>
+              <li><a href="category.html?genre=Khế Ước">Khế Ước</a></li>
+              <li><a href="category.html?genre=Nữ Cường">Nữ Cường</a></li>
+              <li><a href="category.html?genre=Xuyên Qua">Xuyên Qua</a></li>
+              <li><a href="category.html?genre=Vô Địch">Vô Địch</a></li>
+              <li><a href="category.html?genre=Phàm Nhân">Phàm Nhân</a></li>
+            </ul>
+          </div>
+
+          <!-- Cột 5 -->
+          <div class="col">
+            <ul class="menu-list">
+              <li><a href="category.html?genre=Tùy Thân">Tùy Thân</a></li>
+              <li><a href="category.html?genre=Bàn Thờ">Bàn Thờ</a></li>
+              <li><a href="category.html?genre=Lão Gia">Lão Gia</a></li>
+              <li><a href="category.html?genre=Hệ Thống">Hệ Thống</a></li>
+              <li><a href="category.html?genre=Ngược">Ngược</a></li>
+              <li><a href="category.html?genre=Hài Hước">Hài Hước</a></li>
+              <li><a href="category.html?genre=Cổ Đại">Cổ Đại</a></li>
+              <li><a href="category.html?genre=Đoản Văn">Đoản Văn</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mega menu cho Danh sách -->
+    <div class="mega-menu" id="danhSachMenu">
+      <span class="mega-close-btn">&times;</span>
+      <div class="container">
+        <div class="row">
+          <!-- Cột 1 -->
+          <div class="col">
+            <ul class="menu-list">
+              <li><a href="category.html?genre=Truyện Dịch">Truyện Dịch</a></li>
+              <li>
+                <a href="category.html?genre=Truyện Convert">Truyện Convert</a>
+              </li>
+              <li><a href="category.html?genre=Truyện Full">Truyện Full</a></li>
+              <li><a href="category.html?genre=Truyện Hot">Truyện Hot</a></li>
+            </ul>
+          </div>
+
+          <!-- Cột 2 -->
+          <div class="col">
+            <ul class="menu-list">
+              <li>
+                <a href="category.html?genre=Tiên Hiệp Hay">Tiên Hiệp Hay</a>
+              </li>
+              <li>
+                <a href="category.html?genre=Kiếm Hiệp Hay">Kiếm Hiệp Hay</a>
+              </li>
+              <li>
+                <a href="category.html?genre=Truyện Teen Hay"
+                  >Truyện Teen Hay</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Ngôn Tình Hay">Ngôn Tình Hay</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cột 3 -->
+          <div class="col">
+            <ul class="menu-list">
+              <li>
+                <a href="category.html?genre=Ngôn Tình Sắc">Ngôn Tình Sắc</a>
+              </li>
+              <li>
+                <a href="category.html?genre=Ngôn Tình Ngược"
+                  >Ngôn Tình Ngược</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Ngôn Tình Sủng">Ngôn Tình Sủng</a>
+              </li>
+              <li>
+                <a href="category.html?genre=Ngôn Tình Hài">Ngôn Tình Hài</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cột 4 -->
+          <div class="col">
+            <ul class="menu-list">
+              <li><a href="category.html?genre=Đam Mỹ Hài">Đam Mỹ Hài</a></li>
+              <li><a href="category.html?genre=Đam Mỹ Hay">Đam Mỹ Hay</a></li>
+              <li>
+                <a href="category.html?genre=Đam Mỹ H Văn">Đam Mỹ H Văn</a>
+              </li>
+              <li><a href="category.html?genre=Đam Mỹ Sắc">Đam Mỹ Sắc</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="mega-overlay" id="megaOverlay"></div>
+    <!-------------------------------- Thanh chạy chữ --------------------------->
+
+    <div class="promotion-bar">
+      <div class="promotion__heading">
+        <span
+          >Website Đọc truyện chữ, truyện dịch, truyện convert, truyện full hay
+          nhất</span
+        >
+
+        <span
+          >Website Đọc truyện chữ, truyện dịch, truyện convert, truyện full hay
+          nhất</span
+        >
+      </div>
+    </div>
+    <!-- Phần Biên tập viên đề cử và Đang đọc -->
+    <section class="editor-section">
+      <div class="container-fluid">
+        <div class="editor-container">
+          <div class="row g-0">
+            <!-- Phần Biên tập viên đề cử (bên trái) -->
+            <div class="col-md-8 editor-picks">
+              <h2 class="section-title">
+                <i class="fas fa-star me-2"></i>Biên tập viên đề cử
+              </h2>
+              <div class="novel-grid" id="editorPicksContainer">
+                <!-- Skeleton loading -->
+                <div class="skeleton-item d-none" id="skeletonLoader">
+                  <div class="novel-item">
+                    <div
+                      class="skeleton"
+                      style="width: 90px; height: 120px"
+                    ></div>
+                    <div class="novel-info">
+                      <div class="skeleton skeleton-text"></div>
+                      <div class="skeleton skeleton-text"></div>
+                      <div class="skeleton skeleton-text"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Dữ liệu sẽ được render bằng JavaScript -->
+              </div>
+            </div>
+
+            <!-- Phần Đang đọc (bên phải) -->
+            <div class="col-md-4 reading-now">
+              <h2 class="section-title">
+                <i class="fas fa-book-open me-2"></i>Đang đọc
+              </h2>
+              <div class="reading-list" id="readingNowContainer">
+                <!-- Skeleton loading -->
+                <div class="skeleton-item d-none" id="readingSkeleton">
+                  <div class="reading-item">
+                    <div
+                      class="skeleton skeleton-text"
+                      style="height: 24px; margin-bottom: 15px"
+                    ></div>
+                    <div
+                      class="skeleton skeleton-text"
+                      style="width: 30%; height: 20px"
+                    ></div>
+                  </div>
+                </div>
+                <!-- Dữ liệu sẽ được render bằng JavaScript -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="../js/script.js"></script>
+    <!-- thame js -->
+    <script src="../js/thame.js"></script>
+    <!-- data novel js -->
+    <script src="../js/dataNovel.js"></script>
+  </body>
+</html>
