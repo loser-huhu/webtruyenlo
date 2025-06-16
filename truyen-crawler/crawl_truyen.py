@@ -1,5 +1,6 @@
 import json
 import time
+import pickle
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
@@ -17,6 +18,16 @@ options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) Apple
 
 # Khởi tạo driver
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+
+# Tải cookie nếu có
+try:
+    with open("cookies.pkl", "rb") as f:
+        cookies = pickle.load(f)
+    driver.get("https://truyenchu.com.vn/")
+    for cookie in cookies:
+        driver.add_cookie(cookie)
+except FileNotFoundError:
+    print("🔍 Không tìm thấy cookie, sẽ thử đăng nhập...")
 
 # Truy cập trang chủ
 url = "https://truyenchu.com.vn/"
@@ -40,12 +51,21 @@ try:
     data = json.loads(json_data)
     page_props = data["props"]["pageProps"]
     
+    # Lưu dữ liệu thô để debug
+    with open("raw_next_data.json", "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    print("✅ Đã lưu dữ liệu thô vào raw_next_data.json")
+    
     # Tạo dictionary để lưu trữ tất cả các mục
     all_data = {}
     
     # Thu thập dữ liệu từ các mục khác nhau
     if "editorChoice" in page_props:
-        all_data["Biên tập viên đề cử"] = page_props["editorChoice"]
+        editor_choice_books = page_props["editorChoice"]
+        # Tách 8 truyện đầu cho "Biên tập viên đề cử"
+        all_data["Biên tập viên đề cử"] = editor_choice_books[:8]
+        # Tách các truyện còn lại cho "Đang đọc"
+        all_data["Đang đọc"] = editor_choice_books[8:]
     if "lastUpdate" in page_props:
         all_data["Mới cập nhật"] = page_props["lastUpdate"]
     if "topRead" in page_props:
@@ -66,7 +86,7 @@ except Exception as e:
     driver.quit()
     exit()
 
-# Đóng trình duyệt (không cần thiết nữa)
+# Đóng trình duyệt
 driver.quit()
 
 # Ánh xạ thể loại
@@ -89,7 +109,8 @@ results = {
     "Thịnh Hành": [],
     "Đề Cử": [],
     "Đánh giá cao": [],
-    "Mới hoàn thành": []
+    "Mới hoàn thành": [],
+    "Đang đọc": []
 }
 
 # Xử lý từng mục
@@ -98,14 +119,14 @@ for category_name, books in all_data.items():
     
     for idx, book in enumerate(books, 1):
         try:
-            slug = book.get("slug", "")
+            slug = book.get("slug", "") or book.get("bookId", "")
             if not slug:
                 continue
                 
-            link = f"https://truyenchu.com.vn/{slug}"
+            link = f"https://truyenchu.com.vn/{slug}" if slug else book.get("url", "")
             
             # Xử lý ảnh bìa
-            cover_url = book.get("coverUrl", "") or book.get("cover", "")
+            cover_url = book.get("coverUrl", "") or book.get("cover", "") or book.get("image", "")
             if cover_url:
                 if not cover_url.startswith("http"):
                     cover_url = f"https://static.truyenchu.com.vn{cover_url}"
@@ -117,17 +138,17 @@ for category_name, books in all_data.items():
             genres = [genre_map.get(id, f"Thể loại {id}") for id in genre_ids if id in genre_map]
             
             # Xử lý tên truyện
-            name = book.get("name", "") or book.get("bookName", "Không rõ")
+            name = book.get("name", "") or book.get("bookName", "") or book.get("title", "Không rõ")
             
             # Xử lý số chương
-            chapter_count = book.get("chapterCount", 0) or book.get("totalChapter", 0)
+            chapter_count = book.get("chapterCount", 0) or book.get("totalChapter", 0) or book.get("chapters", 0)
             
             # Thêm vào kết quả
             if category_name in results:
                 results[category_name].append({
                     "ten": name.strip(),
                     "link": link,
-                    "mo_ta": book.get("introduction", "").strip(),
+                    "mo_ta": book.get("introduction", "") or book.get("description", "").strip(),
                     "so_chuong": f"{chapter_count} chương",
                     "the_loai": ", ".join(genres),
                     "anh": cover_url
@@ -136,7 +157,7 @@ for category_name, books in all_data.items():
             print(f"✅ [{idx}/{len(books)}] Đã xử lý: {name}")
 
         except Exception as e:
-            print(f"⚠️ Lỗi khi xử lý truyện: {e}")
+            print(f"⚠️ Lỗi khi xử lý truyện: {name} - {e}")
 
 # Lưu kết quả
 output_file = "truyenchu_full_data.json"

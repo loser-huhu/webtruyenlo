@@ -19,12 +19,16 @@
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --skeleton-start: #e5e7eb;
   --skeleton-end: #d1d5db;
+  /* Thêm biến màu nền xen kẽ */
+  --zebra-bg: #fffbeb;
+  --zebra-text: #2b2b2b;
 }
 /* Theme Dark - CẬP NHẬT */
 body.theme-dark {
   --primary-color: #60a5fa;
   --primary-hover: #3b82f6;
   --text-color: #f0f0f0;
+  --text-color-new-update: #1a202c;
   --text-secondary: #a0aec0;
   --text-hover: #ffffff;
   --light-bg: #1a202c;
@@ -39,6 +43,8 @@ body.theme-dark {
     0 4px 6px -2px rgba(0, 0, 0, 0.2);
   --skeleton-start: #2d3748;
   --skeleton-end: #4a5568;
+  --zebra-bg: #2d3748;
+  --zebra-text: #e2e8f0;
 }
 /* Theme Blue */
 body.theme-blue {
@@ -53,6 +59,8 @@ body.theme-blue {
     0 4px 6px -2px rgba(13, 110, 253, 0.05);
   --skeleton-start: #bbd6fe;
   --skeleton-end: #9ec5fe;
+  --zebra-bg: #d1e7ff;
+  --zebra-text: #052c65;
 }
 
 /* Theme Pink */
@@ -68,6 +76,8 @@ body.theme-pink {
     0 4px 6px -2px rgba(214, 51, 132, 0.05);
   --skeleton-start: #f8bbde;
   --skeleton-end: #f692d1;
+  --zebra-bg: #f8d7da;
+  --zebra-text: #58151c;
 }
 
 /* Theme Purple */
@@ -83,6 +93,8 @@ body.theme-purple {
     0 4px 6px -2px rgba(111, 66, 193, 0.05);
   --skeleton-start: #d4c5f0;
   --skeleton-end: #c0a8e8;
+  --zebra-bg: #e2d9f3;
+  --zebra-text: #2f1f57;
 }
 
 /* Theme Green */
@@ -98,4 +110,6 @@ body.theme-green {
     0 4px 6px -2px rgba(25, 135, 84, 0.05);
   --skeleton-start: #b8e0cc;
   --skeleton-end: #a0d4b9;
+  --zebra-bg: #d1e7dd;
+  --zebra-text: #0a3622;
 }

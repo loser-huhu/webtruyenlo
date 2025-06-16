@@ -475,10 +475,11 @@ body {
 
 .novel-title {
   max-width: 246.68px;
+  /* height: 44px !important; */
   font-size: 1.05rem;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-weight: 600;
+  font-weight: 800 !important;
   color: var(--text-color);
   margin: 0 0 8px;
   line-height: 1.4;
@@ -767,4 +768,490 @@ a {
   height: 2px;
   background-color: var(--primary-color);
   transform: scaleX(1);
+}
+/* =============================New Update================================== */
+/* PHẦN MỚI CẬP NHẬT - TỐI ƯU CHO ĐA THEME */
+.update-section {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px 0;
+  background: var(--light-bg);
+}
+
+.update-container {
+  margin-left: auto;
+  margin-right: auto;
+  background: var(--card-bg);
+  max-width: 1200px;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.update-list {
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.update-row {
+  display: grid;
+  grid-template-columns:
+    100px minmax(300px, 4fr) minmax(150px, 2fr) minmax(150px, 2fr)
+    120px;
+  padding: 12px 16px;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+/* Xen kẽ màu nền sử dụng biến mới */
+.update-row:nth-child(odd) {
+  background-color: var(--zebra-bg);
+  color: var(--zebra-text);
+}
+
+.update-row:nth-child(even) {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}
+
+.update-row:hover {
+  background-color: var(--hover-bg) !important;
+  color: var(--text-hover) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+/* Điều chỉnh kích thước các cột */
+.update-row > div {
+  padding: 8px 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.update-container .novel-category {
+  max-width: 135px !important;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 0;
+  background: none;
+  overflow: visible;
+  font-size: 0.8rem;
+}
+
+.update-row:nth-child(odd) .novel-category {
+  color: var(--primary-color);
+}
+
+.update-row:nth-child(even) .novel-category {
+  color: var(--text-secondary);
+}
+
+.update-container .novel-title {
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  /* Cho phép hiển thị đầy đủ tên truyện */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  max-width: 500px;
+  max-height: 3.6em; /* Giới hạn 3 dòng */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  margin-top: auto;
+  margin-bottom: auto;
+  /* margin-left: 40px; */
+}
+
+.update-row:hover .novel-title {
+  color: var(--text-hover);
+}
+
+.novel-chapter {
+  font-size: 0.95rem;
+  /* Giới hạn độ rộng cột chương */
+  /* margin-left: 40px; */
+  max-width: 180px;
+}
+
+.update-row:nth-child(odd) .novel-chapter {
+  color: var(--zebra-text);
+}
+
+.update-row:nth-child(even) .novel-chapter {
+  color: var(--text-secondary);
+}
+
+.update-row:hover .novel-chapter {
+  color: var(--text-hover);
+}
+
+.novel-author {
+  font-size: 0.95rem;
+  /* Giới hạn độ rộng cột tác giả */
+  max-width: 180px;
+}
+
+.update-row:nth-child(odd) .novel-author {
+  color: var(--zebra-text);
+}
+
+.update-row:nth-child(even) .novel-author {
+  color: var(--text-secondary);
+}
+
+.update-row:hover .novel-author {
+  color: var(--text-hover);
+}
+
+.update-time {
+  text-align: right;
+  font-size: 0.9rem;
+}
+
+.update-row:nth-child(odd) .update-time {
+  color: var(--zebra-text);
+}
+
+.update-row:nth-child(even) .update-time {
+  color: var(--text-secondary);
+}
+
+.update-row:hover .update-time {
+  color: var(--text-hover);
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .update-row {
+    grid-template-columns:
+      90px minmax(250px, 4fr) minmax(130px, 2fr) minmax(130px, 2fr)
+      100px;
+  }
+}
+
+@media (max-width: 992px) {
+  .update-row {
+    grid-template-columns: 80px 1fr;
+    grid-template-areas:
+      "category title"
+      "chapter author"
+      "time time";
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .novel-category {
+    grid-area: category;
+    align-self: start;
+  }
+  .novel-title {
+    grid-area: title;
+    font-size: 1.05rem;
+    -webkit-line-clamp: 2; /* Chỉ 2 dòng trên tablet */
+  }
+  .novel-chapter {
+    grid-area: chapter;
+    padding-left: 0;
+  }
+  .novel-author {
+    grid-area: author;
+    text-align: right;
+  }
+  .update-time {
+    grid-area: time;
+    text-align: right;
+    padding-top: 10px;
+    border-top: 1px dashed var(--border-color);
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .update-row {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "category"
+      "chapter"
+      "author"
+      "time";
+    gap: 6px;
+  }
+
+  .novel-category,
+  .novel-chapter,
+  .novel-author,
+  .update-time {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .novel-author,
+  .update-time {
+    text-align: left;
+  }
+
+  .update-time {
+    border-top: 1px dashed var(--border-color);
+    padding-top: 8px;
+    margin-top: 5px;
+  }
+
+  .novel-title {
+    -webkit-line-clamp: 3; /* 3 dòng trên mobile */
+  }
+}
+/* =======================================popular================================ */
+/* Phần popular-section */
+
+.popular-container {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.3s ease;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* popular-section.css */
+.popular-section {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px 0;
+  background: var(--light-bg);
+}
+
+.popular-container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.popular-container:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: var(--text-color);
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.popular-list {
+  position: relative;
+  min-height: 400px;
+}
+
+.popular-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 4px;
+  transition: all 0.3s ease;
+}
+
+.popular-item:hover {
+  background-color: var(--hover-bg);
+  cursor: pointer;
+}
+
+.popular-item:hover .popular-title {
+  color: var(--text-hover);
+}
+
+.popular-first {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 15px;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.popular-first:hover {
+  background-color: var(--hover-bg);
+  transform: translateY(-2px);
+}
+
+.popular-first:hover .popular-title,
+.popular-first:hover .popular-author,
+.popular-first:hover .popular-category {
+  color: var(--text-hover);
+}
+
+.popular-rank {
+  width: 24px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  font-family: "Inter", sans-serif;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.popular-info {
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.popular-title {
+  font-size: 14px;
+  color: var(--text-color);
+  font-weight: 400;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.3s ease;
+}
+
+.popular-first .popular-title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 8px;
+  white-space: normal;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.popular-first .popular-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.popular-first .popular-author,
+.popular-first .popular-category {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.popular-first .popular-author i,
+.popular-first .popular-category i {
+  margin-right: 5px;
+}
+
+.popular-cover {
+  width: 65px;
+  height: 95px;
+  border-radius: 4px;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.popular-first:hover .popular-cover {
+  transform: scale(1.05);
+}
+
+.popular-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Skeleton loading */
+.popular-skeleton {
+  display: flex;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 4px;
+  background: var(--skeleton-start);
+  background-image: linear-gradient(
+    90deg,
+    var(--skeleton-start) 0%,
+    var(--skeleton-end) 20%,
+    var(--skeleton-start) 40%
+  );
+  background-size: 200% 100%;
+  animation: skeletonShine 1.5s infinite linear;
+}
+
+@keyframes skeletonShine {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+.popular-skeleton .skeleton-rank {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+  background: var(--skeleton-end);
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.popular-skeleton .skeleton-text {
+  height: 14px;
+  background: var(--skeleton-end);
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .popular-section .col-md-4 {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .popular-container {
+    padding: 15px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .popular-first {
+    flex-wrap: wrap;
+  }
+
+  .popular-first .popular-cover {
+    width: 100%;
+    height: 140px;
+    margin-top: 10px;
+  }
 }
