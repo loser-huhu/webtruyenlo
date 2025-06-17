@@ -3,20 +3,90 @@
     "pageProps": {
       "editorChoice": [
         {
+          "bookId": 80570,
+          "name": "Thả câu chư thiên: Từ Cửu Long kéo quan câu xuyên vạn giới / Chư thiên: Từ Cửu Long kéo quan bắt đầu vô địch ",
+          "slug": "tha-cau-chu-thien-tu-cuu-long-keo-quan-c",
+          "coverUrl": "/Data/tha-cau-chu-thien-tu-cuu-long-keo-quan-c/default.jpg",
+          "introduction": "Xuyên qua Già Thiên thế giới thả câu chư thiên thế giới Trong đầu một cây đồng thau can thả câu chư thiên bảo bối Đây là Phương Thanh xuyên qua Già Thiên thả câu chư thiên hoành đẩy chư thiên chuyện xưa Hoa Vân Phi Nhìn thấy Phương Thanh",
+          "author": "Đạo Khả Phi Đạo",
+          "lastChapterName": "Chương 809 liều mạng chi chiến!",
+          "lastChapterSlug": "chuong-809-lieu-mang-chi-chien-32B",
+          "lastUpdate": "2025-06-16T16:09:44.744852",
+          "chapterCount": 812,
+          "genres": [
+            2,
+            5,
+            1
+          ]
+        },
+        {
+          "bookId": 80569,
+          "name": "Quân gia tháo, quân gia ngạo, chọc phải quân gia chạy không thoát/60 gả thủ trưởng, làm tinh đoạt nữ chủ bạch nguyệt quang ",
+          "slug": "quan-gia-thao-quan-gia-ngao-choc-phai-qu",
+          "coverUrl": "/Data/quan-gia-thao-quan-gia-ngao-choc-phai-qu/default.jpg",
+          "introduction": "Lại danh Ta biết ngươi có khác sở đồ nhưng ta vẫn như cũ ái ngươi 60 tiểu làm tinh niên đại quân hôn ngọt sủng thuật sảng văn tinh xảo lợi kỷ mạo mỹ tiểu làm tinh VS lại hung lại dã cấm dục hệ quan quân Tống gia",
+          "author": "Đường Bố Đinh",
+          "lastChapterName": "Chương 802 chúng ta không đến trị",
+          "lastChapterSlug": "chuong-802-chung-ta-khong-den-tri-321",
+          "lastUpdate": "2025-06-16T14:26:29.947056",
+          "chapterCount": 802,
+          "genres": [
+            6,
+            13,
+            5
+          ]
+        },
+        {
+          "bookId": 80568,
+          "name": "Ngự thú cầu sinh, thiên phú thăng cấp sau ta sát điên rồi ",
+          "slug": "ngu-thu-cau-sinh-thien-phu-thang-cap-sau",
+          "coverUrl": "/Data/ngu-thu-cau-sinh-thien-phu-thang-cap-sau/default.jpg",
+          "introduction": "Văn án nữ cường vô cp manh sủng ngự thú kích thích mạo hiểm cao châm thi đấu ấm áp hằng ngày chỉ số thông minh tại tuyến sát phạt quyết đoán Lê Chiêu địa cầu hạch nhiễm bạo loạn trung gian nan cầu sinh gần chết khi xuyên qua",
+          "author": "Mộ Thu Khúc",
+          "lastChapterName": "Phần 59",
+          "lastChapterSlug": "phan-59-3A",
+          "lastUpdate": "2025-06-16T09:55:56.60148",
+          "chapterCount": 59,
+          "genres": [
+            6,
+            5,
+            13,
+            7,
+            2
+          ]
+        },
+        {
+          "bookId": 80567,
+          "name": "Trộm mộ: Ta thật không phải hải vương ",
+          "slug": "trom-mo-ta-that-khong-phai-hai-vuong",
+          "coverUrl": "/Data/trom-mo-ta-that-khong-phai-hai-vuong/default.jpg",
+          "introduction": "Tân bản văn án Mất trí nhớ lúc sau Liêu tinh hỏa cơ duyên xảo hợp bước lên đi trước tháp mộc đà hành trình bất quá cái này đội ngũ giống như có điểm kỳ quái…… Buồn chai dầu trầm mặc ít lời lại luôn là bí ẩn góc",
+          "author": "Túng Bạch Hồng",
+          "lastChapterName": "Chương 48 ảo cảnh 9",
+          "lastChapterSlug": "chuong-48-ao-canh-9-186",
+          "lastUpdate": "2025-06-16T10:18:05.860694",
+          "chapterCount": 391,
+          "genres": [
+            14,
+            5,
+            13
+          ]
+        },
+        {
           "bookId": 80566,
           "name": "Tổng phim ảnh từ An Lăng Dung trọng sinh bắt đầu ",
           "slug": "tong-phim-anh-tu-an-lang-dung-trong-sinh",
           "coverUrl": "/Data/tong-phim-anh-tu-an-lang-dung-trong-sinh/default.jpg",
           "introduction": "Chân Hoàn Truyện vai phụ cùng pháo hôi trọng sinh hoặc bị xuyên vai ác như cũ làm vai ác ác nữ càng ác độc không có Bồ Tát tâm địa ác độc chết cũng không hối cải có thể động thủ đao người tuyệt đối không do dự truyền",
           "author": "Thường Dung",
-          "lastChapterName": "Chương 2702 đương An Lăng Dung trói định 【 bị mắng thăng chức hệ thống 】6",
-          "lastChapterSlug": "chuong-2702-duong-an-lang-dung-troi-dinh-bi-mang-thang-chuc-he-thong-6-A94",
-          "lastUpdate": "2025-06-15T18:07:58.262034",
-          "chapterCount": 2709,
+          "lastChapterName": "Chương 2714 Lý dụ mặc xuyên Dư Oanh Nhi, đem nói dối tiến hành rốt cuộc xong",
+          "lastChapterSlug": "chuong-2714-ly-du-mac-xuyen-du-oanh-nhi-dem-noi-doi-tien-hanh-rot-cuoc-xong-AA0",
+          "lastUpdate": "2025-06-16T13:18:16.318424",
+          "chapterCount": 2721,
           "genres": [
-            13,
             2,
-            7
+            7,
+            13
           ]
         },
         {
@@ -118,6 +188,23 @@
             5,
             7,
             6
+          ]
+        },
+        {
+          "bookId": 80519,
+          "name": "Sau Khi Được Mẫu Phi Xuyên Qua Truyền Bá Tư Tưởng",
+          "slug": "sau-khi-duoc-mau-phi-xuyen-qua-truyen-ba-tu-tuong",
+          "coverUrl": null,
+          "introduction": "<div",
+          "author": "Mãn Tự Tinh - Hồng Mông",
+          "lastChapterName": "Chương 14",
+          "lastChapterSlug": "chuong-14",
+          "lastUpdate": "2025-06-15T08:20:30.651569",
+          "chapterCount": 14,
+          "genres": [
+            15,
+            7,
+            2
           ]
         },
         {
@@ -255,229 +342,91 @@
             13,
             7
           ]
-        },
-        {
-          "bookId": 80550,
-          "name": "Tháp Cách - Y Hu Hi Áp",
-          "slug": "thap-cach-y-hu-hi-ap",
-          "coverUrl": null,
-          "introduction": "Hán Việt Tháp cách lí Tác giả Hu Hi Áp Thể loại Nguyên sang Đam mỹ Cổ đại HE Chủ công Cưới trước yêu sau Cung đình hầu tước Nhẹ nhàng Cải trang giả dạng Duyên trời tác hợp 1v1 Mỹ công CP Tang Lam công Tạ Lưu Đình thụ",
-          "author": "Y Hu Hi Áp",
-          "lastChapterName": "Chương 50: Phiên ngoại 3",
-          "lastChapterSlug": "chuong-50",
-          "lastUpdate": "2025-06-15T09:53:37.20264",
-          "chapterCount": 54,
-          "genres": [
-            14,
-            2,
-            6
-          ]
-        },
-        {
-          "bookId": 80549,
-          "name": "Ác Nữ Tái Sinh - Vương Hảo Hảo",
-          "slug": "ac-nu-tai-sinh-vuong-hao-hao",
-          "coverUrl": null,
-          "introduction": "Kiếp trước ta nhắm mắt xuôi tay trên giường sinh nở còn kẻ đáng ra phải chịu tang ta lại vội vã khoác lên mình bộ tân hôn rực rỡ Thời khắc ta hấp hối phu quân ta tay đã cầm sẵn thiệp cưới mới tay kia còn ung dung",
-          "author": "Vương Hảo Hảo",
-          "lastChapterName": "Chương 37: NT 2",
-          "lastChapterSlug": "chuong-37",
-          "lastUpdate": "2025-06-15T09:52:20.420782",
-          "chapterCount": 37,
-          "genres": [
-            13,
-            7,
-            2
-          ]
-        },
-        {
-          "bookId": 80548,
-          "name": "Người Đến Núi Sông Lộng Lẫy",
-          "slug": "nguoi-den-nui-song-long-lay",
-          "coverUrl": null,
-          "introduction": "Tác giả Vinh Cẩn Chuyển ngữ Ve Sa Lai Designer Jo Malone Tag 1Vs1 Cưng chiều Đô thị tình duyên HE Hiện đại Nghiệp giới tinh anh Ngôn Tình Ngọt Song xử Tổng số chương 50 Giới thiệu “Kỳ Trừng chỉ khi em xuất hiện đất cằn hoang sơ nơi",
-          "author": "Vinh Cẩn",
-          "lastChapterName": "Chương 50: Hoàn",
-          "lastChapterSlug": "chuong-50",
-          "lastUpdate": "2025-06-15T09:51:38.141811",
-          "chapterCount": 50,
-          "genres": [
-            13,
-            5,
-            6
-          ]
-        },
-        {
-          "bookId": 80547,
-          "name": "Xuyên Vào Gia Tộc Phản Diện",
-          "slug": "xuyen-vao-gia-toc-phan-dien",
-          "coverUrl": null,
-          "introduction": "Trần Ánh Trừng xuyên vào cuốn tiểu thuyết tu tiên đại nam chủ mà nàng đã đọc trở thành cô con gái trong một gia tộc bên phe phản diện Cả nhà bọn họ làm nhiều điều ác cha và đại ca của nàng còn cấu kết với Ma đạo",
-          "author": "Vân Tân Hoà",
-          "lastChapterName": "Chương 86",
-          "lastChapterSlug": "chuong-86",
-          "lastUpdate": "2025-06-15T09:38:51.32075",
-          "chapterCount": 86,
-          "genres": [
-            1,
-            13,
-            2,
-            7
-          ]
-        },
-        {
-          "bookId": 80546,
-          "name": "Săn Hướng Dẫn Thực Địa",
-          "slug": "san-huong-dan-thuc-dia",
-          "coverUrl": null,
-          "introduction": "<div",
-          "author": "CalyB",
-          "lastChapterName": "Chương 41",
-          "lastChapterSlug": "chuong-41",
-          "lastUpdate": "2025-06-15T09:36:34.31362",
-          "chapterCount": 41,
-          "genres": [
-            2,
-            14,
-            5
-          ]
         }
       ],
       "lastUpdate": [
         {
-          "bookId": 80387,
-          "name": "Pokémon xuyên qua thế giới hiện thực ",
-          "slug": "pokemon-xuyen-qua-the-gioi-hien-thuc",
-          "coverUrl": "/Data/pokemon-xuyen-qua-the-gioi-hien-thuc/default.jpg",
-          "introduction": "Ngầm bài quản một con xú xú bùn đang làm khơi thông công tác tiểu từ quái chính vội vàng duy tu trời cao điện cao thế tuyến phòng cháy đội mũi tên nước quy nhóm chính vận sức chờ phát động không sợ bỏng cháy phun hỏa long vọt",
-          "author": "Thiên Ca Tiêu Dao Tử",
-          "lastChapterName": "Chương 469 ác thực đại vương ( 1 )",
-          "lastChapterSlug": "chuong-469-ac-thuc-dai-vuong-1-1D4",
-          "lastUpdate": "2025-06-15T19:40:12.354212",
-          "chapterCount": 469,
+          "bookId": 79344,
+          "name": "Trọng sinh đại thời đại chi vương ",
+          "slug": "trong-sinh-dai-thoi-dai-chi-vuong",
+          "coverUrl": "/Data/trong-sinh-dai-thoi-dai-chi-vuong/default.jpg",
+          "introduction": "tiền ba mươi mấy chương vì trải chăn hy vọng đại gia kiên nhẫn xem mặt sau sẽ không làm đại gia thất vọng chu an đông trước nay đều không cho rằng chính mình là người tốt nghĩ đã chết lúc sau địa ngục đến sáng lập thứ 19",
+          "author": "Thập Nhị Phong",
+          "lastChapterName": "Chương 2418 mời",
+          "lastChapterSlug": "chuong-2418-moi-961",
+          "lastUpdate": "2025-06-16T17:32:58.281067",
+          "chapterCount": 2402,
           "genres": [
-            5
-          ]
-        },
-        {
-          "bookId": 76373,
-          "name": "Matsuda không nghĩ đương miêu miêu ",
-          "slug": "matsuda-khong-nghi-duong-mieu-mieu",
-          "coverUrl": "/Data/matsuda-khong-nghi-duong-mieu-mieu/default.jpg",
-          "introduction": "không chừng khi đổi mới mặt sau sẽ tìm thời gian tu văn xem văn trước xem gỡ mìn Matsuda Jinpei một lần nữa nhìn thấy chính mình tuổi xuân chết sớm osananajimi cùng âm tín toàn vô đồng kỳ nhưng mà lần này hắn đã bị khai ra người",
-          "author": "Semild",
-          "lastChapterName": "52. Nguyền rủa y tập viện ( nhị )",
-          "lastChapterSlug": "52-nguyen-rua-y-tap-vien-nhi-33",
-          "lastUpdate": "2025-06-15T19:39:55.421772",
-          "chapterCount": 52,
-          "genres": [
-            5,
-            7,
-            13
-          ]
-        },
-        {
-          "bookId": 79619,
-          "name": "Ác độc nữ xứng bị nuông chiều ",
-          "slug": "ac-doc-nu-xung-bi-nuong-chieu",
-          "coverUrl": "/Data/ac-doc-nu-xung-bi-nuong-chieu/default.jpg",
-          "introduction": "Về ác độc nữ xứng bị nuông chiều Dưa sáu xuyên thành trong sách ác độc nữ xứng sau bị nam chủ…… hậu cung trong sách ác độc nữ xứng vườn trường trong sách ác độc nữ xứng thứ nữ trong sách ác độc nữ xứng tổng tài trong sách",
-          "author": "Cửu Nguyệt Nhất Chỉ Miêu",
-          "lastChapterName": "Chương 6 ác nữ trong sách ác độc nữ xứng 6",
-          "lastChapterSlug": "chuong-6-ac-nu-trong-sach-ac-doc-nu-xung-6-1C6",
-          "lastUpdate": "2025-06-15T19:39:25.66397",
-          "chapterCount": 455,
-          "genres": [
-            2,
-            5,
             6,
-            7,
-            13
-          ]
-        },
-        {
-          "bookId": 76369,
-          "name": "Võ đạo phong thần, quan sát có thể thêm chút! ",
-          "slug": "vo-dao-phong-than-quan-sat-co-the-them-c",
-          "coverUrl": "/Data/vo-dao-phong-than-quan-sat-co-the-them-c/default.jpg",
-          "introduction": "…… “Thiên địa vạn vật thế gian võ giả đều có thể vì ta cung cấp nhận tri điểm số vừa đến thế gian còn có cái gì võ học luyện không thành không tồn tại!” Bao nhiêu năm sau Lý vân đứng đỉnh chỗ lại xem thế gian vạn",
-          "author": "Ngô Đồng Thụ Hạ Đích Mãng Hán",
-          "lastChapterName": "Chương 1485 phản sát bắt đầu, trong khoảnh khắc hai sát!",
-          "lastChapterSlug": "chuong-1485-phan-sat-bat-dau-trong-khoanh-khac-hai-sat-5CC",
-          "lastUpdate": "2025-06-15T19:39:11.212193",
-          "chapterCount": 1485,
-          "genres": [
-            2,
-            6,
-            10
-          ]
-        },
-        {
-          "bookId": 79392,
-          "name": "Yêu huynh, ngươi thọ nguyên cùng ta có duyên! ",
-          "slug": "yeu-huynh-nguoi-tho-nguyen-cung-ta-co-du",
-          "coverUrl": "/Data/yeu-huynh-nguoi-tho-nguyen-cung-ta-co-du/default.jpg",
-          "introduction": "Yêu ma loạn thế La lập nhặt được một quả gương đồng đánh chết yêu ma là có thể đạt được đối phương còn thừa thọ mệnh Mà tiêu hao thọ mệnh tắc có thể vô hạn suy đoán tăng lên võ học cảnh giới Vì thế từ thiết cánh",
-          "author": "Tô Cuồng Ca",
-          "lastChapterName": "Chương 918 đánh xuyên qua đế đô, đại huyền băng tán!",
-          "lastChapterSlug": "chuong-918-danh-xuyen-qua-de-do-dai-huyen-bang-tan-395",
-          "lastUpdate": "2025-06-15T19:38:30.76132",
-          "chapterCount": 918,
-          "genres": [
-            2,
-            6,
-            9,
-            10
-          ]
-        },
-        {
-          "bookId": 76367,
-          "name": "Quan trường: Từ trấn trưởng đến biên giới đại quan! ",
-          "slug": "quan-truong-tu-tran-truong-den-bien-gioi",
-          "coverUrl": "/Data/quan-truong-tu-tran-truong-den-bien-gioi/default.jpg",
-          "introduction": "Về quan trường Từ trấn trưởng đến biên giới đại quan Tốt nghiệp đuổi kịp bao phân phối chuyến xe cuối nghiên cứu sinh tốt nghiệp đường tường vũ không cam lòng vừa lòng với hiện trạng tưởng cùng chính mình phụ thân giống nhau đi sáng tạo một cái",
-          "author": "Võ An Quân",
-          "lastChapterName": "Chương 1108 miễn chức",
-          "lastChapterSlug": "chuong-1108-mien-chuc-454",
-          "lastUpdate": "2025-06-15T19:38:01.638023",
-          "chapterCount": 1109,
-          "genres": [
             5,
-            6,
-            7,
-            13
-          ]
-        },
-        {
-          "bookId": 74881,
-          "name": "Người ở chư thiên, bãi lạn thành đế ",
-          "slug": "nguoi-o-chu-thien-bai-lan-thanh-de",
-          "coverUrl": "/Data/nguoi-o-chu-thien-bai-lan-thanh-de/default.jpg",
-          "introduction": "Một lần thời không sai vị Vốn nên đi trước một người dưới thế giới Lâm Tiên bị hệ thống đưa tới Già Thiên vũ trụ Đối mặt hai cái thế giới cách xa chiến lực cấp thấp hệ thống 10086 vô cùng tuyệt vọng Lâm Tiên lộ ra một",
-          "author": "Trường Sinh Sầu",
-          "lastChapterName": "Chương 491 【 đi ngược chiều phạt tiên, thuận hành trấn phàm 】",
-          "lastChapterSlug": "chuong-491-di-nguoc-chieu-phat-tien-thuan-hanh-tran-pham-1EB",
-          "lastUpdate": "2025-06-15T19:37:33.718735",
-          "chapterCount": 492,
-          "genres": [
-            1,
-            2,
-            4,
-            5,
+            13,
             7
           ]
         },
         {
-          "bookId": 76981,
-          "name": "Xuyên thư niên đại: Khai cục cùng hệ thống nói điều kiện! ",
-          "slug": "xuyen-thu-nien-dai-khai-cuc-cung-he-thon",
-          "coverUrl": "/Data/xuyen-thu-nien-dai-khai-cuc-cung-he-thon/default.jpg",
-          "introduction": "Một giấc ngủ dậy từ ngợp trong vàng son hiện đại quán bar đi tới 70 niên đại Trần nhất ngốc vài giây tiếp nhận rồi hiện thực Đương trong đầu ký ức dung hợp xong hắn nhàn nhạt phun ra một ngụm sương khói “Thật mẹ nó tưởng cho",
-          "author": "Bất Hiểu Tâm",
-          "lastChapterName": "Chương 729 giáo sư Lý",
-          "lastChapterSlug": "chuong-729-giao-su-ly-2D8",
-          "lastUpdate": "2025-06-15T19:37:19.396558",
-          "chapterCount": 729,
+          "bookId": 79741,
+          "name": "Sử thượng tuổi trẻ nhất đạo môn đại chân nhân ",
+          "slug": "su-thuong-tuoi-tre-nhat-dao-mon-dai-chan",
+          "coverUrl": "/Data/su-thuong-tuoi-tre-nhat-dao-mon-dai-chan/default.jpg",
+          "introduction": "Từ năm xuyên qua đến thế giới huyền huyễn trở thành đại diễm vọng tộc cự chi môn ngoại tư sinh tử xa xôi tiểu sơn thôn cùng mẫu thân sống nương tựa lẫn nhau Hai mươi tuổi hôm nay trời sinh phú quý cha ruột khiển người tìm lại",
+          "author": "Tam Thốn Quang",
+          "lastChapterName": "Chương 1470 thân thủ vãn hồi",
+          "lastChapterSlug": "chuong-1470-than-thu-van-hoi-5BB",
+          "lastUpdate": "2025-06-16T16:13:44.941483",
+          "chapterCount": 1468,
+          "genres": [
+            1,
+            2,
+            6,
+            13
+          ]
+        },
+        {
+          "bookId": 80570,
+          "name": "Thả câu chư thiên: Từ Cửu Long kéo quan câu xuyên vạn giới / Chư thiên: Từ Cửu Long kéo quan bắt đầu vô địch ",
+          "slug": "tha-cau-chu-thien-tu-cuu-long-keo-quan-c",
+          "coverUrl": "/Data/tha-cau-chu-thien-tu-cuu-long-keo-quan-c/default.jpg",
+          "introduction": "Xuyên qua Già Thiên thế giới thả câu chư thiên thế giới Trong đầu một cây đồng thau can thả câu chư thiên bảo bối Đây là Phương Thanh xuyên qua Già Thiên thả câu chư thiên hoành đẩy chư thiên chuyện xưa Hoa Vân Phi Nhìn thấy Phương Thanh",
+          "author": "Đạo Khả Phi Đạo",
+          "lastChapterName": "Chương 809 liều mạng chi chiến!",
+          "lastChapterSlug": "chuong-809-lieu-mang-chi-chien-32B",
+          "lastUpdate": "2025-06-16T16:09:44.744852",
+          "chapterCount": 812,
+          "genres": [
+            2,
+            5,
+            1
+          ]
+        },
+        {
+          "bookId": 79356,
+          "name": "Ta có một nhà giấy trát phô ",
+          "slug": "ta-co-mot-nha-giay-trat-pho",
+          "coverUrl": "/Data/ta-co-mot-nha-giay-trat-pho/default.jpg",
+          "introduction": "kiểu Trung Quốc khủng bố hơi khủng thần quái nhát gan thận nhập Chết sớm mẹ ngồi tù cha rách nát giấy trát phô cùng tạo nghiệt nàng Ngô thu thu vì thấu học phí cho người ta túc trực bên linh cữu từ đây trăm quỷ quấn thân bị",
+          "author": "Hoa La Chi Chi",
+          "lastChapterName": "Chương 628 ta nguyền rủa Lạc gia người",
+          "lastChapterSlug": "chuong-628-ta-nguyen-rua-lac-gia-nguoi-273",
+          "lastUpdate": "2025-06-16T15:19:26.851491",
+          "chapterCount": 628,
+          "genres": [
+            6,
+            13,
+            5,
+            9
+          ]
+        },
+        {
+          "bookId": 80100,
+          "name": "Gả cho mắt mù tổng tài sau nàng ngọt điên rồi ",
+          "slug": "ga-cho-mat-mu-tong-tai-sau-nang-ngot-die",
+          "coverUrl": "/Data/ga-cho-mat-mu-tong-tai-sau-nang-ngot-die/default.jpg",
+          "introduction": "Về gả cho mắt mù tổng tài sau nàng ngọt điên rồi Giai đoạn trước hậu kỳ ta tuyết tuyết tới tìm ta mệnh đều cho ngươi chơi Nghe đồn cố gia nhị thiếu gia cố cảnh sâm là cái mắt mù nam nhân diện mạo xấu xí tính tình",
+          "author": "Tiểu Phân Phân",
+          "lastChapterName": "Chương 874 cố cảnh minh tới",
+          "lastChapterSlug": "chuong-874-co-canh-minh-toi-369",
+          "lastUpdate": "2025-06-16T15:18:29.366343",
+          "chapterCount": 874,
           "genres": [
             6,
             13,
@@ -485,16 +434,115 @@
           ]
         },
         {
-          "bookId": 74926,
-          "name": "Giải trí siêu tân tinh ",
-          "slug": "giai-tri-sieu-tan-tinh",
-          "coverUrl": "/Data/giai-tri-sieu-tan-tinh/default.jpg",
-          "introduction": "Xuyên qua 】+【 Vui chơi giải trí 】+【 Hệ thống 】+【 Cặn bã Đi tới thế giới mới ta chắc chắn sẽ mang theo các nàng chờ mong hướng đi đỉnh phong Giới thiệu vắn tắt bất lực cảm thấy hứng thú có thể dời đi giao diện quan sát",
-          "author": "Thụ Nhân Vương s",
-          "lastChapterName": "Chương 1131 dĩ hạ khắc thượng",
-          "lastChapterSlug": "chuong-1131-di-ha-khac-thuong-46A",
-          "lastUpdate": "2025-06-15T19:35:19.758721",
-          "chapterCount": 1131,
+          "bookId": 79132,
+          "name": "Star Rail: Ta ở tiên thuyền bán kỳ vật thùng rác ",
+          "slug": "star-rail-ta-o-tien-thuyen-ban-ky-vat-th",
+          "coverUrl": "/Data/star-rail-ta-o-tien-thuyen-ban-ky-vat-th/default.jpg",
+          "introduction": "Xuyên qua đến tiên thuyền La Phù việc vui người lâm thước trở thành kỳ vật thùng rác thương nhân chào hàng thùng rác có đủ loại kỳ vật Lâm thước “Hoàn vũ sở sản thần công dị thuật bảo kiếm thần binh thậm chí tinh thần thoáng nhìn kỳ",
+          "author": "Nhật Nguyệt Yểm Xuân Thu",
+          "lastChapterName": "Chương 662 này chỉ là bình thường kỳ môn cục?",
+          "lastChapterSlug": "chuong-662-nay-chi-la-binh-thuong-ky-mon-cuc-299",
+          "lastUpdate": "2025-06-16T15:16:20.783728",
+          "chapterCount": 666,
+          "genres": [
+            5,
+            3
+          ]
+        },
+        {
+          "bookId": 79080,
+          "name": "Khai cục Thần cấp che giấu kỹ năng! Ta đã nhìn thấu hết thảy ",
+          "slug": "khai-cuc-than-cap-che-giau-ky-nang-ta-da",
+          "coverUrl": "/Data/khai-cuc-than-cap-che-giau-ky-nang-ta-da/default.jpg",
+          "introduction": "Tả Thành An bị kéo vào thế giới cầu sinh trò chơi thức tỉnh trò chơi duy nhất Thần cấp kỹ năng “Chân thật chi mắt” Từ đây thấy được trò chơi một khác mặt Một cây nhánh cây bãi ven đường Người chơi bình thường Cái gì cộm chân",
+          "author": "Hi Chúc Thế Châu",
+          "lastChapterName": "Chương 748 hóa giải",
+          "lastChapterSlug": "chuong-748-hoa-giai-2EB",
+          "lastUpdate": "2025-06-16T15:10:00.855453",
+          "chapterCount": 748,
+          "genres": [
+            6,
+            5,
+            4
+          ]
+        },
+        {
+          "bookId": 79079,
+          "name": "Phàm tu: Từ hối lộ tiên sư, gia nhập tông môn bắt đầu ",
+          "slug": "pham-tu-tu-hoi-lo-tien-su-gia-nhap-tong-",
+          "coverUrl": "/Data/pham-tu-tu-hoi-lo-tien-su-gia-nhap-tong-/default.jpg",
+          "introduction": "Vương kiên một giới nông dân con cháu bị trắc ra có bốn thuộc tính Tạp linh căn nhưng gia nhập Lăng Vân Cung yêu cầu lại là tam thuộc tính trở lên linh căn Vốn dĩ không đạt được yêu cầu hắn từ đây vô tu tiên chi duyên",
+          "author": "Thiên Hải Thiểm Linh",
+          "lastChapterName": "Chương 970 uy hiếp cổ đại lục",
+          "lastChapterSlug": "chuong-970-uy-hiep-co-dai-luc-3C9",
+          "lastUpdate": "2025-06-16T15:07:49.092795",
+          "chapterCount": 970,
+          "genres": [
+            1,
+            2,
+            6
+          ]
+        },
+        {
+          "bookId": 79905,
+          "name": "Tổng phim ảnh chi nữ xứng không tin tà ",
+          "slug": "tong-phim-anh-chi-nu-xung-khong-tin-ta",
+          "coverUrl": "/Data/tong-phim-anh-chi-nu-xung-khong-tin-ta/default.jpg",
+          "introduction": "Về tổng phim ảnh chi nữ xứng không tin tà Trải qua khảo công thất bại giang hi nửa đêm quỳ đối không trung hô to Ông trời cầu xin ngài làm ta phất nhanh đi giọng nói lạc ầm vang một tiếng một đạo lôi từ trên trời giáng",
+          "author": "Tô Thiên Đích Nhất Thiên",
+          "lastChapterName": "Chương 46 nàng người còn quái tốt lặc",
+          "lastChapterSlug": "chuong-46-nang-nguoi-con-quai-tot-lac-285",
+          "lastUpdate": "2025-06-16T15:05:21.796639",
+          "chapterCount": 646,
+          "genres": [
+            2,
+            13
+          ]
+        },
+        {
+          "bookId": 77183,
+          "name": "Hệ thống phú ta trường sinh, tồn tại chung sẽ vô địch ",
+          "slug": "he-thong-phu-ta-truong-sinh-ton-tai-chun",
+          "coverUrl": "/Data/he-thong-phu-ta-truong-sinh-ton-tai-chun/default.jpg",
+          "introduction": "phi sảng văn bình đạm hằng ngày nhẹ nhàng khôi hài vô nữ chủ vô dao nhỏ cẩu vương nhập hố cẩn thận Một quyển lấy trường sinh giả thị giác vượt qua mấy cái tu tiên đại thời đại trường sinh văn từ bình phàm tiểu sơn thôn đi",
+          "author": "Tử Linh Phong Tuyết",
+          "lastChapterName": "Chương 2116 núi sông chưa lão tân hỏa hãy còn truyền",
+          "lastChapterSlug": "chuong-2116-nui-song-chua-lao-tan-hoa-hay-con-truyen-843",
+          "lastUpdate": "2025-06-16T15:02:25.260218",
+          "chapterCount": 2116,
+          "genres": [
+            2,
+            6,
+            7
+          ]
+        },
+        {
+          "bookId": 79605,
+          "name": "Dị giới đại nhà tư bản ",
+          "slug": "di-gioi-dai-nha-tu-ban",
+          "coverUrl": "/Data/di-gioi-dai-nha-tu-ban/default.jpg",
+          "introduction": "Dị thế giới “Làm ruộng” kiếm tiền văn Tin tức tốt Xuyên qua Tin tức xấu Không hệ thống Tin tức tốt Xuyên qua thân thể siêu cấp soái Tin tức xấu Xuyên qua lại đây nguyên chủ đã chết không biết ai giết Tin tức tốt Xuyên qua đến",
+          "author": "Khiếm Tấu Đích Hùng",
+          "lastChapterName": "Chương 703 đáng chết hi quang thương hội! Cư nhiên hố chúng ta mai lâm thương hội tiền!",
+          "lastChapterSlug": "chuong-703-dang-chet-hi-quang-thuong-hoi-cu-nhien-ho-chung-ta-mai-lam-thuong-hoi-tien-2BE",
+          "lastUpdate": "2025-06-16T14:56:09.075066",
+          "chapterCount": 703,
+          "genres": [
+            6,
+            11
+          ]
+        },
+        {
+          "bookId": 78840,
+          "name": "60: Đạp bạch nguyệt quang dọn không gia sản xuống nông thôn ",
+          "slug": "60-dap-bach-nguyet-quang-don-khong-gia-s",
+          "coverUrl": "/Data/60-dap-bach-nguyet-quang-don-khong-gia-s/default.jpg",
+          "introduction": "Niên đại trọng sinh không gian xuyên qua độn vật tư nhẹ nhàng vô hậu cung cố vân dương từ mạt thế xuyên qua trở về 1960 năm một cái bị ôm sai trùng tên trùng họ nam nhân trên người hơn nữa thấy được người nam nhân này cả",
+          "author": "Thiên Quan Tứ Phúc",
+          "lastChapterName": "Chương 968 thiết kế dập nát cơ, thỉnh ăn nướng hải trứng vịt, trà ngôn trà ngữ chu chí mới vừa",
+          "lastChapterSlug": "chuong-968-thiet-ke-dap-nat-co-thinh-an-nuong-hai-trung-vit-tra-ngon-tra-ngu-chu-chi-moi-vua-3C7",
+          "lastUpdate": "2025-06-16T14:52:18.576064",
+          "chapterCount": 968,
           "genres": [
             5,
             6,
@@ -503,106 +551,52 @@
           ]
         },
         {
-          "bookId": 76366,
-          "name": "Hệ thống phú ta trường sinh, ta ngao đã chết mọi người ",
-          "slug": "he-thong-phu-ta-truong-sinh-ta-ngao-da-c",
-          "coverUrl": "/Data/he-thong-phu-ta-truong-sinh-ta-ngao-da-c/default.jpg",
-          "introduction": "Lấy sinh mệnh ngoài thân phận đi quan sát thời gian sông dài trung người tu tiên hồng trần tình thù Cũng không tính phồn hoa trấn nhỏ trung đi ra bước vào xuất sắc ngoạn mục tu tiên thế giới trên đường lúc nhanh lúc chậm hoặc đi hoặc",
-          "author": "— Chỉ Lựu Liên 3 Hào",
-          "lastChapterName": "Chương 1614 giả bảo là thật, thật cũng giả!",
-          "lastChapterSlug": "chuong-1614-gia-bao-la-that-that-cung-gia-64E",
-          "lastUpdate": "2025-06-15T19:33:20.609908",
-          "chapterCount": 1615,
-          "genres": [
-            1,
-            2,
-            6,
-            7
-          ]
-        },
-        {
-          "bookId": 73824,
-          "name": "Khai cục liền qua đời, biến thành mỹ thiếu nữ đạp biến chư thiên ",
-          "slug": "khai-cuc-lien-qua-doi-bien-thanh-my-thie",
-          "coverUrl": "/Data/khai-cuc-lien-qua-doi-bien-thanh-my-thie/default.jpg",
-          "introduction": "Về khai cục liền qua đời biến thành mỹ thiếu nữ đạp biến chư thiên Vương Tiểu xuyên qua song song thế giới mười năm khai cục liền qua đời là cái gì thể nghiệm Qua đời phía trước phát hiện lão bà Bạch Khuynh Thành là người xuyên việt",
-          "author": "Phấn Đấu Đích Hà Cầu Tương",
-          "lastChapterName": "Chương 1032 hồng liên Godzilla!",
-          "lastChapterSlug": "chuong-1032-hong-lien-godzilla-409",
-          "lastUpdate": "2025-06-15T19:27:51.545199",
-          "chapterCount": 1034,
+          "bookId": 79783,
+          "name": "Quán ăn thông vạn giới? Ta kiếm 1 tỷ thực hợp lý đi ",
+          "slug": "quan-an-thong-van-gioi-ta-kiem-1-ty-thuc",
+          "coverUrl": "/Data/quan-an-thong-van-gioi-ta-kiem-1-ty-thuc/default.jpg",
+          "introduction": "Trói định mỹ thực hệ thống sau thịnh cửu gia quán ăn cửa sau thông hướng dị giới Đệ nhất vị dị thế lai khách cho nàng mang đến một cái so người cao cua kiềm Thịnh cửu Này nguyên liệu nấu ăn có điểm kích thích Góc đường chỗ",
+          "author": "Nhị Khiêm",
+          "lastChapterName": "Chương 543 ma thú tân thế giới",
+          "lastChapterSlug": "chuong-543-ma-thu-tan-the-gioi-21E",
+          "lastUpdate": "2025-06-16T14:40:40.777769",
+          "chapterCount": 543,
           "genres": [
             3,
             5,
             6,
             7,
+            13
+          ]
+        },
+        {
+          "bookId": 77457,
+          "name": "Hỏa ảnh từ Chiến quốc bắt đầu Uchiha quang ",
+          "slug": "hoa-anh-tu-chien-quoc-bat-dau-uchiha-qua",
+          "coverUrl": "/Data/hoa-anh-tu-chien-quoc-bat-dau-uchiha-qua/default.jpg",
+          "introduction": "Về hỏa ảnh từ Chiến quốc bắt đầu Uchiha quang Vai chính Uchiha quang vô hồn xuyên vô ngoại quải vô chiến lực tan vỡ vô nổi điên cốt truyện cùng nhân thiết thuần bác quang đảng đây là một cái quang tìm kiếm bác người bổ toàn nguyên tác",
+          "author": "Li Nguyệt Cật Qua Nhân",
+          "lastChapterName": "Chương 665 đại ống mộc diêm thật",
+          "lastChapterSlug": "chuong-665-dai-ong-moc-diem-that-298",
+          "lastUpdate": "2025-06-16T14:37:18.755843",
+          "chapterCount": 665,
+          "genres": [
             13,
-            15
+            5
           ]
         },
         {
-          "bookId": 74869,
-          "name": "Hỗn độn thánh thể, khai cục bị tiên tử cưỡng bách song tu ",
-          "slug": "hon-don-thanh-the-khai-cuc-bi-tien-tu-cu",
-          "coverUrl": "/Data/hon-don-thanh-the-khai-cuc-bi-tien-tu-cu/default.jpg",
-          "introduction": "Trương dương xuyên qua dị giới ngẫu nhiên gặp được thân trung kỳ độc tuyết trắng tiên tử…… Trương dương “Tiên tử thỉnh tự trọng Trương mỗ nãi người đứng đắn!” Trương dương “Tiên tử ngươi đừng như vậy còn như vậy… Trương mỗ đã có thể không phản khá",
-          "author": "Đỉnh Đỉnh Đỉnh",
-          "lastChapterName": "Chương 911 nghiêm quân hạo",
-          "lastChapterSlug": "chuong-911-nghiem-quan-hao-38E",
-          "lastUpdate": "2025-06-15T19:26:08.714535",
-          "chapterCount": 911,
+          "bookId": 79078,
+          "name": "Ma kiếp lâm ",
+          "slug": "ma-kiep-lam",
+          "coverUrl": "/Data/ma-kiep-lam/default.jpg",
+          "introduction": "Tiêu dao tán gái hai không lầm luyện thể tu tiên đến trường sinh Phan thuận gió xuyên qua sau quá hạnh phúc sinh hoạt Kết quả Ma tộc tới phạm Phan thuận gió có thể quán bọn họ Độc sấm Ma Vực sính anh hùng danh dương thiên hạ",
+          "author": "Dũng Cảm Đích Mã Nghĩ",
+          "lastChapterName": "Chương 778 Ngưu đại thúc lo lắng",
+          "lastChapterSlug": "chuong-778-nguu-dai-thuc-lo-lang-308",
+          "lastUpdate": "2025-06-16T14:36:52.907978",
+          "chapterCount": 777,
           "genres": [
-            2,
-            6,
-            13
-          ]
-        },
-        {
-          "bookId": 74868,
-          "name": "Võ đạo nghèo khó sinh! Từ giết heo bắt đầu hoành đẩy sao trời ",
-          "slug": "vo-dao-ngheo-kho-sinh-tu-giet-heo-bat-da",
-          "coverUrl": "/Data/vo-dao-ngheo-kho-sinh-tu-giet-heo-bat-da/default.jpg",
-          "introduction": "Tô tuấn xuyên qua cao võ thế giới trở thành một người võ đạo nghèo khó sinh Nơi này dị thú hung hăng ngang ngược vạn tộc hoành hành muốn sinh tồn đi xuống chỉ có tu võ Đúng lúc vào lúc này tô tuấn mở ra bàn tay vàng",
-          "author": "Nhất Kiếm Phá Thương Khung",
-          "lastChapterName": "Chương 854 chém giết nhân mã tộc tộc trưởng!",
-          "lastChapterSlug": "chuong-854-chem-giet-nhan-ma-toc-toc-truong-355",
-          "lastUpdate": "2025-06-15T19:23:19.819495",
-          "chapterCount": 854,
-          "genres": [
-            6,
-            5,
-            10
-          ]
-        },
-        {
-          "bookId": 73663,
-          "name": "Hồng Hoang: Tiệt giáo nữ tiên ",
-          "slug": "hong-hoang-tiet-giao-nu-tien",
-          "coverUrl": "/Data/hong-hoang-tiet-giao-nu-tien/default.jpg",
-          "introduction": "Kim Linh Thánh Mẫu vốn là Thông Thiên giáo chủ dưới tòa tứ đại thân truyền đệ tử chi nhất tiệt giáo nữ tiên đứng đầu Pháp lực cao cường có được đông đảo pháp bảo Vạn Tiên Trận trung Kim Linh Thánh Mẫu từng lấy một địch tam đại",
-          "author": "Triều Du Bắc Hải Mộ Thương Khung",
-          "lastChapterName": "Chương 652 đổi mới trung",
-          "lastChapterSlug": "chuong-652-doi-moi-trung-28B",
-          "lastUpdate": "2025-06-15T19:21:22.321578",
-          "chapterCount": 652,
-          "genres": [
-            2,
-            13
-          ]
-        },
-        {
-          "bookId": 77861,
-          "name": "Thông tiên linh đồ / Bàn tay tiên linh đồ ta mang gia tộc từ Trúc Cơ đến phi thăng ",
-          "slug": "thong-tien-linh-do-ban-tay-tien-linh-do-",
-          "coverUrl": "/Data/thong-tien-linh-do-ban-tay-tien-linh-do-/default.jpg",
-          "introduction": "Không có vô địch hệ thống cũng không có thần bí bình nhỏ ngoại có Yêu tộc hoàn hầu nội bộ gia tộc nghèo nàn Trúc Cơ tiểu tộc nhưng như thế nào đối mặt lần lượt nguy cơ Cố Trường Hoan mở ra bản đồ Linh bảo linh dược",
-          "author": "Nhất Điều Miêu Trùng",
-          "lastChapterName": "Chương 1942 Bại Thất dược viên",
-          "lastChapterSlug": "chuong-1942-bai-that-duoc-vien-79A",
-          "lastUpdate": "2025-06-15T19:20:32.586228",
-          "chapterCount": 1947,
-          "genres": [
-            1,
             2,
             6
           ]
@@ -610,168 +604,174 @@
       ],
       "topRead": [
         {
-          "bookId": 68292,
-          "name": "Điện Trường Sinh",
-          "slug": "dien-truong-sinh",
+          "bookId": 80027,
+          "name": "Bình Tĩnh Báo Thù, Vui Vẻ Lên Hot Search",
+          "slug": "binh-tinh-bao-thu-vui-ve-len-hot-search",
           "coverUrl": null,
-          "introduction": "Tác giả Trương Nhược Dư Thể loại Trọng Sinh Cổ Đại Không CP Vả Mặt OE Đoản Văn Trả Thù Huyền Huyễn Tiên Hiệp Phương Đông Team dịch Góc tiểu thuyết của mèo đen Giới thiệu Tiểu sư muội chết khi tất cả mọi người yêu thương nàng ta nhất",
-          "author": "Trương Nhược Dư",
-          "lastChapterName": "Chương 23: Hoàn",
+          "introduction": "Vị hôn phu và anh trai ruột của tôi đã hận tôi suốt mười năm Bọn họ tin chắc rằng tôi đã bắt nạt “bông hoa nhỏ” mà họ cùng yêu thích Trong buổi tiệc đính hôn của tôi hai người không chút do dự phơi bày “tội ác” của",
+          "author": "Chocolate A Hoa Điềm",
+          "lastChapterName": "Chương 15: Chương 15 [Hết]",
           "lastChapterSlug": null,
-          "lastUpdate": "2024-10-08T11:29:57.208043",
-          "chapterCount": 23,
-          "genres": [
-            1,
-            2,
-            7,
-            6
-          ]
-        },
-        {
-          "bookId": 72504,
-          "name": "Conan: Ở xưởng rượu đương một cái điên phê kẻ phản bội ",
-          "slug": "conan-o-xuong-ruou-duong-mot-cai-dien-ph",
-          "coverUrl": "/Data/conan-o-xuong-ruou-duong-mot-cai-dien-ph/default.jpg",
-          "introduction": "Thần cốc toàn nguyệt xưởng rượu danh hiệu kim mạch rượu nhân xưng di động kho vũ khí ngoại hiệu điên cuồng kẻ điên thờ phụng có thể trực tiếp động thủ liền tuyệt không BB Conan ngươi nếu là lại vô duyên vô cớ ẩu đả phạm nhân cưỡng",
-          "author": "Cuồng Tiếu Tam Kiệt",
-          "lastChapterName": "Chương 1154 không nên xuất hiện ngoài ý muốn",
-          "lastChapterSlug": null,
-          "lastUpdate": "2024-09-22T12:58:22.750868",
-          "chapterCount": 1154,
+          "lastUpdate": "2025-06-15T10:30:21.522376",
+          "chapterCount": 15,
           "genres": [
             5,
-            7
+            7,
+            2
           ]
         },
         {
-          "bookId": 73227,
-          "name": "Tổng võ: Vương Ngữ Yên cự hôn, cường cưới Lý thanh la ",
-          "slug": "tong-vo-vuong-ngu-yen-cu-hon-cuong-cuoi-",
-          "coverUrl": "/Data/tong-vo-vuong-ngu-yen-cu-hon-cuong-cuoi-/default.jpg",
-          "introduction": "Về tổng võ Vương Ngữ Yên cự hôn cường cưới Lý thanh la Ngụy võ xuyên qua tổng võ thế giới trở thành Bắc Tống hoàng triều Tiêu Dao hầu Cô Tô địa giới mắc mưu chi không thẹn thổ hoàng đế Khai cục đi trước mạn đà sơn trang",
-          "author": "Ngã Thị Tiểu Pháp Sư",
-          "lastChapterName": "Chương 641 lấy Đồ Long đao vì nhị, câu Tử Sam Long Vương Đại Khỉ Ti",
+          "bookId": 61245,
+          "name": "Tổng phim ảnh chi an hồn sử ",
+          "slug": "tong-phim-anh-chi-an-hon-su",
+          "coverUrl": "/Data/tong-phim-anh-chi-an-hon-su/default.jpg",
+          "introduction": "vô CP đồng nhân văn phương thức viết độ dài so trường ông giả lịch tẫn thiên phàm cũng ngọc thanh giả cao khiết cũng Trải qua thiên phàm lúc sau vẫn nhưng thủ vững bản tâm Rời đi thiếu ca thế giới sau ngọc thanh chính thức mở ra",
+          "author": "Tuyết Thất Trọng",
+          "lastChapterName": "Chương 98 một người vui không bằng mọi người cùng vui",
           "lastChapterSlug": null,
-          "lastUpdate": "2025-01-26T02:15:20.308649",
-          "chapterCount": 641,
+          "lastUpdate": "2024-09-16T17:35:05.373885",
+          "chapterCount": 781,
           "genres": [
             2,
+            6,
             10
           ]
         },
         {
-          "bookId": 62083,
-          "name": "Anh Chồng Vệ Sĩ Trời Cho",
-          "slug": "anh-chong-ve-si-troi-cho",
-          "coverUrl": null,
-          "introduction": "ANH CHỒNG VỆ SĨ TRỜI CHO Tác giả 米鱼紫 Editor Táo Linnie Thể loại xuyên sách hài hước… Giới thiệu Tôi xuyên thành nữ phụ ác độc có hôn ước với nam chính trong tiểu thuyết ngôn tình Sau đó tôi bị nam chính gài bẫy rơi xuống nước anh",
-          "author": "Zhihu",
-          "lastChapterName": "Chương 5: Hoàn",
+          "bookId": 73035,
+          "name": "3000 nhặt xác quân, giết đến thiên hạ tẫn nỗi nhớ nhà ",
+          "slug": "3000-nhat-xac-quan-giet-den-thien-ha-tan",
+          "coverUrl": "/Data/3000-nhat-xac-quan-giet-den-thien-ha-tan/default.jpg",
+          "introduction": "Về 3000 nhặt xác quân giết đến thiên hạ tẫn nỗi nhớ nhà Xuyên qua đại càn thành tầng chót nhất nhặt xác người vốn định cùng mỹ lệ tẩu tử khờ ngốc đệ đệ hảo hảo sinh hoạt lại gặp được bắc mãng khấu quan thu xong thi chạy",
+          "author": "Nhất Bôi Công Phu Trà",
+          "lastChapterName": "Chương 477 một ngữ bừng tỉnh người trong mộng, nhưng hắn không phải người kia",
           "lastChapterSlug": null,
-          "lastUpdate": "2024-10-08T13:56:49.095864",
-          "chapterCount": 5,
-          "genres": [
-            7,
-            2,
-            6
-          ]
-        },
-        {
-          "bookId": 80213,
-          "name": "Quận Chúa Gánh Phân Với Thế Tử Quét Rác",
-          "slug": "quan-chua-ganh-phan-voi-the-tu-quet-rac",
-          "coverUrl": null,
-          "introduction": "chuẩn bị mang hết của cải trong phủ Quận chúa cùng một kẻ không xu dính túi chạy trốn theo tiếng gọi của tình yêu Lại không ngờ vào đêm Cung yến một ngày trước khi tẩu hôn khi diện kiến thế tử của Trường Ninh Hầu ta lại trợn",
-          "author": "Khuyết Danh",
-          "lastChapterName": "Chương 12: Chương 12",
-          "lastChapterSlug": null,
-          "lastUpdate": "2025-06-15T10:26:36.44821",
-          "chapterCount": 12,
+          "lastUpdate": "2024-10-25T08:56:06.551586",
+          "chapterCount": 477,
           "genres": [
             2
           ]
         },
         {
-          "bookId": 75051,
-          "name": "Ta cùng vô số ta ",
-          "slug": "ta-cung-vo-so-ta",
-          "coverUrl": "/Data/ta-cung-vo-so-ta/default.jpg",
-          "introduction": "Naruto trung kêu gọi chết đi người dựa vào mình thân tái hiện thần thoại thời đại chiến trường Yêu ma quỷ quái thế giới giữa thân thủ đánh ra tới một cái nhân đạo hưng thịnh Ma pháp giới giữa làm những cái đó ngu xuẩn huyết mạch vu",
-          "author": "Bạch Nhãn Kính Miêu",
-          "lastChapterName": "332. Chương 309 dũng khí thí luyện bắt đầu",
+          "bookId": 80230,
+          "name": "Phi Tần Tranh Dành Sủng Ái",
+          "slug": "phi-tan-tranh-danh-sung-ai",
+          "coverUrl": null,
+          "introduction": "[Zhihu] Phi Tần Tranh Dành Sủng ÁiĐề cử Thời Khanh<div class=\"x11i5",
+          "author": "Zhihu",
+          "lastChapterName": "Chương 12: Chương 12 (Hoàn)",
           "lastChapterSlug": null,
-          "lastUpdate": "2024-12-08T11:34:28.01956",
-          "chapterCount": 332,
+          "lastUpdate": "2025-06-15T10:28:18.21675",
+          "chapterCount": 12,
           "genres": [
-            1,
             2,
-            3,
+            6
+          ]
+        },
+        {
+          "bookId": 63370,
+          "name": "Giang Thanh Nguyệt",
+          "slug": "giang-thanh-nguyet",
+          "coverUrl": null,
+          "introduction": "Tên truyện Giang Thanh Nguyệt Tác giả Doãn Biệt Dịch Nhím Tag Cổ đại Giới thiệu Ta và tỷ tỷ đồng thời cứu một tiểu tử mồ côi thân phận là con cháu của tiền triều không phải là một tiểu tử câm Ta không nỡ nhìn tiểu tử",
+          "author": "Doãn Biệt",
+          "lastChapterName": "Chương 4: Hoàn",
+          "lastChapterSlug": null,
+          "lastUpdate": "2024-10-07T10:48:38.005008",
+          "chapterCount": 4,
+          "genres": [
+            2,
+            6
+          ]
+        },
+        {
+          "bookId": 56516,
+          "name": "Lão Tử Không Phải Kẻ Ngốc",
+          "slug": "lao-tu-khong-phai-ke-ngoc",
+          "coverUrl": null,
+          "introduction": "Trong một bộ tiểu thuyết hiện đại xoay quanh chủ đề phấn đấu Diệp Phong đã vô tình bị xuyên vào đó và trở thành một nhân vật phản diện Tuy nhiên anh ta có thân phận đẹp trai dáng người cao lớn và giàu có Tất cả những thứ",
+          "author": "Khuyết Danh",
+          "lastChapterName": "Chương 45: C45: Anh nhìn thấy em hả",
+          "lastChapterSlug": null,
+          "lastUpdate": "2024-09-17T10:45:21.459714",
+          "chapterCount": 45,
+          "genres": [
             5,
+            7,
+            16
+          ]
+        },
+        {
+          "bookId": 64351,
+          "name": "Toàn dân xuyên qua nguyên thủy thế giới, mà ta là người tu tiên ",
+          "slug": "toan-dan-xuyen-qua-nguyen-thuy-the-gioi-",
+          "coverUrl": "/Data/toan-dan-xuyen-qua-nguyen-thuy-the-gioi-/default.jpg",
+          "introduction": "Toàn dân xuyên qua nguyên thủy thế giới Những người khác sôi nổi thức tỉnh các loại bình thường chức nghiệp Nông dân đốn củi công chiến sĩ vú em nhưng mà ta lại là người tu tiên Đương mọi người còn dùng trường mâu dùng rìu tinh anh mới",
+          "author": "Đường Thố Trư Trửu",
+          "lastChapterName": "Chương 450 quỷ dị sương mù",
+          "lastChapterSlug": null,
+          "lastUpdate": "2024-04-23T10:48:19.955143",
+          "chapterCount": 450,
+          "genres": [
+            6,
+            2,
+            1,
+            3,
             10
           ]
         },
         {
-          "bookId": 65943,
-          "name": "Chiết Liễu",
-          "slug": "chiet-lieu",
-          "coverUrl": null,
-          "introduction": "Tác giả 巧克力阿华甜 Chocolate Hoa Điềm _________ Thôi được rồi để ta gả Vừa nghe ta nói vậy nét mặt của nam nhân chợt thả lỏng xuống hắn ta ngay lập tức quay sang nói với thiếu nữ bên cạnh Mạn Mạn đừng khóc Ngọc Liễu nói nàng ấy sẽ",
-          "author": "Chocolate A Hoa Điềm",
-          "lastChapterName": "Chương 10: Ngoại truyện: Cùng chàng một kiếp người (Hoàn toàn văn)",
+          "bookId": 66200,
+          "name": "Một người dưới: Khai cục ếch nhãi con đưa ta cách biệt chi trảo ",
+          "slug": "mot-nguoi-duoi-khai-cuc-ech-nhai-con-dua",
+          "coverUrl": "/Data/mot-nguoi-duoi-khai-cuc-ech-nhai-con-dua/default.jpg",
+          "introduction": "Phùng trời cho trọng sinh đến dị nhân thế giới trở thành một cái đứa trẻ bị vứt bỏ may mắn bị mai kim phượng nhặt được Nhưng kỳ quái chính là thân là bẩm sinh dị nhân hắn thế nhưng không có chút nào dị năng Thẳng đến 18",
+          "author": "Thải Cúc Đông Li Nam",
+          "lastChapterName": "240. Chương 240 Phùng Thiên Tứ ra tay, nháy mắt hạ gục duy tư tháp!",
           "lastChapterSlug": null,
-          "lastUpdate": "2024-10-08T13:44:01.851334",
-          "chapterCount": 10,
-          "genres": [
-            2,
-            6
-          ]
-        },
-        {
-          "bookId": 72381,
-          "name": "Conan chi toàn viên vũ lực tăng lên kế hoạch ",
-          "slug": "conan-chi-toan-vien-vu-luc-tang-len-ke-h",
-          "coverUrl": "/Data/conan-chi-toan-vien-vu-luc-tang-len-ke-h/default.jpg",
-          "introduction": "Mori Ran “Ta nhất tri kỷ bằng hữu!” Suzuki Sonoko “Ta kế thừa chục tỷ gia sản trên đường hoa tiêu người!” Haibara Ai “Cứu ta với nước lửa bên trong Cảm giác an toàn chi nguyên!” Sawada Hiroki “Ta nhân sinh đạo sư!” Conan “Nơi chốn áp ta một",
-          "author": "Tự Huyền Ngự",
-          "lastChapterName": "Chương 564 tu bug sao",
-          "lastChapterSlug": null,
-          "lastUpdate": "2025-03-25T09:06:59.560805",
-          "chapterCount": 564,
+          "lastUpdate": "2024-05-16T21:05:21.406305",
+          "chapterCount": 240,
           "genres": [
             5,
-            7
-          ]
-        },
-        {
-          "bookId": 71834,
-          "name": "Võ đạo kỷ nguyên, ta có thuần thục độ giao diện ",
-          "slug": "vo-dao-ky-nguyen-ta-co-thuan-thuc-do-gia",
-          "coverUrl": "/Data/vo-dao-ky-nguyen-ta-co-thuan-thuc-do-gia/default.jpg",
-          "introduction": "Kết thúc xong dị giới xâm lấn chân linh đại lục nghênh đón tân võ đạo kỷ nguyên Vì phòng bị dị giới ngóc đầu trở lại chân linh giới bắt đầu phát triển mạnh võ đạo…… Mà kiến thức đến giới ngoại phong cảnh sau mọi người tỏ vẻ",
-          "author": "Y Thực Ngũ Thành",
-          "lastChapterName": "Chương 554 cao cấp đào quặng người, cao cấp pháo hôi thời không",
-          "lastChapterSlug": null,
-          "lastUpdate": "2024-12-29T17:13:34.233719",
-          "chapterCount": 554,
-          "genres": [
             2,
-            6
+            1
           ]
         },
         {
-          "bookId": 55281,
-          "name": "Âm Nữ",
-          "slug": "am-nu",
+          "bookId": 55059,
+          "name": "Mạt Thế Triệu Hồi Sư Thâm Uyên",
+          "slug": "mat-the-trieu-hoi-su-tham-uyen",
           "coverUrl": null,
-          "introduction": "ÂM NỮ Tác giả 魏乌合 Thể loại Linh dị plot twist BE Số chương chương Editor Mắt nâu GIỚI THIỆU Chị tôi là nữ bẩm sinh đã sợ ánh sáng Mẹ tôi chưa bao giờ cho chị ra ngoài càng không để chị ấy làm việc mà luôn cẩn thận",
-          "author": "Zhihu",
-          "lastChapterName": "Chương 4: Hoàn",
+          "introduction": "Tác giả 凉心未暖 Lương tâm vị noãn-Lạnh lòng không ấm áp Tóm tắt Thâm Uyên Đây là tên mảnh đất này Một vực sâu không đáy vô hạn cấp bậc Nơi này là vô cùng vô tận là chỗ kinh khủng khiến người ta không thở nổi Nơi này có",
+          "author": "Lương Tâm Vị Noãn",
+          "lastChapterName": "Chương 21: C21: Chương 21",
           "lastChapterSlug": null,
-          "lastUpdate": "2024-09-03T22:46:22.590058",
-          "chapterCount": 4,
+          "lastUpdate": "2024-08-28T12:32:08.525377",
+          "chapterCount": 21,
           "genres": [
+            3,
             9,
-            6,
+            7,
+            5,
+            2
+          ]
+        },
+        {
+          "bookId": 79139,
+          "name": "Đồng thời xuyên qua: Ta cư nhiên là bị bạch phiêu cái kia ",
+          "slug": "dong-thoi-xuyen-qua-ta-cu-nhien-la-bi-ba",
+          "coverUrl": "/Data/dong-thoi-xuyen-qua-ta-cu-nhien-la-bi-ba/default.jpg",
+          "introduction": "Tóm tắt Xuyên qua đến thích khách ngũ sáu bảy thế giới vẫn là cá lớn nuốt cá bé Huyền Vũ quốc bản đồ quả thực chính là địa ngục khai cục Nhưng là cũng may dựa vào người xuyên việt tiên tri tiên giác còn có mười năm như",
+          "author": "Tinh Chuẩn Đả Tạp",
+          "lastChapterName": "Chương 544 ứng chiến thuỷ thần",
+          "lastChapterSlug": null,
+          "lastUpdate": "2025-04-17T05:59:32.596157",
+          "chapterCount": 545,
+          "genres": [
+            5,
+            10,
+            1,
+            9,
             2
           ]
         }
@@ -930,16 +930,16 @@
       ],
       "topPromote": [
         {
-          "bookId": 35401,
-          "name": "Người Đang Cao Võ Ta Có Thể Mô Phỏng Tương Lai",
-          "slug": "nguoi-dang-cao-vo-ta-co-the-mo-phong-tuong-lai",
-          "coverUrl": "/Data/nguoi-dang-cao-vo-ta-co-the-mo-phong-tuong-lai/default.jpg",
-          "introduction": "Lâm Uy xuyên qua đi tới một Cao Võ Thế Giới phấn đấu 14 mùa màng công tiến vào một môn phái sau lại cho môn phái đào một năm quặng mỏ rốt cục thức tỉnh rồi tương lai mô phỏng khí Chỉ cần tiêu hao một ít tiền tài",
-          "author": "Nguyệt Hồn Tai Họa",
-          "lastChapterName": "Chương 230, Goblin tụ tập địa",
+          "bookId": 30837,
+          "name": "Ta Ở Thế Giới Khác Ở Trong Giới",
+          "slug": "ta-o-the-gioi-khac-o-trong-gioi",
+          "coverUrl": "/Data/ta-o-the-gioi-khac-o-trong-gioi/default.jpg",
+          "introduction": "Ta tên Cố Uyên ta xuyên qua rồi Thế nhưng ta không chút nào sợ bởi vì ta có Hệ Thống Người khác tu luyện dựa vào cướp tài nguyên làm ăn cái gọi là chổ dựa vững chắc ta là dựa vào Hệ Thống ăn Hệ Thống Không sai",
+          "author": "Nan Hiểu",
+          "lastChapterName": "Chương 820: Đại kết cục",
           "lastChapterSlug": null,
-          "lastUpdate": "2024-08-20T09:25:33.830831",
-          "chapterCount": 231,
+          "lastUpdate": "2024-08-01T17:44:40.238744",
+          "chapterCount": 818,
           "genres": [
             2
           ]
@@ -960,31 +960,16 @@
           ]
         },
         {
-          "bookId": 30837,
-          "name": "Ta Ở Thế Giới Khác Ở Trong Giới",
-          "slug": "ta-o-the-gioi-khac-o-trong-gioi",
-          "coverUrl": "/Data/ta-o-the-gioi-khac-o-trong-gioi/default.jpg",
-          "introduction": "Ta tên Cố Uyên ta xuyên qua rồi Thế nhưng ta không chút nào sợ bởi vì ta có Hệ Thống Người khác tu luyện dựa vào cướp tài nguyên làm ăn cái gọi là chổ dựa vững chắc ta là dựa vào Hệ Thống ăn Hệ Thống Không sai",
-          "author": "Nan Hiểu",
-          "lastChapterName": "Chương 820: Đại kết cục",
+          "bookId": 35401,
+          "name": "Người Đang Cao Võ Ta Có Thể Mô Phỏng Tương Lai",
+          "slug": "nguoi-dang-cao-vo-ta-co-the-mo-phong-tuong-lai",
+          "coverUrl": "/Data/nguoi-dang-cao-vo-ta-co-the-mo-phong-tuong-lai/default.jpg",
+          "introduction": "Lâm Uy xuyên qua đi tới một Cao Võ Thế Giới phấn đấu 14 mùa màng công tiến vào một môn phái sau lại cho môn phái đào một năm quặng mỏ rốt cục thức tỉnh rồi tương lai mô phỏng khí Chỉ cần tiêu hao một ít tiền tài",
+          "author": "Nguyệt Hồn Tai Họa",
+          "lastChapterName": "Chương 230, Goblin tụ tập địa",
           "lastChapterSlug": null,
-          "lastUpdate": "2024-08-01T17:44:40.238744",
-          "chapterCount": 818,
-          "genres": [
-            2
-          ]
-        },
-        {
-          "bookId": 64521,
-          "name": "Đại Đạo Thù Cần : Từ Tam Quốc Bắt Đầu Cuốn Chết Chư Thiên",
-          "slug": "dai-dao-thu-can-tu-tam-gioi-bat-dau-cuon-chet-chu-thien",
-          "coverUrl": "/Data/dai-dao-thu-can-tu-tam-gioi-bat-dau-cuon-chet-chu-thien/default.jpg",
-          "introduction": "Tần Nguyên xuyên việt thần thoại Tam Quốc thế giới thành vì một tên hoàng cân tiểu đầu mục tại cái này danh gia vọng tộc chúa tể thế giới hắn đã không có đường lui có thể nói chỉ có một đường đi đến cùng May mắn hắn thức",
-          "author": "Nỗ Lực Lão Ngưu",
-          "lastChapterName": "Chương 162: Quảng Tây đề đốc Ô Đại Kinh, sợ",
-          "lastChapterSlug": null,
-          "lastUpdate": "2024-08-20T23:27:26.487829",
-          "chapterCount": 162,
+          "lastUpdate": "2024-08-20T09:25:33.830831",
+          "chapterCount": 231,
           "genres": [
             2
           ]
@@ -1005,6 +990,21 @@
           ]
         },
         {
+          "bookId": 64521,
+          "name": "Đại Đạo Thù Cần : Từ Tam Quốc Bắt Đầu Cuốn Chết Chư Thiên",
+          "slug": "dai-dao-thu-can-tu-tam-gioi-bat-dau-cuon-chet-chu-thien",
+          "coverUrl": "/Data/dai-dao-thu-can-tu-tam-gioi-bat-dau-cuon-chet-chu-thien/default.jpg",
+          "introduction": "Tần Nguyên xuyên việt thần thoại Tam Quốc thế giới thành vì một tên hoàng cân tiểu đầu mục tại cái này danh gia vọng tộc chúa tể thế giới hắn đã không có đường lui có thể nói chỉ có một đường đi đến cùng May mắn hắn thức",
+          "author": "Nỗ Lực Lão Ngưu",
+          "lastChapterName": "Chương 162: Quảng Tây đề đốc Ô Đại Kinh, sợ",
+          "lastChapterSlug": null,
+          "lastUpdate": "2024-08-20T23:27:26.487829",
+          "chapterCount": 162,
+          "genres": [
+            2
+          ]
+        },
+        {
           "bookId": 332,
           "name": "Thôn Thiên Võ Thần",
           "slug": "thon-thien-vo-than",
@@ -1015,6 +1015,21 @@
           "lastChapterSlug": null,
           "lastUpdate": "2024-07-28T02:57:12.762075",
           "chapterCount": 1083,
+          "genres": [
+            2
+          ]
+        },
+        {
+          "bookId": 40200,
+          "name": "Vừa Thành Nhân Tiên, Nữ Đế Quỳ Cầu Ta Xuất Quan",
+          "slug": "vua-thanh-nhan-tien-nu-de-quy-cau-ta-xuat-quan",
+          "coverUrl": "/Data/vua-thanh-nhan-tien-nu-de-quy-cau-ta-xuat-quan/default.jpg",
+          "introduction": "Faloo tiểu thuyết Internet độc nhất vô nhị ký kết tiểu thuyết Vừa thành Nhân Tiên Nữ Đế quỳ cầu ta xuất quan Xuyên qua huyền huyễn Giang Trần trở thành Đại Viêm vương triều thất hoàng tử Lại vì chọc tức hoàng đế bị phạt vào Tàng Thư các",
+          "author": "Diệc Diệc Diệc Diệc Văn",
+          "lastChapterName": "Chương 100.2:: Đại thắng! Giang Trần suy nghĩ",
+          "lastChapterSlug": null,
+          "lastUpdate": "2024-08-20T07:04:18.187104",
+          "chapterCount": 147,
           "genres": [
             2
           ]
@@ -1047,21 +1062,6 @@
           "chapterCount": 216,
           "genres": [
             4
-          ]
-        },
-        {
-          "bookId": 40200,
-          "name": "Vừa Thành Nhân Tiên, Nữ Đế Quỳ Cầu Ta Xuất Quan",
-          "slug": "vua-thanh-nhan-tien-nu-de-quy-cau-ta-xuat-quan",
-          "coverUrl": "/Data/vua-thanh-nhan-tien-nu-de-quy-cau-ta-xuat-quan/default.jpg",
-          "introduction": "Faloo tiểu thuyết Internet độc nhất vô nhị ký kết tiểu thuyết Vừa thành Nhân Tiên Nữ Đế quỳ cầu ta xuất quan Xuyên qua huyền huyễn Giang Trần trở thành Đại Viêm vương triều thất hoàng tử Lại vì chọc tức hoàng đế bị phạt vào Tàng Thư các",
-          "author": "Diệc Diệc Diệc Diệc Văn",
-          "lastChapterName": "Chương 100.2:: Đại thắng! Giang Trần suy nghĩ",
-          "lastChapterSlug": null,
-          "lastUpdate": "2024-08-20T07:04:18.187104",
-          "chapterCount": 147,
-          "genres": [
-            2
           ]
         },
         {
@@ -1166,23 +1166,6 @@
           ]
         },
         {
-          "bookId": 79829,
-          "name": "Tôi Làm Chủ Cứu Thế Tại Mạt Thế",
-          "slug": "toi-lam-chu-cuu-the-tai-mat-the",
-          "coverUrl": null,
-          "introduction": "Tận thế năm thứ mười hệ thống cuối cùng cũng xuất hiện Nó bảo tôi là nữ phụ thánh mẫu trong một cuốn tiểu thuyết về xây dựng lại thế giới sau tận thế Vừa hay tôi đang cứu người ngoài cách đó không xa là một đám zombie đang",
-          "author": "Trĩ An Sơ",
-          "lastChapterName": "Chương 15: Chương 15 (Hoàn)",
-          "lastChapterSlug": null,
-          "lastUpdate": "2025-06-15T10:42:06.552574",
-          "chapterCount": 15,
-          "genres": [
-            7,
-            5,
-            2
-          ]
-        },
-        {
           "bookId": 76536,
           "name": "Chờ Mùa Xuân Đến - Thất Nguyệt Lệ",
           "slug": "cho-mua-xuan-den-that-nguyet-le",
@@ -1197,6 +1180,23 @@
             7,
             2,
             6
+          ]
+        },
+        {
+          "bookId": 79829,
+          "name": "Tôi Làm Chủ Cứu Thế Tại Mạt Thế",
+          "slug": "toi-lam-chu-cuu-the-tai-mat-the",
+          "coverUrl": null,
+          "introduction": "Tận thế năm thứ mười hệ thống cuối cùng cũng xuất hiện Nó bảo tôi là nữ phụ thánh mẫu trong một cuốn tiểu thuyết về xây dựng lại thế giới sau tận thế Vừa hay tôi đang cứu người ngoài cách đó không xa là một đám zombie đang",
+          "author": "Trĩ An Sơ",
+          "lastChapterName": "Chương 15: Chương 15 (Hoàn)",
+          "lastChapterSlug": null,
+          "lastUpdate": "2025-06-15T10:42:06.552574",
+          "chapterCount": 15,
+          "genres": [
+            7,
+            5,
+            2
           ]
         },
         {
