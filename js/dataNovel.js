@@ -45,7 +45,7 @@ function renderEditorPicks(novels) {
     // HTML của mỗi truyện, có thêm xử lý ảnh lỗi bằng onerror
     novelItem.innerHTML = `
       <img src="${novel.anh}" alt="${novel.ten}" loading="lazy"
-           onerror="this.onerror=null;this.src='../assets/img/no-image.webp';">
+           onerror="this.onerror=null;this.src='assets/img/no-image.webp';">
       <div class="novel-info">
         <h3 class="novel-title">${novel.ten}</h3>
         <p class="novel-description">${novel.mo_ta}</p>

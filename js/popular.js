@@ -86,7 +86,7 @@ function renderPopularList(containerId, novels) {
     // Sử dụng SVG cho top 1,2,3
     if (rank <= 3) {
       const medalImg = document.createElement("img");
-      medalImg.src = `../assets/img/medal-${rank}.svg`;
+      medalImg.src = `assets/img/medal-${rank}.svg`;
       medalImg.alt = `Top ${rank}`;
       medalImg.width = 24;
       medalImg.height = 32;
