@@ -1,4 +1,5 @@
 // popular.js
+
 // Hàm render danh sách phổ biến
 async function renderPopularLists() {
   try {
@@ -83,7 +84,6 @@ function renderPopularList(containerId, novels) {
     const rankEl = document.createElement("div");
     rankEl.className = "popular-rank";
 
-    // Sử dụng SVG cho top 1,2,3
     if (rank <= 3) {
       const medalImg = document.createElement("img");
       medalImg.src = `./assets/img/medal-${rank}.svg`;
@@ -107,35 +107,29 @@ function renderPopularList(containerId, novels) {
     const infoEl = document.createElement("div");
     infoEl.className = "popular-info";
 
-    // Tiêu đề truyện
     const titleEl = document.createElement("h3");
     titleEl.className = "popular-title";
     titleEl.textContent = novel.ten;
-
     infoEl.appendChild(titleEl);
 
-    // Thêm meta cho item đầu tiên
     if (index === 0) {
-      // Tác giả
+      // Meta data cho item đầu tiên
       const authorEl = document.createElement("div");
       authorEl.className = "popular-author";
       authorEl.innerHTML = `<i class="fas fa-user"></i> ${
         novel.tac_gia || "Đang cập nhật"
       }`;
 
-      // Thể loại
       const categoryEl = document.createElement("div");
       categoryEl.className = "popular-category";
       categoryEl.innerHTML = `<i class="fas fa-tag"></i> ${novel.the_loai
         .split(",")[0]
         .trim()}`;
 
-      // Container meta
       const metaEl = document.createElement("div");
       metaEl.className = "popular-meta";
       metaEl.appendChild(authorEl);
       metaEl.appendChild(categoryEl);
-
       infoEl.appendChild(metaEl);
 
       // Ảnh bìa
@@ -144,12 +138,14 @@ function renderPopularList(containerId, novels) {
       const img = document.createElement("img");
       img.src = novel.anh;
       img.alt = novel.ten;
+
+      // Xử lý lỗi khi load ảnh bị lỗi
       img.onerror = function () {
         this.onerror = null;
-        this.src = "../assets/img/no-image.webp";
+        this.src = "./assets/img/no-image.webp";
       };
-      coverEl.appendChild(img);
 
+      coverEl.appendChild(img);
       item.appendChild(rankEl);
       item.appendChild(infoEl);
       item.appendChild(coverEl);
