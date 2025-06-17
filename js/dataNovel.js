@@ -2,7 +2,7 @@
 async function loadNovelData() {
   try {
     // Load dữ liệu từ file JSON
-    const response = await fetch("../Json/truyenchu_full_data.json");
+    const response = await fetch("/Json/truyenchu_full_data.json");
     const data = await response.json();
 
     // Lấy dữ liệu cho phần Biên tập viên đề cử
