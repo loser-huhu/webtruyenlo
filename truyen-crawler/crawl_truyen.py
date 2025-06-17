@@ -160,7 +160,7 @@ for category_name, books in all_data.items():
             print(f"⚠️ Lỗi khi xử lý truyện: {name} - {e}")
 
 # Lưu kết quả
-output_file = "truyenchu_full_data.json"
+output_file = "./truyenchu_full_data.json"
 with open(output_file, "w", encoding="utf-8") as f:
     json.dump(results, f, ensure_ascii=False, indent=2)
 
