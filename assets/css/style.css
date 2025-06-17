@@ -341,6 +341,116 @@ body {
   z-index: 998;
   display: none;
 }
+/* ========== CHỈNH SỬA CHO MEGA MENU TRÊN MOBILE ========== */
+@media (max-width: 991.98px) {
+  /* 1. Điều chỉnh navbar-collapse */
+  .navbar-collapse {
+    max-height: 80vh; /* Giới hạn chiều cao tối đa */
+    overflow-y: auto; /* Cho phép cuộn nếu nội dung dài */
+    padding: 15px;
+    background-color: var(--primary-color);
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  /* 2. Điều chỉnh mega menu cho mobile */
+  .mega-menu {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: calc(100vh - 64px); /* Chiếm toàn bộ chiều cao màn hình */
+    overflow-y: auto; /* Cho phép cuộn */
+    z-index: 1000;
+    padding: 20px 10px;
+  }
+
+  /* 3. Điều chỉnh bố cục các cột */
+  .mega-menu .row {
+    flex-direction: column;
+  }
+
+  .mega-menu .col {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* 4. Điều chỉnh menu list */
+  .mega-menu .menu-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+  }
+
+  .mega-menu .menu-list li {
+    margin-bottom: 5px;
+  }
+
+  .mega-menu .menu-list a {
+    padding: 8px 10px;
+    white-space: normal; /* Cho phép xuống dòng */
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+  }
+
+  /* 5. Điều chỉnh nút đóng */
+  .mega-close-btn {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.5);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: 1001;
+  }
+
+  /* 6. Ẩn thanh tìm kiếm khi mega menu mở */
+  body.menu-open .search-container {
+    display: none;
+  }
+
+  /* 7. Điều chỉnh overlay */
+  .mega-overlay {
+    top: 64px;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+/* ========== CHỈNH SỬA CHO NAVBAR TRÊN MOBILE ========== */
+@media (max-width: 767.98px) {
+  /* 1. Điều chỉnh kích thước nav-link */
+  .nav-link {
+    font-size: 16px;
+    padding: 8px 10px !important;
+  }
+
+  /* 2. Điều chỉnh header icons */
+  .header-icons {
+    margin-top: 15px;
+    justify-content: flex-start;
+  }
+
+  /* 3. Điều chỉnh dropdown menu */
+  .dropdown-menu {
+    position: fixed !important;
+    top: 120px !important;
+    left: 10px !important;
+    right: 10px !important;
+    width: calc(100% - 20px) !important;
+  }
+
+  /* 4. Điều chỉnh thanh tìm kiếm */
+  .search-container {
+    margin-top: 15px;
+    max-width: 100%;
+  }
+}
 /* =========================thanh chữ chạy======================= */
 .promotion-bar {
   width: 100%;
@@ -474,11 +584,13 @@ body {
 }
 
 .novel-title {
-  max-width: 246.68px;
+  max-width: 246.68px !important;
+  max-height: 3em !important;
   /* height: 44px !important; */
   font-size: 1.05rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+
   font-weight: 800 !important;
   color: var(--text-color);
   margin: 0 0 8px;
@@ -857,11 +969,11 @@ a {
   font-size: 1rem;
   transition: all 0.2s ease;
   /* Cho phép hiển thị đầy đủ tên truyện */
-  overflow: hidden;
-  text-overflow: ellipsis;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
   white-space: normal;
-  max-width: 500px;
-  max-height: 3.6em; /* Giới hạn 3 dòng */
+  max-width: 500px !important;
+  max-height: 3.6em !important; /* Giới hạn 3 dòng */
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -952,7 +1064,7 @@ a {
     grid-area: category;
     align-self: start;
   }
-  .novel-title {
+  .update-section .novel-title {
     grid-area: title;
     font-size: 1.05rem;
     -webkit-line-clamp: 2; /* Chỉ 2 dòng trên tablet */
@@ -1253,5 +1365,295 @@ a {
     width: 100%;
     height: 140px;
     margin-top: 10px;
+  }
+}
+/* ==========================Phần Đánh giá cao và Mới hoàn thành =========*/
+/* PHẦN ĐÁNH GIÁ CAO VÀ MỚI HOÀN THÀNH - TỐI ƯU CHO ĐA THEME */
+/* Điều chỉnh khoảng cách giữa hai cột của phần Đánh giá cao */
+.high-rated .row {
+  --bs-gutter-x: 1.5rem; /* Giảm khoảng cách giữa các cột */
+}
+
+.review-section {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px 0;
+  background: var(--light-bg);
+}
+
+.review-container {
+  margin-left: auto;
+  margin-right: auto;
+  background: var(--card-bg);
+  max-width: 1200px;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.high-rated .row {
+  margin-top: 20px;
+}
+
+.novel-list {
+  margin-top: 20px;
+}
+
+.novel-item {
+  display: flex;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.novel-item img {
+  width: 96px;
+  height: 128px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.novel-info {
+  flex: 1;
+}
+
+.novel-title {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-color);
+  margin-bottom: 5px;
+}
+
+.novel-description {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+
+.novel-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chapter-count {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.review-section .novel-category {
+  font-size: 14px;
+  color: var(--novel-category);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .high-rated .row {
+    flex-direction: column;
+  }
+  .novel-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .novel-item img {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+  .novel-meta {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+/* Định nghĩa màu nền cho phần Mới hoàn thành */
+.new-completed {
+  /* background-color: var(--new-completed-bg); */
+}
+
+/* <!---------------------------------------- Phần footer -------------------------------->
+
+ */
+/* ===== FOOTER STYLES ===== */
+.site-footer {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  padding-top: 60px;
+  border-top: 1px solid var(--border-color);
+  font-size: 15px;
+  line-height: 1.6;
+  transition: all 0.3s ease;
+}
+
+.footer-top {
+  padding-bottom: 40px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-widgets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.footer-widget {
+  margin-bottom: 30px;
+}
+
+.footer-widget-title {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: var(--text-color);
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-widget-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--primary-color);
+}
+
+.footer-logo a {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.footer-about-text {
+  margin: 15px 0 20px;
+  color: var(--text-secondary);
+}
+
+.footer-social {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: var(--text-hover);
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background: var(--primary-hover);
+  transform: translateY(-3px);
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links li a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.footer-links li a:hover {
+  color: var(--primary-color);
+  padding-left: 5px;
+}
+
+.footer-bottom {
+  background: var(--light-bg);
+  padding: 20px 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.footer-bottom-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.footer-payment {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.payment-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.payment-icons i {
+  font-size: 24px;
+  color: var(--text-secondary);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .footer-widgets {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-top {
+    padding-bottom: 30px;
+  }
+
+  .footer-widgets {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .footer-payment {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-widget {
+    text-align: center;
+  }
+
+  .footer-widget-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footer-social {
+    justify-content: center;
   }
 }

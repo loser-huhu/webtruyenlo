@@ -20,6 +20,14 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <!-- link thame css -->
     <link rel="stylesheet" href="./assets/css/thame.css" />
+    <!-- link icon cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <!-- =======================================Header=================================================== -->
@@ -789,6 +797,119 @@
         </div>
       </div>
     </section>
+    <!-- Phần Đánh giá cao và Mới hoàn thành -->
+    <section class="review-section">
+      <div class="container-fluid">
+        <div class="review-container">
+          <div class="row g-0">
+            <!-- Phần Đánh giá cao (bên trái, 2 cột, mỗi cột 4 item) -->
+            <div class="col-md-8 high-rated">
+              <h2 class="section-title">
+                <i class="fas fa-star me-2"></i>Đánh giá cao
+              </h2>
+              <div class="row" id="highRatedContainer">
+                <!-- Dữ liệu sẽ được render bằng JavaScript -->
+              </div>
+            </div>
+            <!-- Phần Mới hoàn thành (bên phải, 1 cột, 4 item) -->
+            <div class="col-md-4 new-completed">
+              <h2 class="section-title">
+                <i class="fas fa-check-circle me-2"></i>Mới hoàn thành
+              </h2>
+              <div class="novel-list" id="newCompletedContainer">
+                <!-- Dữ liệu sẽ được render bằng JavaScript -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!---------------------------------------- Phần footer -------------------------------->
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="footer-widgets">
+            <div class="footer-widget footer-widget-about">
+              <div class="footer-logo">
+                <a href="/">Truyenchu.com.vn</a>
+              </div>
+              <p class="footer-about-text">
+                Website đọc truyện chữ online miễn phí. Với kho truyện khổng lồ,
+                cập nhật nhanh chóng, chúng tôi mang đến trải nghiệm đọc truyện
+                tuyệt vời nhất.
+              </p>
+              <div class="footer-social">
+                <a href="#" class="social-link" title="Facebook"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="social-link" title="Twitter"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" class="social-link" title="Instagram"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" class="social-link" title="YouTube"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+              </div>
+            </div>
+
+            <div class="footer-widget">
+              <h3 class="footer-widget-title">Thể Loại</h3>
+              <ul class="footer-links">
+                <li><a href="#">Tiên Hiệp</a></li>
+                <li><a href="#">Kiếm Hiệp</a></li>
+                <li><a href="#">Ngôn Tình</a></li>
+                <li><a href="#">Đam Mỹ</a></li>
+                <li><a href="#">Huyền Huyễn</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-widget">
+              <h3 class="footer-widget-title">Liên Kết Nhanh</h3>
+              <ul class="footer-links">
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Truyện mới</a></li>
+                <li><a href="#">Truyện hot</a></li>
+                <li><a href="#">Thể loại</a></li>
+                <li><a href="#">Xếp hạng</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-widget">
+              <h3 class="footer-widget-title">Hỗ Trợ</h3>
+              <ul class="footer-links">
+                <li><a href="#">Về chúng tôi</a></li>
+                <li><a href="#">Điều khoản sử dụng</a></li>
+                <li><a href="#">Chính sách bảo mật</a></li>
+                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#">FAQ</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="footer-bottom-content">
+            <div class="copyright">
+              &copy; 2025 Truyenchu.com.vn. Tất cả các quyền được bảo lưu.
+            </div>
+            <div class="footer-payment">
+              <span>Phương thức thanh toán:</span>
+              <div class="payment-icons">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-paypal"></i>
+                <i class="fab fa-cc-apple-pay"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -802,5 +923,7 @@
     <script src="./js/new-update.js"></script>
     <!-- popular js -->
     <script src="./js/popular.js"></script>
+    <!-- rating js -->
+    <script src="./js/rating.js"></script>
   </body>
 </html>

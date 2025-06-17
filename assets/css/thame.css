@@ -22,6 +22,9 @@
   /* Thêm biến màu nền xen kẽ */
   --zebra-bg: #fffbeb;
   --zebra-text: #2b2b2b;
+  /* thêm màu cho righting */
+  --new-completed-bg: #f0f9ff; /* Màu nền theme mặc định (light) */
+  --novel-category: #047857;
 }
 /* Theme Dark - CẬP NHẬT */
 body.theme-dark {
@@ -45,6 +48,8 @@ body.theme-dark {
   --skeleton-end: #4a5568;
   --zebra-bg: #2d3748;
   --zebra-text: #e2e8f0;
+  --new-completed-bg: #1e293b; /* Màu nền theme dark */
+  --novel-category: #fff;
 }
 /* Theme Blue */
 body.theme-blue {
@@ -61,6 +66,8 @@ body.theme-blue {
   --skeleton-end: #9ec5fe;
   --zebra-bg: #d1e7ff;
   --zebra-text: #052c65;
+  --new-completed-bg: #dbeafe; /* Màu nền theme blue */
+  --novel-category: #047857;
 }
 
 /* Theme Pink */
@@ -78,6 +85,8 @@ body.theme-pink {
   --skeleton-end: #f692d1;
   --zebra-bg: #f8d7da;
   --zebra-text: #58151c;
+  --new-completed-bg: #fdf2f8; /* Màu nền theme pink */
+  --novel-category: #047857;
 }
 
 /* Theme Purple */
@@ -95,6 +104,8 @@ body.theme-purple {
   --skeleton-end: #c0a8e8;
   --zebra-bg: #e2d9f3;
   --zebra-text: #2f1f57;
+  --new-completed-bg: #ede9fe; /* Màu nền theme purple */
+  --novel-category: #047857;
 }
 
 /* Theme Green */
@@ -112,4 +123,6 @@ body.theme-green {
   --skeleton-end: #a0d4b9;
   --zebra-bg: #d1e7dd;
   --zebra-text: #0a3622;
+  --new-completed-bg: #ecfdf5; /* Màu nền theme green */
+  --novel-category: #047857;
 }
