@@ -1,10 +1,13 @@
 // popular.js
 
+// Đường dẫn gốc (tự động lấy đúng base path khi deploy trên GitHub Pages)
+const BASE_PATH = window.location.pathname.replace(/\/[^\/]*$/, "/") || "/";
+
 // Hàm render danh sách phổ biến
 async function renderPopularLists() {
   try {
     // Load dữ liệu từ file JSON
-    const response = await fetch("Json/truyenchu_full_data.json");
+    const response = await fetch(`${BASE_PATH}Json/truyenchu_full_data.json`);
     const data = await response.json();
 
     // Render skeleton loading
@@ -21,7 +24,6 @@ async function renderPopularLists() {
     renderPopularList("deCuContainer", deCuData);
   } catch (error) {
     console.error("❌ Lỗi khi tải dữ liệu truyện phổ biến:", error);
-    // Ẩn skeleton khi có lỗi
     document.querySelectorAll(".popular-skeleton").forEach((el) => {
       el.style.display = "none";
     });
@@ -60,7 +62,6 @@ function renderSkeleton() {
           <div class="skeleton skeleton-text" style="flex-grow:1"></div>
         `;
       }
-
       container.appendChild(skeletonItem);
     }
   });
@@ -74,19 +75,17 @@ function renderPopularList(containerId, novels) {
   novels.forEach((novel, index) => {
     const rank = index + 1;
 
-    // Tạo phần tử chính
     const item = document.createElement("a");
     item.href = novel.link || "#";
     item.target = "_blank";
     item.className = index === 0 ? "popular-first" : "popular-item";
 
-    // Tạo badge xếp hạng
     const rankEl = document.createElement("div");
     rankEl.className = "popular-rank";
 
     if (rank <= 3) {
       const medalImg = document.createElement("img");
-      medalImg.src = `./assets/img/medal-${rank}.svg`;
+      medalImg.src = `${BASE_PATH}assets/img/medal-${rank}.svg`;
       medalImg.alt = `Top ${rank}`;
       medalImg.width = 24;
       medalImg.height = 32;
@@ -103,7 +102,6 @@ function renderPopularList(containerId, novels) {
       rankEl.style.color = "var(--text-color)";
     }
 
-    // Phần thông tin
     const infoEl = document.createElement("div");
     infoEl.className = "popular-info";
 
@@ -113,7 +111,6 @@ function renderPopularList(containerId, novels) {
     infoEl.appendChild(titleEl);
 
     if (index === 0) {
-      // Meta data cho item đầu tiên
       const authorEl = document.createElement("div");
       authorEl.className = "popular-author";
       authorEl.innerHTML = `<i class="fas fa-user"></i> ${
@@ -132,17 +129,15 @@ function renderPopularList(containerId, novels) {
       metaEl.appendChild(categoryEl);
       infoEl.appendChild(metaEl);
 
-      // Ảnh bìa
       const coverEl = document.createElement("div");
       coverEl.className = "popular-cover";
       const img = document.createElement("img");
       img.src = novel.anh;
       img.alt = novel.ten;
 
-      // Xử lý lỗi khi load ảnh bị lỗi
       img.onerror = function () {
         this.onerror = null;
-        this.src = "./assets/img/no-image.webp";
+        this.src = `${BASE_PATH}assets/img/no-image.webp`;
       };
 
       coverEl.appendChild(img);
@@ -153,7 +148,6 @@ function renderPopularList(containerId, novels) {
       item.appendChild(rankEl);
       item.appendChild(titleEl);
     }
-
     container.appendChild(item);
   });
 }
