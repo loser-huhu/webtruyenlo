@@ -1,3 +1,4 @@
+import os
 import json
 import time
 import pickle
@@ -8,6 +9,22 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
+
+# ----------------- CẤU HÌNH ĐƯỜNG DẪN ------------------
+# Lấy đường dẫn thư mục hiện tại (nơi file python này nằm)
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Đường dẫn tới thư mục Json (nằm cùng cấp với thư mục code hiện tại)
+json_dir = os.path.join(current_dir, "..", "Json")
+
+# Đảm bảo thư mục Json tồn tại
+os.makedirs(json_dir, exist_ok=True)
+
+# Đường dẫn đầy đủ cho 2 file json cần lưu
+raw_next_data_path = os.path.join(json_dir, "raw_next_data.json")
+full_data_path = os.path.join(json_dir, "truyenchu_full_data.json")
+
+# -------------------------------------------------------
 
 # Cấu hình trình duyệt
 options = Options()
@@ -51,10 +68,10 @@ try:
     data = json.loads(json_data)
     page_props = data["props"]["pageProps"]
     
-    # Lưu dữ liệu thô để debug
-    with open("../Json/raw_next_data.json", "w", encoding="utf-8") as f:
+    # Lưu dữ liệu thô để debug (lưu toàn bộ dữ liệu gốc)
+    with open(raw_next_data_path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
-    print("✅ Đã lưu dữ liệu thô vào raw_next_data.json")
+    print(f"✅ Đã lưu dữ liệu thô vào {raw_next_data_path}")
     
     # Tạo dictionary để lưu trữ tất cả các mục
     all_data = {}
@@ -62,9 +79,7 @@ try:
     # Thu thập dữ liệu từ các mục khác nhau
     if "editorChoice" in page_props:
         editor_choice_books = page_props["editorChoice"]
-        # Tách 8 truyện đầu cho "Biên tập viên đề cử"
         all_data["Biên tập viên đề cử"] = editor_choice_books[:8]
-        # Tách các truyện còn lại cho "Đang đọc"
         all_data["Đang đọc"] = editor_choice_books[8:]
     if "lastUpdate" in page_props:
         all_data["Mới cập nhật"] = page_props["lastUpdate"]
@@ -102,16 +117,7 @@ genre_map = {
 }
 
 # Cấu trúc dữ liệu kết quả
-results = {
-    "Biên tập viên đề cử": [],
-    "Mới cập nhật": [],
-    "Đọc nhiều": [],
-    "Thịnh Hành": [],
-    "Đề Cử": [],
-    "Đánh giá cao": [],
-    "Mới hoàn thành": [],
-    "Đang đọc": []
-}
+results = {key: [] for key in all_data.keys()}
 
 # Xử lý từng mục
 for category_name, books in all_data.items():
@@ -144,24 +150,22 @@ for category_name, books in all_data.items():
             chapter_count = book.get("chapterCount", 0) or book.get("totalChapter", 0) or book.get("chapters", 0)
             
             # Thêm vào kết quả
-            if category_name in results:
-                results[category_name].append({
-                    "ten": name.strip(),
-                    "link": link,
-                    "mo_ta": book.get("introduction", "") or book.get("description", "").strip(),
-                    "so_chuong": f"{chapter_count} chương",
-                    "the_loai": ", ".join(genres),
-                    "anh": cover_url
-                })
+            results[category_name].append({
+                "ten": name.strip(),
+                "link": link,
+                "mo_ta": book.get("introduction", "") or book.get("description", "").strip(),
+                "so_chuong": f"{chapter_count} chương",
+                "the_loai": ", ".join(genres),
+                "anh": cover_url
+            })
             
             print(f"✅ [{idx}/{len(books)}] Đã xử lý: {name}")
 
         except Exception as e:
             print(f"⚠️ Lỗi khi xử lý truyện: {name} - {e}")
 
-# Lưu kết quả
-output_file = "../Json/truyenchu_full_data.json"
-with open(output_file, "w", encoding="utf-8") as f:
+# Lưu kết quả xử lý vào file đầy đủ
+with open(full_data_path, "w", encoding="utf-8") as f:
     json.dump(results, f, ensure_ascii=False, indent=2)
 
 # Thống kê
@@ -169,4 +173,4 @@ total_books = sum(len(books) for books in results.values())
 print(f"\n✅ Đã xử lý thành công {total_books} truyện")
 for category, books in results.items():
     print(f"- {category}: {len(books)} truyện")
-print(f"🎉 Dữ liệu đã được lưu vào {output_file}")
+print(f"🎉 Dữ liệu đã được lưu vào {full_data_path}")

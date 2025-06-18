@@ -7,35 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
   initMegaMenus();
 });
 
-// // Xử lý tìm kiếm
-// function setupSearch() {
-//   const searchInput = document.querySelector(".search-input");
-//   const searchButton = document.querySelector(".search-button");
-
-//   // Xử lý khi nhấn nút tìm kiếm
-//   searchButton.addEventListener("click", function () {
-//     performSearch();
-//   });
-
-//   // Xử lý khi nhấn Enter
-//   searchInput.addEventListener("keypress", function (e) {
-//     if (e.key === "Enter") {
-//       performSearch();
-//     }
-//   });
-
-//   // Hàm thực hiện tìm kiếm
-//   function performSearch() {
-//     const searchTerm = searchInput.value.trim();
-
-//     if (searchTerm) {
-//       // Chuyển hướng sang trang kết quả với từ khóa tìm kiếm
-//       window.location.href = `search-results.html?q=${encodeURIComponent(
-//         searchTerm
-//       )}`;
-//     }
-//   }
-// }
 // ======== Xử lý tìm kiếm ========
 function setupSearch() {
   const searchInput = document.querySelector(".search-input");
@@ -59,7 +30,7 @@ function setupSearch() {
 
     if (searchTerm) {
       // Chuyển hướng sang trang kết quả với từ khóa tìm kiếm
-      window.location.href = `search-results.html?q=${encodeURIComponent(
+      window.location.href = `search-results.html?query=${encodeURIComponent(
         searchTerm
       )}`;
     }

@@ -4,334 +4,667 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Thể loại - Truyenchu.com.vn</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
+    <!-- Bootstrap 5 CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <style>
-      :root {
-        --primary-color: #14425d;
-        --primary-hover: #1e6b94;
-        --text-color: #2b2b2b;
-        --text-secondary: #4b5563;
-        --text-hover: #ffffff;
-        --light-bg: #f9fafb;
-        --hover-bg: #1e6b94;
-        --border-color: #e5e7eb;
-        --card-bg: #ffffff;
-        --tag-text-color: #ffffff;
-        --tag-bg-color: rgba(20, 66, 93, 0.2);
-        --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-          0 4px 6px -2px rgba(0, 0, 0, 0.05);
-      }
-
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      }
-
-      body {
-        background-color: #f5f5f5;
-        color: var(--text-color);
-      }
-
-      /* Header */
-      .category-header {
-        background-color: var(--primary-color);
-        padding: 15px 20px;
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        position: sticky;
-        top: 0;
-        z-index: 100;
-      }
-
-      .breadcrumb {
-        display: flex;
-        align-items: center;
-        color: rgba(255, 255, 255, 0.9);
-        font-size: 16px;
-        flex-wrap: wrap;
-      }
-
-      .breadcrumb a {
-        color: white;
-        text-decoration: none;
-        transition: all 0.2s;
-      }
-
-      .breadcrumb a:hover {
-        text-decoration: underline;
-      }
-
-      .breadcrumb .separator {
-        margin: 0 8px;
-        color: rgba(255, 255, 255, 0.6);
-      }
-
-      .category-title {
-        font-size: 24px;
-        color: white;
-        font-weight: 600;
-        margin-left: 15px;
-      }
-
-      /* Kết quả tìm kiếm */
-      .category-container {
-        max-width: 1200px;
-        margin: 30px auto;
-        padding: 0 20px;
-      }
-
-      .category-heading {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 25px;
-        flex-wrap: wrap;
-        gap: 15px;
-      }
-
-      .category-name {
-        font-size: 32px;
-        font-weight: 700;
-        color: var(--primary-color);
-        position: relative;
-        padding-left: 20px;
-      }
-
-      .category-name::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        height: 80%;
-        width: 8px;
-        background-color: var(--primary-color);
-        border-radius: 4px;
-      }
-
-      .novel-count {
-        font-size: 18px;
-        color: var(--text-secondary);
-      }
-
-      /* Grid kết quả */
-      .results-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 20px;
-        padding: 10px 0;
-      }
-
-      .novel-link {
-        text-decoration: none;
-        color: inherit;
-        display: block;
-      }
-
-      .novel-item {
-        display: flex;
-        padding: 15px;
-        border-radius: 8px;
-        transition: all 0.3s ease;
-        height: auto;
-        background-color: var(--card-bg);
-        border: 1px solid var(--border-color);
-        box-shadow: var(--shadow);
-      }
-
-      .novel-link:hover .novel-item {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        border-color: var(--primary-color);
-        background-color: var(--hover-bg);
-      }
-
-      .novel-item img {
-        width: 90px;
-        height: 120px;
-        object-fit: cover;
-        border-radius: 4px;
-        margin-right: 15px;
-        transition: transform 0.3s ease;
-      }
-
-      .novel-link:hover .novel-item img {
-        transform: scale(1.05);
-      }
-
-      .novel-info {
-        flex: 1;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .novel-title {
-        font-size: 1.1rem;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        font-weight: 600;
-        color: var(--text-color);
-        margin: 0 0 8px;
-        line-height: 1.4;
-        transition: color 0.2s ease;
-      }
-
-      .novel-link:hover .novel-title {
-        color: var(--text-hover);
-      }
-
-      .novel-description {
-        font-size: 0.9rem;
-        color: var(--text-secondary);
-        overflow: hidden;
-        text-overflow: ellipsis;
-        margin: 0 0 12px;
-        line-height: 1.5;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        transition: color 0.2s ease;
-      }
-
-      .novel-link:hover .novel-description {
-        color: var(--text-hover);
-      }
-
-      .novel-meta {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 10px;
-      }
-
-      .chapter-count {
-        font-size: 0.85rem;
-        color: var(--text-color);
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        transition: color 0.2s ease;
-      }
-
-      .novel-link:hover .chapter-count {
-        color: var(--text-hover);
-      }
-
-      .chapter-count i {
-        color: var(--primary-color);
-        transition: color 0.2s ease;
-      }
-
-      .novel-link:hover .chapter-count i {
-        color: var(--text-hover);
-      }
-
-      .novel-author {
-        font-size: 0.85rem;
-        color: #6c757d;
-        font-style: italic;
-      }
-
-      /* Không có kết quả */
-      .no-results {
-        text-align: center;
-        padding: 50px 20px;
-        background: white;
-        border-radius: 10px;
-        box-shadow: var(--shadow);
-      }
-
-      .no-results-icon {
-        font-size: 60px;
-        color: #e74c3c;
-        margin-bottom: 20px;
-      }
-
-      .no-results-title {
-        font-size: 24px;
-        font-weight: 600;
-        margin-bottom: 15px;
-        color: var(--text-color);
-      }
-
-      .no-results-text {
-        font-size: 18px;
-        color: #777;
-        margin-bottom: 25px;
-      }
-
-      .back-to-home {
-        display: inline-block;
-        padding: 12px 30px;
-        background-color: var(--light-bg);
-        color: var(--primary-color);
-        border: 1px solid var(--border-color);
-        border-radius: 5px;
-        font-size: 16px;
-        font-weight: 500;
-        text-decoration: none;
-        transition: all 0.3s ease;
-      }
-
-      .back-to-home:hover {
-        background-color: var(--primary-color);
-        color: white;
-      }
-
-      /* Responsive */
-      @media (max-width: 768px) {
-        .results-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .category-heading {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-
-        .category-name {
-          font-size: 28px;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .novel-item {
-          flex-direction: column;
-        }
-
-        .novel-item img {
-          width: 100%;
-          height: 150px;
-          margin-right: 0;
-          margin-bottom: 10px;
-        }
-
-        .breadcrumb {
-          font-size: 14px;
-        }
-
-        .category-title {
-          font-size: 18px;
-        }
-      }
-    </style>
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <!-- Link Theme CSS -->
+    <link rel="stylesheet" href="./assets/css/thame.css" />
+    <!-- Link category.css -->
+    <link rel="stylesheet" href="./assets/css/category.css" />
   </head>
   <body>
-    <!-- Header cho trang thể loại -->
-    <header class="category-header">
+    <!-- =======================================header============================== -->
+    <header class="main-header sticky-top">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <!-- Logo -->
+          <a class="navbar-brand" href="./index.html">
+            <img
+              src="https://placehold.co/191x36?text=TRUYENCHU.VN"
+              alt="Website Truyện Chữ"
+              class="site-logo"
+            />
+          </a>
+
+          <!-- Nút hamburger cho mobile -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent"
+          >
+            <i class="bi bi-list text-white"></i>
+          </button>
+
+          <!-- Nội dung navbar -->
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <!-- Menu điều hướng -->
+            <ul class="navbar-nav me-auto">
+              <!-- Menu dropdown Thể loại -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  id="theLoaiBtn"
+                >
+                  Thể loại
+                </a>
+              </li>
+
+              <!-- Menu dropdown Bối cảnh thế giới -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  id="boiCanhBtn"
+                >
+                  Bối cảnh thế giới
+                </a>
+              </li>
+
+              <!-- Menu dropdown Lưu phái -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  id="luuPhaiBtn"
+                >
+                  Lưu phái
+                </a>
+              </li>
+
+              <!-- Menu dropdown Danh sách -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  id="danhSachBtn"
+                >
+                  Danh sách
+                </a>
+              </li>
+            </ul>
+
+            <!-- Thanh tìm kiếm -->
+            <div class="search-container">
+              <i class="bi bi-search search-icon" id="searchIcon"></i>
+              <!-- Thêm id="searchIcon" -->
+              <input
+                type="text"
+                class="search-input"
+                placeholder="Tìm kiếm truyện..."
+              />
+            </div>
+
+            <!-- Các icon bên phải -->
+            <div class="header-icons d-flex">
+              <!-- Icon cài đặt với dropdown -->
+              <div class="dropdown icon-container">
+                <i
+                  class="bi bi-gear header-icon"
+                  id="settingsDropdown"
+                  data-bs-toggle="dropdown"
+                ></i>
+                <ul class="dropdown-menu settings-menu">
+                  <li><h6 class="dropdown-header">Chọn màu nền</h6></li>
+                  <li>
+                    <a
+                      class="dropdown-item theme-select"
+                      href="#"
+                      data-theme="light"
+                    >
+                      <span class="theme-option theme-light"></span> Sáng
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item theme-select"
+                      href="#"
+                      data-theme="dark"
+                    >
+                      <span class="theme-option theme-dark"></span> Tối
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item theme-select"
+                      href="#"
+                      data-theme="blue"
+                    >
+                      <span class="theme-option theme-blue"></span> Xanh dương
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item theme-select"
+                      href="#"
+                      data-theme="pink"
+                    >
+                      <span class="theme-option theme-pink"></span> Hồng
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item theme-select"
+                      href="#"
+                      data-theme="purple"
+                    >
+                      <span class="theme-option theme-purple"></span> Tím
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item theme-select"
+                      href="#"
+                      data-theme="green"
+                    >
+                      <span class="theme-option theme-green"></span> Xanh lá
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Icon đăng nhập -->
+              <div class="icon-container">
+                <i class="bi bi-person header-icon"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Mega menu cho Thể loại -->
+    <div class="mega-menu" id="theLoaiMenu">
+      <span class="mega-close-btn">&times;</span>
+      <div class="container">
+        <div class="row">
+          <!-- Cột 1 -->
+          <div class="col">
+            <ul class="menu-list">
+              <li><a href="category.html?genre=Tiên Hiệp">Tiên Hiệp</a></li>
+              <li><a href="category.html?genre=Huyền Huyễn">Huyền Huyễn</a></li>
+              <li><a href="category.html?genre=Khoa Huyễn">Khoa Huyễn</a></li>
+              <li><a href="category.html?genre=Võng Du">Võng Du</a></li>
+              <li><a href="category.html?genre=Đô Thị">Đô Thị</a></li>
+            </ul>
+          </div>
+
+          <!-- Cột 2 -->
+          <div class="col">
+            <ul class="menu-list">
+              <li><a href="category.html?genre=Đồng Nhân">Đồng Nhân</a></li>
+              <li><a href="category.html?genre=Dã Sử">Dã Sử</a></li>
+              <li><a href="category.html?genre=Cạnh Kỹ">Cạnh Kỹ</a></li>
+              <li><a href="category.html?genre=Huyền Nghi">Huyền Nghi</a></li>
+              <li><a href="category.html?genre=Kiếm Hiệp">Kiếm Hiệp</a></li>
+            </ul>
+          </div>
+
+          <!-- Cột 3 -->
+          <div class="col">
+            <ul class="menu-list">
+              <li><a href="category.html?genre=Kỳ Ảo">Kỳ Ảo</a></li>
+              <li><a href="category.html?genre=Sắc">Sắc</a></li>
+              <li><a href="category.html?genre=Ngôn Tình">Ngôn Tình</a></li>
+              <li><a href="category.html?genre=Đam Mỹ">Đam Mỹ</a></li>
+              <li><a href="category.html?genre=Bách Hợp">Bách Hợp</a></li>
+            </ul>
+          </div>
+
+          <!-- Cột 4 -->
+          <div class="col">
+            <ul class="menu-list">
+              <li><a href="category.html?genre=Truyện Teen">Truyện Teen</a></li>
+              <li><a href="category.html?genre=Light Novel">Light Novel</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mega menu cho Bối cảnh thế giới -->
+    <div class="mega-menu" id="boiCanhMenu">
+      <span class="mega-close-btn">&times;</span>
+      <div class="container">
+        <div class="row">
+          <!-- Cột 1 -->
+          <div class="col">
+            <ul class="menu-list">
+              <li>
+                <a href="category.html?genre=Chư Thiên Vạn Giới"
+                  >Chư Thiên Vạn Giới</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Linh Khí Khôi Phục"
+                  >Linh Khí Khôi Phục</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Tinh Tế Luyến Ca"
+                  >Tinh Tế Luyến Ca</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Ma Pháp Huyễn Tình"
+                  >Ma Pháp Huyễn Tình</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Dị Tộc Luyến Tính"
+                  >Dị Tộc Luyến Tính</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Hào Môn Thế Gia"
+                  >Hào Môn Thế Gia</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Tiên Lữ Kỳ Duyên"
+                  >Tiên Lữ Kỳ Duyên</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Kinh Thương Chủng Điền"
+                  >Kinh Thương Chủng Điền</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Cung Vi Trạch Đấu"
+                  >Cung Vi Trạch Đấu</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Thám Hiểm Sinh Tồn"
+                  >Thám Hiểm Sinh Tồn</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cột 2 -->
+          <div class="col">
+            <ul class="menu-list">
+              <li>
+                <a href="category.html?genre=Trinh Thám Thôi Lý"
+                  >Trinh Thám Thôi Lý</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Kỳ Diệu Thế Giới"
+                  >Kỳ Diệu Thế Giới</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Quỷ Bí Huyền Nghi"
+                  >Quỷ Bí Huyền Nghi</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Thời Không Xuyên Toa"
+                  >Thời Không Xuyên Toa</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Mạt Thế Nguy Cơ"
+                  >Mạt Thế Nguy Cơ</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Tiến Hóa Biến Dị"
+                  >Tiến Hóa Biến Dị</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Tinh Tế Văn Minh"
+                  >Tinh Tế Văn Minh</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Thế Giới Tương Lai"
+                  >Thế Giới Tương Lai</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Cổ Võ Cơ Giáp">Cổ Võ Cơ Giáp</a>
+              </li>
+              <li>
+                <a href="category.html?genre=Thể Dục Cạnh Kỹ"
+                  >Thể Dục Cạnh Kỹ</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cột 3 -->
+          <div class="col">
+            <ul class="menu-list">
+              <li>
+                <a href="category.html?genre=Điện Tử Cạnh Kỹ"
+                  >Điện Tử Cạnh Kỹ</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Du Hí Dị Giới">Du Hí Dị Giới</a>
+              </li>
+              <li>
+                <a href="category.html?genre=Hư Nghĩ Võng Du"
+                  >Hư Nghĩ Võng Du</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Lịch Sử Quan Trường"
+                  >Lịch Sử Quan Trường</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Dân Gian Truyền Thuyết"
+                  >Dân Gian Truyền Thuyết</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Lịch Sử Quân Sự"
+                  >Lịch Sử Quân Sự</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Giả Không Lịch Sử"
+                  >Giả Không Lịch Sử</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Thương Chiến Chức Tràng"
+                  >Thương Chiến Chức Tràng</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Ngu Nhạc Minh Tinh"
+                  >Ngu Nhạc Minh Tinh</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Thanh Xuân Vườn Trường"
+                  >Thanh Xuân Vườn Trường</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cột 4 -->
+          <div class="col">
+            <ul class="menu-list">
+              <li>
+                <a href="category.html?genre=Đô Thị Dị Năng">Đô Thị Dị Năng</a>
+              </li>
+              <li>
+                <a href="category.html?genre=Đô Thị Sinh Hoạt"
+                  >Đô Thị Sinh Hoạt</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Viễn Cổ Hồng Hoang"
+                  >Viễn Cổ Hồng Hoang</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Cổ Điển Tiên Hiệp"
+                  >Cổ Điển Tiên Hiệp</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Thần Thoại Tu Chân"
+                  >Thần Thoại Tu Chân</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Hiện Đại Tu Chân"
+                  >Hiện Đại Tu Chân</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Huyễn Tưởng Tu Tiên"
+                  >Huyễn Tưởng Tu Tiên</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Tu Chân Văn Minh"
+                  >Tu Chân Văn Minh</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Cổ Võ Tương Lai"
+                  >Cổ Võ Tương Lai</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Võ Hiệp Huyễn Tưởng"
+                  >Võ Hiệp Huyễn Tưởng</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cột 5 -->
+          <div class="col">
+            <ul class="menu-list">
+              <li>
+                <a href="category.html?genre=Lịch Sử Thần Thoại"
+                  >Lịch Sử Thần Thoại</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Hắc Ám Huyễn Tưởng"
+                  >Hắc Ám Huyễn Tưởng</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Hiện Đại Ma Pháp"
+                  >Hiện Đại Ma Pháp</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Tây Phương Kỳ Duyên"
+                  >Tây Phương Kỳ Duyên</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Cao Võ Thế Giới"
+                  >Cao Võ Thế Giới</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Vương Triều Tranh Bá"
+                  >Vương Triều Tranh Bá</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Dị Thế Đại Lục">Dị Thế Đại Lục</a>
+              </li>
+              <li>
+                <a href="category.html?genre=Đông Phương Huyền Huyễn"
+                  >Đông Phương Huyền Huyễn</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mega menu cho Lưu phái -->
+    <div class="mega-menu" id="luuPhaiMenu">
+      <span class="mega-close-btn">&times;</span>
+      <div class="container">
+        <div class="row">
+          <!-- Cột 1 -->
+          <div class="col">
+            <ul class="menu-list">
+              <li><a href="category.html?genre=Sau Màn">Sau Màn</a></li>
+              <li><a href="category.html?genre=Phản Phái">Phản Phái</a></li>
+              <li><a href="category.html?genre=Mỹ Thực">Mỹ Thực</a></li>
+              <li><a href="category.html?genre=Toàn Dân">Toàn Dân</a></li>
+              <li><a href="category.html?genre=Điền Viên">Điền Viên</a></li>
+              <li><a href="category.html?genre=Ngự Thú">Ngự Thú</a></li>
+              <li><a href="category.html?genre=Ngọt Sủng">Ngọt Sủng</a></li>
+              <li><a href="category.html?genre=Xuyên Không">Xuyên Không</a></li>
+            </ul>
+          </div>
+
+          <!-- Cột 2 -->
+          <div class="col">
+            <ul class="menu-list">
+              <li><a href="category.html?genre=Sảng Văn">Sảng Văn</a></li>
+              <li><a href="category.html?genre=Vả Mặt">Vả Mặt</a></li>
+              <li><a href="category.html?genre=Nữ Phụ">Nữ Phụ</a></li>
+              <li><a href="category.html?genre=Xuyên Nhanh">Xuyên Nhanh</a></li>
+              <li>
+                <a href="category.html?genre=Xây Dựng Thế Lực"
+                  >Xây Dựng Thế Lực</a
+                >
+              </li>
+              <li><a href="category.html?genre=Cá Mặn">Cá Mặn</a></li>
+              <li><a href="category.html?genre=Marry Sue">Marry Sue</a></li>
+              <li><a href="category.html?genre=Vô Hạn">Vô Hạn</a></li>
+            </ul>
+          </div>
+
+          <!-- Cột 3 -->
+          <div class="col">
+            <ul class="menu-list">
+              <li><a href="category.html?genre=Cơm Mềm">Cơm Mềm</a></li>
+              <li><a href="category.html?genre=Dưỡng Thành">Dưỡng Thành</a></li>
+              <li><a href="category.html?genre=Phế Tài">Phế Tài</a></li>
+              <li><a href="category.html?genre=Đàn Xuyên">Đàn Xuyên</a></li>
+              <li><a href="category.html?genre=Xuyên Sách">Xuyên Sách</a></li>
+              <li><a href="category.html?genre=Chuyển Thế">Chuyển Thế</a></li>
+              <li><a href="category.html?genre=Cố Ngu">Cố Ngu</a></li>
+              <li><a href="category.html?genre=Biến Thân">Biến Thân</a></li>
+            </ul>
+          </div>
+
+          <!-- Cột 4 -->
+          <div class="col">
+            <ul class="menu-list">
+              <li><a href="category.html?genre=Học Viện">Học Viện</a></li>
+              <li><a href="category.html?genre=Hồng Lâu">Hồng Lâu</a></li>
+              <li><a href="category.html?genre=Trọng Sinh">Trọng Sinh</a></li>
+              <li><a href="category.html?genre=Khế Ước">Khế Ước</a></li>
+              <li><a href="category.html?genre=Nữ Cường">Nữ Cường</a></li>
+              <li><a href="category.html?genre=Xuyên Qua">Xuyên Qua</a></li>
+              <li><a href="category.html?genre=Vô Địch">Vô Địch</a></li>
+              <li><a href="category.html?genre=Phàm Nhân">Phàm Nhân</a></li>
+            </ul>
+          </div>
+
+          <!-- Cột 5 -->
+          <div class="col">
+            <ul class="menu-list">
+              <li><a href="category.html?genre=Tùy Thân">Tùy Thân</a></li>
+              <li><a href="category.html?genre=Bàn Thờ">Bàn Thờ</a></li>
+              <li><a href="category.html?genre=Lão Gia">Lão Gia</a></li>
+              <li><a href="category.html?genre=Hệ Thống">Hệ Thống</a></li>
+              <li><a href="category.html?genre=Ngược">Ngược</a></li>
+              <li><a href="category.html?genre=Hài Hước">Hài Hước</a></li>
+              <li><a href="category.html?genre=Cổ Đại">Cổ Đại</a></li>
+              <li><a href="category.html?genre=Đoản Văn">Đoản Văn</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mega menu cho Danh sách -->
+    <div class="mega-menu" id="danhSachMenu">
+      <span class="mega-close-btn">&times;</span>
+      <div class="container">
+        <div class="row">
+          <!-- Cột 1 -->
+          <div class="col">
+            <ul class="menu-list">
+              <li><a href="category.html?genre=Truyện Dịch">Truyện Dịch</a></li>
+              <li>
+                <a href="category.html?genre=Truyện Convert">Truyện Convert</a>
+              </li>
+              <li><a href="category.html?genre=Truyện Full">Truyện Full</a></li>
+              <li><a href="category.html?genre=Truyện Hot">Truyện Hot</a></li>
+            </ul>
+          </div>
+
+          <!-- Cột 2 -->
+          <div class="col">
+            <ul class="menu-list">
+              <li>
+                <a href="category.html?genre=Tiên Hiệp Hay">Tiên Hiệp Hay</a>
+              </li>
+              <li>
+                <a href="category.html?genre=Kiếm Hiệp Hay">Kiếm Hiệp Hay</a>
+              </li>
+              <li>
+                <a href="category.html?genre=Truyện Teen Hay"
+                  >Truyện Teen Hay</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Ngôn Tình Hay">Ngôn Tình Hay</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cột 3 -->
+          <div class="col">
+            <ul class="menu-list">
+              <li>
+                <a href="category.html?genre=Ngôn Tình Sắc">Ngôn Tình Sắc</a>
+              </li>
+              <li>
+                <a href="category.html?genre=Ngôn Tình Ngược"
+                  >Ngôn Tình Ngược</a
+                >
+              </li>
+              <li>
+                <a href="category.html?genre=Ngôn Tình Sủng">Ngôn Tình Sủng</a>
+              </li>
+              <li>
+                <a href="category.html?genre=Ngôn Tình Hài">Ngôn Tình Hài</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cột 4 -->
+          <div class="col">
+            <ul class="menu-list">
+              <li><a href="category.html?genre=Đam Mỹ Hài">Đam Mỹ Hài</a></li>
+              <li><a href="category.html?genre=Đam Mỹ Hay">Đam Mỹ Hay</a></li>
+              <li>
+                <a href="category.html?genre=Đam Mỹ H Văn">Đam Mỹ H Văn</a>
+              </li>
+              <li><a href="category.html?genre=Đam Mỹ Sắc">Đam Mỹ Sắc</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Overlay -->
+    <div class="mega-overlay" id="megaOverlay"></div>
+    <!-- Thanh breadcrumb chạy -->
+    <div class="promotion-bar">
       <div class="breadcrumb">
         <a href="index.html">
           <i class="fas fa-home"></i>
@@ -343,225 +676,30 @@
           <span>Thể Loại</span>
         </a>
         <span class="separator">/</span>
-        <span id="currentCategory">Chư Thiên Vạn Giới</span>
+        <span id="currentCategory">Đang tải...</span>
       </div>
-    </header>
+    </div>
 
     <!-- Nội dung thể loại -->
     <div class="category-container">
       <div class="category-heading">
-        <h1 class="category-name" id="categoryName">Chư Thiên Vạn Giới</h1>
-        <div class="novel-count" id="novelCount">12 truyện</div>
+        <h1 class="category-name" id="categoryName">Đang tải...</h1>
+        <div class="novel-count" id="novelCount">0 truyện</div>
       </div>
 
       <!-- Grid kết quả -->
       <div class="results-grid" id="resultsGrid">
-        <!-- Kết quả sẽ được thêm vào đây -->
+        <div class="loading-spinner">
+          <div class="spinner"></div>
+        </div>
       </div>
     </div>
 
-    <script>
-      // Dữ liệu truyện mẫu cho thể loại
-      const genreData = {
-        "Chư Thiên Vạn Giới": [
-          {
-            id: 1,
-            image: "https://placehold.co/96x128/047857/FFFFFF?text=Thiên+Thần",
-            title: "Thiên Thần Chiến Kỷ",
-            description:
-              "Một thế giới với vô số chư thiên, nơi các vị thần và ác ma tranh đấu...",
-            chapters: 245,
-            author: "Tác giả A",
-            url: "#",
-          },
-          {
-            id: 2,
-            image: "https://placehold.co/96x128/3B82F6/FFFFFF?text=Vạn+Giới",
-            title: "Vạn Giới Độc Tôn",
-            description:
-              "Chàng trai trẻ bước vào thế giới đa nguyên, khám phá bí mật của chư thiên...",
-            chapters: 187,
-            author: "Tác giả B",
-            url: "#",
-          },
-          {
-            id: 3,
-            image: "https://placehold.co/96x128/EF4444/FFFFFF?text=Chư+Thiên",
-            title: "Chư Thiên Du Ký",
-            description:
-              "Hành trình du hành qua các thế giới khác nhau, gặp gỡ các chủng tộc kỳ lạ...",
-            chapters: 320,
-            author: "Tác giả C",
-            url: "#",
-          },
-          {
-            id: 4,
-            image: "https://placehold.co/96x128/8B5CF6/FFFFFF?text=Thiên+Uyên",
-            title: "Thiên Uyên Đại Lục",
-            description:
-              "Một đại lục với hàng ngàn thiên thế giới chồng lên nhau, nơi sức mạnh vô biên...",
-            chapters: 412,
-            author: "Tác giả D",
-            url: "#",
-          },
-          {
-            id: 5,
-            image: "https://placehold.co/96x128/10B981/FFFFFF?text=Thiên+Đạo",
-            title: "Thiên Đạo Tranh Phong",
-            description:
-              "Cuộc chiến giữa các thế lực thiên đạo, tranh giành quyền kiểm soát vạn giới...",
-            chapters: 298,
-            author: "Tác giả E",
-            url: "#",
-          },
-          {
-            id: 6,
-            image: "https://placehold.co/96x128/F59E0B/FFFFFF?text=Thiên+Cơ",
-            title: "Thiên Cơ Mật Tạng",
-            description:
-              "Khám phá bí mật cổ xưa ẩn giấu trong các thiên thế giới bị lãng quên...",
-            chapters: 156,
-            author: "Tác giả F",
-            url: "#",
-          },
-          {
-            id: 7,
-            image: "https://placehold.co/96x128/EC4899/FFFFFF?text=Vũ+Trụ",
-            title: "Vũ Trụ Chi Môn",
-            description:
-              "Cánh cổng nối liền vô số thế giới, nơi anh hùng và ác nhân cùng tranh đấu...",
-            chapters: 378,
-            author: "Tác giả G",
-            url: "#",
-          },
-          {
-            id: 8,
-            image: "https://placehold.co/96x128/6366F1/FFFFFF?text=Đa+Nguyên",
-            title: "Đa Nguyên Vương Tọa",
-            description:
-              "Con đường trở thành vương giả của vạn giới, thống trị vô số thiên địa...",
-            chapters: 421,
-            author: "Tác giả H",
-            url: "#",
-          },
-        ],
-        "Tiên Hiệp": [
-          {
-            id: 1,
-            image: "https://placehold.co/96x128/047857/FFFFFF?text=Tiên+Hiệp",
-            title: "Tiên Đạo Tranh Hùng",
-            description:
-              "Con đường tu tiên đầy chông gai, nơi các tu sĩ tranh đấu vì đạo...",
-            chapters: 320,
-            author: "Tác giả X",
-            url: "#",
-          },
-          {
-            id: 2,
-            image: "https://placehold.co/96x128/3B82F6/FFFFFF?text=Tiên+Giới",
-            title: "Tiên Giới Chi Môn",
-            description:
-              "Hành trình vượt qua kiếp nạn để đạt tới cảnh giới tiên nhân...",
-            chapters: 245,
-            author: "Tác giả Y",
-            url: "#",
-          },
-        ],
-        "Huyền Huyễn": [
-          {
-            id: 1,
-            image: "https://placehold.co/96x128/EF4444/FFFFFF?text=Huyền+Huyễn",
-            title: "Huyền Huyễn Ký",
-            description:
-              "Thế giới huyền huyễn đầy phép thuật và quái vật thần bí...",
-            chapters: 187,
-            author: "Tác giả Z",
-            url: "#",
-          },
-        ],
-      };
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Link category.js -->
+    <script src="./js/category.js"></script>
 
-      // Hàm lấy tham số từ URL
-      function getUrlParameter(name) {
-        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
-        var results = regex.exec(location.search);
-        return results === null
-          ? ""
-          : decodeURIComponent(results[1].replace(/\+/g, " "));
-      }
-
-      // Hàm hiển thị kết quả theo thể loại
-      function displayGenreResults(genre) {
-        const resultsGrid = document.getElementById("resultsGrid");
-        const categoryName = document.getElementById("categoryName");
-        const currentCategory = document.getElementById("currentCategory");
-        const novelCount = document.getElementById("novelCount");
-
-        // Đặt tên thể loại
-        categoryName.textContent = genre;
-        currentCategory.textContent = genre;
-
-        // Lấy dữ liệu truyện theo thể loại
-        const novels = genreData[genre] || [];
-
-        // Cập nhật số lượng truyện
-        novelCount.textContent = novels.length + " truyện";
-
-        // Xóa nội dung cũ
-        resultsGrid.innerHTML = "";
-
-        if (novels.length === 0) {
-          resultsGrid.innerHTML = `
-                    <div class="no-results">
-                        <div class="no-results-icon">
-                            <i class="fas fa-book"></i>
-                        </div>
-                        <h2 class="no-results-title">Không có truyện nào</h2>
-                        <p class="no-results-text">Hiện chưa có truyện nào trong thể loại "${genre}"</p>
-                        <a href="categories.html" class="back-to-home">
-                            <i class="fas fa-arrow-left"></i> Quay lại danh mục
-                        </a>
-                    </div>
-                `;
-          return;
-        }
-
-        // Hiển thị truyện
-        novels.forEach((novel) => {
-          const novelLink = document.createElement("a");
-          novelLink.href = novel.url;
-          novelLink.className = "novel-link";
-
-          novelLink.innerHTML = `
-                    <div class="novel-item">
-                        <img src="${novel.image}" alt="${novel.title}" loading="lazy">
-                        <div class="novel-info">
-                            <h3 class="novel-title">${novel.title}</h3>
-                            <p class="novel-description">${novel.description}</p>
-                            <div class="novel-meta">
-                                <span class="chapter-count">
-                                    <i class="fas fa-book"></i>
-                                    ${novel.chapters} chương
-                                </span>
-                                <span class="novel-author">${novel.author}</span>
-                            </div>
-                        </div>
-                    </div>
-                `;
-
-          resultsGrid.appendChild(novelLink);
-        });
-      }
-
-      // Khi trang được tải
-      document.addEventListener("DOMContentLoaded", () => {
-        // Lấy tham số thể loại từ URL
-        const genre = getUrlParameter("genre") || "Chư Thiên Vạn Giới";
-
-        // Hiển thị kết quả
-        displayGenreResults(genre);
-      });
-    </script>
+    <script src="./js/script.js"></script>
   </body>
 </html>
