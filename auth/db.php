@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "WEBTRUYENDS";
+$dbname = "webtruyends";
 $port = 3307;
 
 $conn = new mysqli($servername, $username, $password, $dbname, $port);
