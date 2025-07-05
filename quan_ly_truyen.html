@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản Lý Truyện Đã Đăng</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --primary: #6f42c1;
+        --secondary: #d63384;
+        --accent: #20c997;
+        --light-bg: #f8f9fa;
+        --dark-bg: #212529;
+      }
+
+      body {
+        background-color: #f5f9fc;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: #333;
+        padding-top: 20px;
+      }
+
+      .dashboard-header {
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        color: white;
+        padding: 30px 0;
+        border-radius: 15px;
+        margin-bottom: 30px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        text-align: center;
+      }
+
+      .stat-card {
+        background: white;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        text-align: center;
+        transition: all 0.3s ease;
+        height: 100%;
+        border: none;
+      }
+
+      .stat-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+      }
+
+      .stat-card i {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        display: block;
+      }
+
+      .stat-card h3 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+
+      .stat-card p {
+        color: #6c757d;
+        margin-bottom: 0;
+        font-size: 0.95rem;
+      }
+
+      .card-primary i {
+        color: var(--primary);
+      }
+      .card-success i {
+        color: var(--accent);
+      }
+      .card-warning i {
+        color: #ffc107;
+      }
+
+      .story-card {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        margin-bottom: 25px;
+        border: none;
+      }
+
+      .story-card:hover {
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        transform: translateY(-5px);
+      }
+
+      .story-content {
+        display: flex;
+        padding: 20px;
+      }
+
+      .story-image {
+        width: 150px;
+        height: 200px;
+        overflow: hidden;
+        background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        flex-shrink: 0;
+        margin-right: 20px;
+      }
+
+      .story-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .story-card:hover .story-image img {
+        transform: scale(1.05);
+      }
+
+      .story-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .story-title {
+        font-weight: 700;
+        color: var(--dark-bg);
+        margin-bottom: 10px;
+        font-size: 1.3rem;
+      }
+
+      .story-meta {
+        color: #6c757d;
+        font-size: 0.95rem;
+        margin-bottom: 10px;
+      }
+
+      .story-meta div {
+        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+      }
+
+      .story-meta i {
+        width: 20px;
+        margin-right: 8px;
+      }
+
+      .story-genres {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 15px;
+      }
+
+      .genre-badge {
+        background: rgba(111, 66, 193, 0.1);
+        color: var(--primary);
+        padding: 4px 10px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 500;
+      }
+
+      .story-footer {
+        padding: 15px 20px;
+        background: var(--light-bg);
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+      }
+
+      .action-buttons {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .btn-action {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        border-radius: 8px;
+        transition: all 0.2s ease;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+      }
+
+      .empty-state {
+        text-align: center;
+        padding: 50px 20px;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        margin: 30px 0;
+      }
+
+      .empty-state i {
+        font-size: 4rem;
+        color: #dee2e6;
+        margin-bottom: 20px;
+        opacity: 0.7;
+      }
+
+      .empty-state h4 {
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      .empty-state p {
+        color: #6c757d;
+        max-width: 500px;
+        margin: 0 auto 20px;
+        font-size: 1.1rem;
+      }
+
+      .section-title {
+        position: relative;
+        padding-bottom: 15px;
+        margin-bottom: 25px;
+        font-weight: 700;
+        color: var(--dark-bg);
+        font-size: 1.6rem;
+      }
+
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 4px;
+        background: linear-gradient(to right, var(--primary), var(--secondary));
+        border-radius: 2px;
+      }
+
+      .chapter-badge {
+        background: rgba(111, 66, 193, 0.1);
+        color: var(--primary);
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 8px;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .btn-view-chapters {
+        background: rgba(32, 201, 151, 0.1);
+        color: #20c997;
+      }
+      .btn-view-chapters:hover {
+        background: #20c997;
+        color: white;
+      }
+
+      .btn-add-chapter {
+        background: rgba(13, 202, 240, 0.1);
+        color: #0dcaf0;
+      }
+      .btn-add-chapter:hover {
+        background: #0dcaf0;
+        color: white;
+      }
+
+      .btn-edit-story {
+        background: rgba(255, 193, 7, 0.1);
+        color: #ffc107;
+      }
+      .btn-edit-story:hover {
+        background: #ffc107;
+        color: white;
+      }
+
+      .btn-delete-story {
+        background: rgba(220, 53, 69, 0.1);
+        color: #dc3545;
+      }
+      .btn-delete-story:hover {
+        background: #dc3545;
+        color: white;
+      }
+
+      .main-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .btn-new-story {
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        color: white;
+        padding: 10px 25px;
+        border-radius: 8px;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        border: none;
+      }
+
+      .btn-new-story:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(111, 66, 193, 0.4);
+        color: white;
+      }
+
+      .footer {
+        text-align: center;
+        padding: 30px 0;
+        color: #6c757d;
+        font-size: 0.9rem;
+        margin-top: 50px;
+      }
+
+      .statistics-row {
+        margin-bottom: 40px;
+      }
+
+      .loading-spinner {
+        display: none;
+        text-align: center;
+        padding: 30px 0;
+      }
+
+      .spinner-border {
+        width: 3rem;
+        height: 3rem;
+      }
+
+      @media (max-width: 768px) {
+        .dashboard-header {
+          padding: 20px 0;
+        }
+
+        .dashboard-header h1 {
+          font-size: 1.8rem;
+        }
+
+        .stat-card {
+          padding: 15px;
+        }
+
+        .stat-card i {
+          font-size: 2rem;
+        }
+
+        .stat-card h3 {
+          font-size: 1.5rem;
+        }
+
+        .story-content {
+          flex-direction: column;
+        }
+
+        .story-image {
+          width: 100%;
+          height: 250px;
+          margin-right: 0;
+          margin-bottom: 15px;
+        }
+
+        .action-buttons {
+          flex-direction: column;
+        }
+
+        .btn-action {
+          width: 100%;
+        }
+
+        .section-title {
+          font-size: 1.4rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <!-- Header -->
+      <div class="dashboard-header">
+        <div class="container">
+          <h1><i class="fas fa-book-open me-2"></i>QUẢN LÝ TRUYỆN ĐÃ ĐĂNG</h1>
+          <p class="lead mb-0">
+            Nơi quản lý toàn bộ truyện và chương truyện của bạn
+          </p>
+        </div>
+      </div>
+
+      <!-- Stats Overview -->
+      <div class="statistics-row">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="stat-card card-primary">
+              <i class="fas fa-book"></i>
+              <h3 id="total-stories">0</h3>
+              <p>Tổng số truyện</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="stat-card card-success">
+              <i class="fas fa-list-check"></i>
+              <h3 id="total-chapters">0</h3>
+              <p>Tổng số chương</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="stat-card card-warning">
+              <i class="fas fa-calendar-alt"></i>
+              <h3 id="last-updated">--/--/----</h3>
+              <p>Cập nhật gần nhất</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Bar -->
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3 class="section-title">Danh sách truyện của bạn</h3>
+        <a href="upload.html" class="btn-new-story">
+          <i class="fas fa-plus"></i> Đăng truyện mới
+        </a>
+      </div>
+
+      <!-- Loading Spinner -->
+      <div class="loading-spinner" id="loading">
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <p class="mt-3">Đang tải dữ liệu...</p>
+      </div>
+
+      <!-- Stories Container -->
+      <div id="stories-container"></div>
+
+      <!-- Empty State -->
+      <div class="empty-state" id="empty-state" style="display: none">
+        <i class="fas fa-book"></i>
+        <h4>Bạn chưa đăng truyện nào</h4>
+        <p>
+          Hãy bắt đầu đăng truyện mới để chia sẻ tác phẩm của bạn với cộng đồng
+        </p>
+        <a href="upload.html" class="btn-new-story">
+          <i class="fas fa-plus me-1"></i> Đăng truyện ngay
+        </a>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <p>© 2025 Hệ thống Quản lý Truyện. Tất cả quyền được bảo lưu.</p>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const API_URL = "api/lay_truyen_nguoi_dung.php";
+
+      const storiesContainer = document.getElementById("stories-container");
+      const loadingSpinner = document.getElementById("loading");
+      const emptyState = document.getElementById("empty-state");
+      const totalStoriesEl = document.getElementById("total-stories");
+      const totalChaptersEl = document.getElementById("total-chapters");
+      const lastUpdatedEl = document.getElementById("last-updated");
+
+      async function fetchStories() {
+        try {
+          loadingSpinner.style.display = "block";
+          storiesContainer.innerHTML = "";
+
+          const response = await fetch(API_URL);
+          if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
+
+          const stories = await response.json();
+          loadingSpinner.style.display = "none";
+
+          if (stories.length === 0) {
+            emptyState.style.display = "block";
+            updateStatistics(stories);
+            return;
+          }
+
+          renderStories(stories);
+          updateStatistics(stories);
+        } catch (error) {
+          console.error("Error fetching stories:", error);
+          loadingSpinner.style.display = "none";
+          storiesContainer.innerHTML = `
+        <div class="alert alert-danger">
+          <i class="fas fa-exclamation-triangle me-2"></i>
+          Đã có lỗi xảy ra khi tải dữ liệu. Vui lòng thử lại sau.
+        </div>
+      `;
+        }
+      }
+
+      function renderStories(stories) {
+        storiesContainer.innerHTML = "";
+        stories.forEach((story) => {
+          const storyCard = createStoryCard(story);
+          storiesContainer.appendChild(storyCard);
+        });
+      }
+
+      function createStoryCard(story) {
+        const card = document.createElement("div");
+        card.className = "story-card";
+        card.dataset.id = story.id;
+
+        const genres = story.the_loai ? story.the_loai.split(", ") : [];
+
+        card.innerHTML = `
+      <div class="story-content">
+        <div class="story-image">
+          ${
+            story.anh_bia
+              ? `
+            <img src="${story.anh_bia}" alt="${story.tieu_de}">
+          `
+              : `
+            <div class="d-flex flex-column align-items-center justify-content-center text-center p-3 text-muted w-100 h-100">
+              <i class="fas fa-book fa-3x mb-2"></i>
+              <div>Không có ảnh bìa</div>
+            </div>
+          `
+          }
+        </div>
+        <div class="story-info">
+          <h3 class="story-title">${story.tieu_de}</h3>
+          <div class="story-meta">
+            <div><i class="fas fa-user-pen"></i> Tác giả: ${story.tac_gia}</div>
+            <div><i class="fas fa-calendar"></i> Ngày đăng: ${formatDate(
+              story.created_at
+            )}</div>
+            <div><i class="fas fa-list"></i> Số chương: <span class="chapter-badge">${
+              story.tong_chuong
+            }</span></div>
+          </div>
+          <div class="story-genres">
+            ${genres
+              .slice(0, 3)
+              .map((g) => `<span class="genre-badge">${g}</span>`)
+              .join("")}
+            ${
+              genres.length > 3
+                ? `<span class="genre-badge">+${genres.length - 3} khác</span>`
+                : ""
+            }
+          </div>
+        </div>
+      </div>
+      <div class="story-footer">
+        <div class="action-buttons">
+          <a href="xemtruyen.php?id=${
+            story.id
+          }" class="btn btn-view-chapters btn-action">
+            <i class="fas fa-list"></i> Xem Truyện
+          </a>
+          <a href="themchuong.html?id=${
+            story.id
+          }" class="btn btn-add-chapter btn-action">
+            <i class="fas fa-plus"></i> Thêm chương
+          </a>
+          <a href="suatruyen.html?id=${
+            story.id
+          }" class="btn btn-edit-story btn-action">
+            <i class="fas fa-edit"></i> Sửa Truyện
+          </a>
+          <button class="btn btn-delete-story btn-action" onclick="deleteStory(${
+            story.id
+          }, this)">
+            <i class="fas fa-trash"></i> Xóa Truyện
+          </button>
+        </div>
+      </div>
+    `;
+
+        return card;
+      }
+
+      function updateStatistics(stories) {
+        totalStoriesEl.textContent = stories.length;
+        const totalChapters = stories.reduce(
+          (sum, s) => sum + (parseInt(s.tong_chuong) || 0),
+          0
+        );
+        totalChaptersEl.textContent = totalChapters;
+
+        if (stories.length > 0) {
+          const latestDate = new Date(
+            Math.max(...stories.map((s) => new Date(s.created_at)))
+          );
+          lastUpdatedEl.textContent = formatDate(latestDate);
+        } else {
+          lastUpdatedEl.textContent = "--/--/----";
+        }
+      }
+
+      function formatDate(dateStr) {
+        const date = new Date(dateStr);
+        return `${String(date.getDate()).padStart(2, "0")}/${String(
+          date.getMonth() + 1
+        ).padStart(2, "0")}/${date.getFullYear()}`;
+      }
+
+      function deleteStory(storyId, button) {
+        if (
+          !confirm(
+            "Bạn có chắc chắn muốn xóa truyện này? Toàn bộ chương truyện cũng sẽ bị xóa."
+          )
+        )
+          return;
+
+        const card = button.closest(".story-card");
+        card.style.opacity = "0.5";
+        card.style.transform = "scale(0.95)";
+        card.style.transition = "all 0.5s ease";
+
+        fetch("api/xoa_truyen.php", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ truyen_id: storyId }),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.success) {
+              setTimeout(() => {
+                card.remove();
+                updateStatisticsAfterDelete();
+              }, 400);
+            } else {
+              alert("Không thể xoá truyện: " + data.error);
+              card.style.opacity = "1";
+              card.style.transform = "scale(1)";
+            }
+          })
+          .catch((err) => {
+            alert("Lỗi khi gửi yêu cầu xoá truyện!");
+            console.error(err);
+            card.style.opacity = "1";
+            card.style.transform = "scale(1)";
+          });
+      }
+
+      function updateStatisticsAfterDelete() {
+        const cards = document.querySelectorAll(".story-card");
+        totalStoriesEl.textContent = cards.length;
+        if (cards.length === 0) emptyState.style.display = "block";
+      }
+
+      document.addEventListener("DOMContentLoaded", fetchStories);
+    </script>
+  </body>
+</html>

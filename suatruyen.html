@@ -1,0 +1,1757 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chỉnh Sửa Truyện - Website Truyện Chữ</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@400;600;700&family=Merriweather:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CKEditor CSS -->
+    <style>
+      :root {
+        --primary: #6f42c1;
+        --secondary: #d63384;
+        --accent: #20c997;
+        --light-bg: #f8f9fa;
+        --dark-bg: #212529;
+      }
+
+      body {
+        background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+        min-height: 100vh;
+        padding-top: 30px;
+        padding-bottom: 50px;
+        font-family: "Roboto", sans-serif;
+      }
+
+      .header {
+        background: linear-gradient(to right, var(--primary), var(--secondary));
+        color: white;
+        padding: 20px 0;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+      }
+
+      .form-container {
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        margin-bottom: 30px;
+        position: relative;
+      }
+
+      .form-title {
+        color: var(--primary);
+        font-weight: 700;
+        margin-bottom: 25px;
+        border-bottom: 3px solid var(--accent);
+        padding-bottom: 10px;
+        display: inline-block;
+      }
+
+      .form-label {
+        font-weight: 600;
+        color: #495057;
+        margin-bottom: 8px;
+      }
+
+      .required:after {
+        content: " *";
+        color: #dc3545;
+      }
+
+      .form-control,
+      .form-select {
+        border-radius: 10px;
+        padding: 12px 15px;
+        border: 2px solid #e9ecef;
+        transition: all 0.3s;
+      }
+
+      .form-control:focus,
+      .form-select:focus {
+        border-color: var(--primary);
+        box-shadow: 0 0 0 0.25rem rgba(111, 66, 193, 0.25);
+      }
+
+      .btn-primary {
+        background: linear-gradient(to right, var(--primary), var(--secondary));
+        border: none;
+        padding: 12px 30px;
+        font-weight: 600;
+        border-radius: 50px;
+        transition: all 0.3s;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: white;
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(111, 66, 193, 0.4);
+        color: white;
+      }
+
+      .file-upload {
+        background-color: var(--light-bg);
+        border-radius: 10px;
+        padding: 15px;
+        border: 2px dashed #ced4da;
+        transition: all 0.3s;
+        cursor: pointer;
+      }
+
+      .file-upload:hover {
+        border-color: var(--primary);
+        background-color: rgba(111, 66, 193, 0.05);
+      }
+
+      .file-upload-icon {
+        font-size: 2.5rem;
+        color: var(--primary);
+        margin-bottom: 10px;
+      }
+
+      .footer {
+        text-align: center;
+        color: #6c757d;
+        margin-top: 30px;
+        font-size: 0.9rem;
+      }
+
+      .genre-container {
+        max-height: 250px;
+        overflow-y: auto;
+        border: 1px solid #dee2e6;
+        border-radius: 10px;
+        padding: 15px;
+        background: #f8f9fa;
+      }
+
+      .genre-scroll {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px;
+      }
+
+      .genre-item {
+        display: flex;
+        align-items: center;
+        padding: 8px 12px;
+        background: white;
+        border-radius: 8px;
+        border: 1px solid #dee2e6;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      .genre-item:hover {
+        background: #e9ecef;
+        border-color: var(--primary);
+      }
+
+      .genre-item.selected {
+        background: rgba(111, 66, 193, 0.1);
+        border-color: var(--primary);
+      }
+
+      .genre-item input {
+        margin-right: 8px;
+        cursor: pointer;
+      }
+
+      .editor-container {
+        border: 1px solid #dee2e6;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 20px;
+      }
+
+      .upload-toggle {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 15px;
+      }
+
+      .toggle-option {
+        padding: 8px 15px;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        cursor: pointer;
+        background: #f8f9fa;
+        transition: all 0.2s;
+      }
+
+      .toggle-option.active {
+        background: rgba(111, 66, 193, 0.1);
+        border-color: var(--primary);
+        color: var(--primary);
+      }
+
+      /* CKEditor custom styling */
+      .ck-editor__editable {
+        min-height: 350px;
+        padding: 15px;
+        border-radius: 0 0 10px 10px;
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      .ck.ck-editor {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      }
+
+      .ck.ck-toolbar {
+        background-color: #f8f9fa;
+        border-bottom: 1px solid #dee2e6;
+        border-radius: 10px 10px 0 0;
+        padding: 8px;
+      }
+
+      .ck.ck-button {
+        border-radius: 5px;
+      }
+
+      .ck.ck-button:not(.ck-disabled):hover,
+      .ck.ck-button.ck-on {
+        background-color: rgba(111, 66, 193, 0.1);
+        color: var(--primary);
+      }
+
+      .ck.ck-dropdown__panel {
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .ck.ck-list__item:hover {
+        background-color: rgba(111, 66, 193, 0.1);
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .form-container {
+          padding: 20px;
+        }
+
+        .header h1 {
+          font-size: 1.8rem;
+        }
+
+        .header p {
+          font-size: 0.9rem;
+        }
+
+        .genre-scroll {
+          grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        }
+
+        .ck.ck-toolbar {
+          overflow-x: auto;
+          flex-wrap: nowrap;
+        }
+
+        .ck.ck-toolbar__items {
+          flex-wrap: nowrap;
+          min-width: max-content;
+        }
+
+        .action-buttons {
+          flex-direction: column;
+          gap: 15px;
+        }
+
+        .action-buttons > div {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .btn-manage,
+        .btn-home,
+        .btn-primary {
+          width: 100%;
+          margin: 5px 0;
+        }
+      }
+
+      /* Scrollbar styling */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: var(--primary);
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--secondary);
+      }
+
+      .genre-container::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      .genre-container::-webkit-scrollbar-thumb {
+        background: #adb5bd;
+      }
+
+      .chapter-title-container {
+        margin-bottom: 15px;
+      }
+
+      .action-buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+      }
+
+      .btn-manage {
+        background: linear-gradient(to right, #20c997, #0dcaf0);
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        font-weight: 600;
+        border-radius: 50px;
+        transition: all 0.3s;
+      }
+
+      .btn-manage:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(32, 201, 151, 0.4);
+        color: white;
+      }
+
+      .btn-home {
+        background: linear-gradient(to right, #6c757d, #495057);
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        font-weight: 600;
+        border-radius: 50px;
+        transition: all 0.3s;
+      }
+
+      .btn-home:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(108, 117, 125, 0.4);
+        color: white;
+      }
+
+      /* New styles */
+      .chapter-selector {
+        margin-bottom: 20px;
+        background: #f8f9fa;
+        padding: 15px;
+        border-radius: 10px;
+        border: 1px solid #e9ecef;
+      }
+
+      .chapter-list {
+        max-height: 300px;
+        overflow-y: auto;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        margin-top: 10px;
+      }
+
+      .chapter-item {
+        padding: 10px 15px;
+        border-bottom: 1px solid #e9ecef;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      .chapter-item:hover {
+        background-color: rgba(111, 66, 193, 0.1);
+      }
+
+      .chapter-item.selected {
+        background-color: rgba(111, 66, 193, 0.2);
+        border-left: 3px solid var(--primary);
+      }
+
+      .chapter-edit-section {
+        display: none;
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid #e9ecef;
+      }
+
+      .chapter-edit-section.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <div class="header text-center mb-5">
+        <h1><i class="fas fa-edit me-2"></i>CHỈNH SỬA TRUYỆN</h1>
+        <p class="mb-0">Cập nhật tác phẩm của bạn với cộng đồng đọc truyện</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="form-container">
+            <form
+              id="editStoryForm"
+              method="POST"
+              action="update.php"
+              enctype="multipart/form-data"
+            >
+              <input type="hidden" id="story-id" name="id" />
+
+              <h3 class="form-title">Thông Tin Truyện</h3>
+
+              <!-- Tên truyện -->
+              <div class="mb-4">
+                <label class="form-label required">Tên truyện</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="story_name"
+                  required
+                  placeholder="Nhập tên truyện"
+                  value="Huyền Thoại Tu Chân"
+                />
+              </div>
+
+              <!-- Tác giả -->
+              <div class="mb-4">
+                <label class="form-label required">Tác giả</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="author"
+                  required
+                  placeholder="Tên tác giả"
+                  value="Đạo Mộ"
+                />
+              </div>
+
+              <!-- Ảnh bìa -->
+              <div class="mb-4">
+                <label class="form-label">Ảnh bìa</label>
+                <div class="file-upload text-center p-4">
+                  <div class="file-upload-icon">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                  </div>
+                  <p class="mb-2">Kéo thả ảnh vào đây hoặc nhấn để chọn</p>
+                  <p class="text-muted small mb-0">
+                    Định dạng: JPG, PNG, GIF - Kích thước tối đa: 5MB
+                  </p>
+                  <input
+                    type="file"
+                    class="d-none"
+                    name="cover_image"
+                    accept="image/*"
+                  />
+                </div>
+              </div>
+
+              <!-- Tóm tắt nội dung -->
+              <div class="mb-4">
+                <label class="form-label">Tóm tắt nội dung</label>
+                <textarea
+                  class="form-control"
+                  name="summary"
+                  rows="5"
+                  placeholder="Nhập tóm tắt nội dung truyện..."
+                >
+Trong thế giới tu chân đầy rẫy hiểm nguy, một thiếu niên nghèo khó bất ngờ nhặt được một viên ngọc bí ẩn, từ đó bước chân vào con đường tu tiên đầy chông gai. Liệu chàng trai này có thể vượt qua mọi thử thách, đạp bằng chư thiên vạn giới, trở thành đại đạo chí tôn?</textarea
+                >
+              </div>
+
+              <!-- Thể loại -->
+              <div class="mb-4">
+                <label class="form-label">Thể loại (chọn nhiều)</label>
+                <div class="genre-container">
+                  <div class="genre-scroll">
+                    <!-- Danh sách thể loại đầy đủ -->
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Tiên Hiệp"
+                        checked
+                      />
+                      Tiên Hiệp
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Huyền Huyễn"
+                        checked
+                      />
+                      Huyền Huyễn
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Khoa Huyễn"
+                      />
+                      Khoa Huyễn
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Võng Du"
+                      />
+                      Võng Du
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Đô Thị"
+                      />
+                      Đô Thị
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Đồng Nhân"
+                      />
+                      Đồng Nhân
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Dã Sử"
+                      />
+                      Dã Sử
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Cạnh Kỹ"
+                      />
+                      Cạnh Kỹ
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Huyền Nghi"
+                      />
+                      Huyền Nghi
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Kiếm Hiệp"
+                      />
+                      Kiếm Hiệp
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Kỳ Ảo"
+                      />
+                      Kỳ Ảo
+                    </label>
+                    <label class="genre-item">
+                      <input type="checkbox" name="categories[]" value="Sắc" />
+                      Sắc
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Ngôn Tình"
+                      />
+                      Ngôn Tình
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Đam Mỹ"
+                      />
+                      Đam Mỹ
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Bách Hợp"
+                      />
+                      Bách Hợp
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Truyện Teen"
+                      />
+                      Truyện Teen
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Light Novel"
+                      />
+                      Light Novel
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Chư Thiên Vạn Giới"
+                      />
+                      Chư Thiên Vạn Giới
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Linh Khí Khôi Phục"
+                      />
+                      Linh Khí Khôi Phục
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Tinh Tế Luyến Ca"
+                      />
+                      Tinh Tế Luyến Ca
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Ma Pháp Huyễn Tình"
+                      />
+                      Ma Pháp Huyễn Tình
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Dị Tộc Luyến Tính"
+                      />
+                      Dị Tộc Luyến Tính
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Hào Môn Thế Gia"
+                      />
+                      Hào Môn Thế Gia
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Tiên Lữ Kỳ Duyên"
+                      />
+                      Tiên Lữ Kỳ Duyên
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Kinh Thương Chủng Điền"
+                      />
+                      Kinh Thương Chủng Điền
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Cung Vi Trạch Đấu"
+                      />
+                      Cung Vi Trạch Đấu
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Thám Hiểm Sinh Tồn"
+                      />
+                      Thám Hiểm Sinh Tồn
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Trinh Thám Thôi Lý"
+                      />
+                      Trinh Thám Thôi Lý
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Kỳ Diệu Thế Giới"
+                      />
+                      Kỳ Diệu Thế Giới
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Quỷ Bí Huyền Nghi"
+                      />
+                      Quỷ Bí Huyền Nghi
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Thời Không Xuyên Toa"
+                      />
+                      Thời Không Xuyên Toa
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Mạt Thế Nguy Cơ"
+                      />
+                      Mạt Thế Nguy Cơ
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Tiến Hóa Biến Dị"
+                      />
+                      Tiến Hóa Biến Dị
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Tinh Tế Văn Minh"
+                      />
+                      Tinh Tế Văn Minh
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Thế Giới Tương Lai"
+                      />
+                      Thế Giới Tương Lai
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Cổ Võ Cơ Giáp"
+                      />
+                      Cổ Võ Cơ Giáp
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Thể Dục Cạnh Kỹ"
+                      />
+                      Thể Dục Cạnh Kỹ
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Điện Tử Cạnh Kỹ"
+                      />
+                      Điện Tử Cạnh Kỹ
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Du Hí Dị Giới"
+                      />
+                      Du Hí Dị Giới
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Hư Nghĩ Võng Du"
+                      />
+                      Hư Nghĩ Võng Du
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Lịch Sử Quan Trường"
+                      />
+                      Lịch Sử Quan Trường
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Dân Gian Truyền Thuyết"
+                      />
+                      Dân Gian Truyền Thuyết
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Lịch Sử Quân Sự"
+                      />
+                      Lịch Sử Quân Sự
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Giả Không Lịch Sử"
+                      />
+                      Giả Không Lịch Sử
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Thương Chiến Chức Tràng"
+                      />
+                      Thương Chiến Chức Tràng
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Ngu Nhạc Minh Tinh"
+                      />
+                      Ngu Nhạc Minh Tinh
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Thanh Xuân Vườn Trường"
+                      />
+                      Thanh Xuân Vườn Trường
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Đô Thị Dị Năng"
+                      />
+                      Đô Thị Dị Năng
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Đô Thị Sinh Hoạt"
+                      />
+                      Đô Thị Sinh Hoạt
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Viễn Cổ Hồng Hoang"
+                      />
+                      Viễn Cổ Hồng Hoang
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Cổ Điển Tiên Hiệp"
+                      />
+                      Cổ Điển Tiên Hiệp
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Thần Thoại Tu Chân"
+                        checked
+                      />
+                      Thần Thoại Tu Chân
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Hiện Đại Tu Chân"
+                      />
+                      Hiện Đại Tu Chân
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Huyễn Tưởng Tu Tiên"
+                      />
+                      Huyễn Tưởng Tu Tiên
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Tu Chân Văn Minh"
+                      />
+                      Tu Chân Văn Minh
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Cổ Võ Tương Lai"
+                      />
+                      Cổ Võ Tương Lai
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Võ Hiệp Huyễn Tưởng"
+                      />
+                      Võ Hiệp Huyễn Tưởng
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Lịch Sử Thần Thoại"
+                      />
+                      Lịch Sử Thần Thoại
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Hắc Ám Huyễn Tưởng"
+                      />
+                      Hắc Ám Huyễn Tưởng
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Hiện Đại Ma Pháp"
+                      />
+                      Hiện Đại Ma Pháp
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Tây Phương Kỳ Duyên"
+                      />
+                      Tây Phương Kỳ Duyên
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Cao Võ Thế Giới"
+                      />
+                      Cao Võ Thế Giới
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Vương Triều Tranh Bá"
+                      />
+                      Vương Triều Tranh Bá
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Dị Thế Đại Lục"
+                      />
+                      Dị Thế Đại Lục
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Đông Phương Huyền Huyễn"
+                      />
+                      Đông Phương Huyền Huyễn
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Sau Màn"
+                      />
+                      Sau Màn
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Phản Phái"
+                      />
+                      Phản Phái
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Mỹ Thực"
+                      />
+                      Mỹ Thực
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Toàn Dân"
+                      />
+                      Toàn Dân
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Điền Viên"
+                      />
+                      Điền Viên
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Ngự Thú"
+                      />
+                      Ngự Thú
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Ngọt Sủng"
+                      />
+                      Ngọt Sủng
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Xuyên Không"
+                      />
+                      Xuyên Không
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Sảng Văn"
+                      />
+                      Sảng Văn
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Vả Mặt"
+                      />
+                      Vả Mặt
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Nữ Phụ"
+                      />
+                      Nữ Phụ
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Xuyên Nhanh"
+                      />
+                      Xuyên Nhanh
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Xây Dựng Thế Lực"
+                      />
+                      Xây Dựng Thế Lực
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Cá Mặn"
+                      />
+                      Cá Mặn
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Marry Sue"
+                      />
+                      Marry Sue
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Vô Hạn"
+                      />
+                      Vô Hạn
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Cơm Mềm"
+                      />
+                      Cơm Mềm
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Dưỡng Thành"
+                      />
+                      Dưỡng Thành
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Phế Tài"
+                      />
+                      Phế Tài
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Đàn Xuyên"
+                      />
+                      Đàn Xuyên
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Xuyên Sách"
+                      />
+                      Xuyên Sách
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Chuyển Thế"
+                      />
+                      Chuyển Thế
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Cố Ngu"
+                      />
+                      Cố Ngu
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Biến Thân"
+                      />
+                      Biến Thân
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Học Viện"
+                      />
+                      Học Viện
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Hồng Lâu"
+                      />
+                      Hồng Lâu
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Trọng Sinh"
+                      />
+                      Trọng Sinh
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Khế Ước"
+                      />
+                      Khế Ước
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Nữ Cường"
+                      />
+                      Nữ Cường
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Xuyên Qua"
+                      />
+                      Xuyên Qua
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Vô Địch"
+                      />
+                      Vô Địch
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Phàm Nhân"
+                      />
+                      Phàm Nhân
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Tùy Thân"
+                      />
+                      Tùy Thân
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Bàn Thờ"
+                      />
+                      Bàn Thờ
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Lão Gia"
+                      />
+                      Lão Gia
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Hệ Thống"
+                      />
+                      Hệ Thống
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Ngược"
+                      />
+                      Ngược
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Hài Hước"
+                      />
+                      Hài Hước
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Cổ Đại"
+                      />
+                      Cổ Đại
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Đoản Văn"
+                      />
+                      Đoản Văn
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Truyện Dịch"
+                      />
+                      Truyện Dịch
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Truyện Convert"
+                      />
+                      Truyện Convert
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Truyện Full"
+                      />
+                      Truyện Full
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Truyện Hot"
+                      />
+                      Truyện Hot
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Tiên Hiệp Hay"
+                      />
+                      Tiên Hiệp Hay
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Kiếm Hiệp Hay"
+                      />
+                      Kiếm Hiệp Hay
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Truyện Teen Hay"
+                      />
+                      Truyện Teen Hay
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Ngôn Tình Hay"
+                      />
+                      Ngôn Tình Hay
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Ngôn Tình Sắc"
+                      />
+                      Ngôn Tình Sắc
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Ngôn Tình Ngược"
+                      />
+                      Ngôn Tình Ngược
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Ngôn Tình Sủng"
+                      />
+                      Ngôn Tình Sủng
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Ngôn Tình Hài"
+                      />
+                      Ngôn Tình Hài
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Đam Mỹ Hài"
+                      />
+                      Đam Mỹ Hài
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Đam Mỹ Hay"
+                      />
+                      Đam Mỹ Hay
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Đam Mỹ H Văn"
+                      />
+                      Đam Mỹ H Văn
+                    </label>
+                    <label class="genre-item">
+                      <input
+                        type="checkbox"
+                        name="categories[]"
+                        value="Đam Mỹ Sắc"
+                      />
+                      Đam Mỹ Sắc
+                    </label>
+                  </div>
+                </div>
+                <div class="form-text">
+                  Bạn có thể chọn nhiều thể loại cho truyện của mình
+                </div>
+              </div>
+
+              <!-- Phần chọn chương để chỉnh sửa -->
+              <div class="chapter-selector mb-4">
+                <h4 class="mb-3">
+                  <i class="fas fa-list me-2"></i>Chọn chương để chỉnh sửa
+                </h4>
+                <div class="chapter-list" id="chapterList"></div>
+              </div>
+
+              <!-- Phần chỉnh sửa chương (sẽ hiển thị khi chọn chương) -->
+              <div id="chapter-edit-section" class="chapter-edit-section">
+                <h4 class="mb-3">
+                  <i class="fas fa-edit me-2"></i>Chỉnh sửa chương
+                </h4>
+
+                <!-- Tên chương -->
+                <div class="chapter-title-container mb-4">
+                  <label class="form-label">Tên chương</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="chapter-title-input"
+                    name="chapter_title"
+                    placeholder="Nhập tên chương"
+                    value="Chương 1: Ngọc bội kỳ lạ"
+                  />
+                </div>
+
+                <div class="upload-toggle">
+                  <div class="toggle-option active" data-option="editor">
+                    Nhập trực tiếp
+                  </div>
+                  <div class="toggle-option" data-option="upload">
+                    Tải file lên
+                  </div>
+                </div>
+
+                <!-- Trình soạn thảo chuyên nghiệp -->
+                <div class="editor-container" id="editor-container">
+                  <div id="ckeditor"></div>
+                  <textarea
+                    class="d-none"
+                    id="editor-content-hidden"
+                    name="chapter_content"
+                  ></textarea>
+                </div>
+
+                <!-- Upload file -->
+                <div class="d-none" id="upload-container">
+                  <div class="file-upload text-center p-4">
+                    <div class="file-upload-icon">
+                      <i class="fas fa-file-upload"></i>
+                    </div>
+                    <p class="mb-2">Kéo thả file vào đây hoặc nhấn để chọn</p>
+                    <p class="text-muted small mb-0">
+                      Định dạng: DOC, DOCX, TXT, PDF - Kích thước tối đa: 10MB
+                    </p>
+                    <input
+                      type="file"
+                      class="d-none"
+                      name="chapter_file"
+                      accept=".doc,.docx,.txt,.pdf"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Nút đăng truyện và quản lý -->
+              <div class="action-buttons">
+                <div>
+                  <button
+                    type="button"
+                    id="updateStoryBtn"
+                    class="btn btn-primary btn-lg"
+                  >
+                    <i class="fas fa-save me-2"></i>Cập Nhật Truyện
+                  </button>
+                  <a href="index.html" class="btn btn-home btn-lg ms-2">
+                    <i class="fas fa-home me-2"></i>Về trang chủ
+                  </a>
+                </div>
+                <a href="quan_ly_truyen.html" class="btn btn-manage btn-lg">
+                  <i class="fas fa-book-open me-2"></i>Truyện đã đăng
+                </a>
+              </div>
+            </form>
+          </div>
+
+          <div class="footer">
+            <p>© 2023 Website Truyện Chữ. Tất cả quyền được bảo lưu.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- CKEditor 5 -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.1.0/classic/ckeditor.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const storyId = urlParams.get("id");
+        document.getElementById("story-id").value = storyId;
+
+        // Load dữ liệu truyện
+        fetch(`api/lay_truyen_theo_id.php?id=${storyId}`)
+          .then((res) => res.json())
+          .then((data) => {
+            document.querySelector('input[name="story_name"]').value =
+              data.tieu_de;
+            document.querySelector('input[name="author"]').value = data.tac_gia;
+            document.querySelector('textarea[name="summary"]').value =
+              data.mo_ta;
+
+            const checkboxes = document.querySelectorAll(
+              'input[name="categories[]"]'
+            );
+            checkboxes.forEach((cb) => {
+              if (data.the_loai && data.the_loai.includes(cb.value)) {
+                cb.checked = true;
+                cb.parentElement.classList.add("selected");
+              }
+            });
+          });
+
+        // Gửi dữ liệu cập nhật
+        document
+          .getElementById("updateStoryBtn")
+          .addEventListener("click", function () {
+            const form = document.getElementById("editStoryForm");
+            const formData = new FormData(form);
+
+            // Gắn nội dung chương nếu có CKEditor
+            if (window.editor) {
+              formData.set("chapter_content", window.editor.getData());
+            }
+
+            fetch("api/sua_truyen.php", {
+              method: "POST",
+              body: formData,
+            })
+              .then((res) => res.json())
+              .then((data) => {
+                if (data.success) {
+                  alert("✅ Cập nhật truyện thành công!");
+                  window.location.href = "quan_ly_truyen.html";
+                } else {
+                  alert("❌ Lỗi: " + data.message);
+                }
+              })
+              .catch((err) => {
+                console.error("Lỗi khi gửi form:", err);
+                alert("❌ Có lỗi xảy ra khi gửi dữ liệu");
+              });
+          });
+
+        // Load danh sách chương
+        fetch(`api/lay_chuong_theo_truyen.php?id=${storyId}`)
+          .then((res) => res.json())
+          .then((data) => {
+            const chapterList = document.getElementById("chapterList");
+            data.forEach((chapter) => {
+              const div = document.createElement("div");
+              div.className = "chapter-item";
+              div.dataset.chapter = chapter.id;
+              div.innerHTML = `<i class="fas fa-bookmark me-2 text-primary"></i> ${chapter.tieu_de}`;
+              chapterList.appendChild(div);
+            });
+
+            attachChapterEvents();
+
+            if (data.length > 0) {
+              document.querySelector(".chapter-item").click();
+            }
+          });
+
+        // CKEditor
+        ClassicEditor.create(document.querySelector("#ckeditor"), {
+          toolbar: {
+            items: [
+              "heading",
+              "|",
+              "bold",
+              "italic",
+              "underline",
+              "strikethrough",
+              "|",
+              "fontFamily",
+              "fontSize",
+              "fontColor",
+              "fontBackgroundColor",
+              "|",
+              "alignment",
+              "|",
+              "numberedList",
+              "bulletedList",
+              "|",
+              "indent",
+              "outdent",
+              "|",
+              "link",
+              "blockQuote",
+              "insertTable",
+              "|",
+              "undo",
+              "redo",
+            ],
+            shouldNotGroupWhenFull: true,
+          },
+          language: "vi",
+          fontSize: {
+            options: [10, 12, 14, "default", 18, 20, 24, 28, 32],
+            supportAllValues: true,
+          },
+          fontFamily: {
+            options: [
+              "Arial, sans-serif",
+              "'Times New Roman', serif",
+              "'Courier New', monospace",
+              "Georgia, serif",
+              "Verdana, sans-serif",
+              "'Roboto', sans-serif",
+              "'Open Sans', sans-serif",
+              "'Merriweather', serif",
+              "'Playfair Display', serif",
+            ],
+          },
+          placeholder: "Nhập nội dung chương truyện tại đây...",
+          table: {
+            contentToolbar: ["tableColumn", "tableRow", "mergeTableCells"],
+          },
+        })
+          .then((newEditor) => {
+            window.editor = newEditor;
+          })
+          .catch((error) => console.error(error));
+
+        // Sự kiện chọn chương
+        function attachChapterEvents() {
+          const chapterItems = document.querySelectorAll(".chapter-item");
+          const chapterEditSection = document.getElementById(
+            "chapter-edit-section"
+          );
+
+          chapterItems.forEach((item) => {
+            item.addEventListener("click", function () {
+              chapterItems.forEach((ch) => ch.classList.remove("selected"));
+              this.classList.add("selected");
+              chapterEditSection.classList.add("active");
+
+              const chapterId = this.dataset.chapter;
+
+              fetch(`api/lay_noi_dung_chuong.php?id=${chapterId}`)
+                .then((res) => res.json())
+                .then((chap) => {
+                  document.getElementById("chapter-title-input").value =
+                    chap.tieu_de;
+                  window.editor.setData(chap.noi_dung);
+                });
+            });
+          });
+        }
+
+        // Highlight các checkbox thể loại
+        document
+          .querySelectorAll(".genre-item input[type='checkbox']")
+          .forEach((cb) => {
+            cb.addEventListener("change", () => {
+              cb.parentElement.classList.toggle("selected", cb.checked);
+            });
+          });
+
+        // Ảnh bìa
+        const coverUpload = document.querySelector(".file-upload");
+        const coverInput = coverUpload.querySelector('input[type="file"]');
+        coverUpload.addEventListener("click", () => coverInput.click());
+        coverInput.addEventListener("change", function () {
+          if (this.files.length > 0) {
+            coverUpload.style.borderColor = "#6f42c1";
+            coverUpload.style.backgroundColor = "rgba(111, 66, 193, 0.05)";
+            coverUpload.querySelector("p").textContent =
+              "Đã chọn: " + this.files[0].name;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -40,9 +40,15 @@ function renderHighRated(novels) {
       const novelItem = document.createElement("div");
       novelItem.className = "novel-item";
 
+      const imageUrl = novel.anh || "assets/img/no-image.webp";
+
       novelItem.innerHTML = `
-        <img src="${novel.anh}" alt="${novel.ten}" loading="lazy"
-             onerror="this.onerror=null;this.src='./assets/img/no-image.webp';">
+        <img 
+          src="${imageUrl}" 
+          alt="${novel.ten}" 
+          loading="lazy"
+          onerror="this.onerror=null;this.src='assets/img/no-image.webp';"
+        >
         <div class="novel-info">
           <h3 class="novel-title">${novel.ten}</h3>
           <p class="novel-description">${novel.mo_ta}</p>
@@ -79,9 +85,15 @@ function renderNewCompleted(novels) {
     const novelItem = document.createElement("div");
     novelItem.className = "novel-item";
 
+    const imageUrl = novel.anh || "assets/img/no-image.webp";
+
     novelItem.innerHTML = `
-      <img src="${novel.anh}" alt="${novel.ten}" loading="lazy"
-           onerror="this.onerror=null;this.src='../assets/img/no-image.webp';">
+      <img 
+        src="${imageUrl}" 
+        alt="${novel.ten}" 
+        loading="lazy"
+        onerror="this.onerror=null;this.src='assets/img/no-image.webp';"
+      >
       <div class="novel-info">
         <h3 class="novel-title">${novel.ten}</h3>
         <p class="novel-description">${novel.mo_ta}</p>

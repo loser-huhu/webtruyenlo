@@ -328,7 +328,7 @@ body {
 .category-name {
   font-size: 32px;
   font-weight: 700;
-  color: var(--primary-color);
+  color: var(--text-color);
   position: relative;
   padding-left: 20px;
 }
@@ -347,7 +347,8 @@ body {
 
 .novel-count {
   font-size: 18px;
-  color: var(--text-secondary);
+  color: var(--text-color);
+  font-weight: 800;
 }
 
 /* Grid results */

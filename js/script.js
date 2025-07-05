@@ -146,13 +146,6 @@ function initMegaMenus() {
   });
 }
 
-// Hiệu ứng cho icon đăng nhập
-const loginIcon = document.querySelector(".bi-person");
-loginIcon.addEventListener("click", function () {
-  alert("Vui lòng đăng nhập để sử dụng tính năng này!");
-});
-//
-
 // Hàm render truyện đề cử
 function renderEditorPicks() {
   const container = document.getElementById("editorPicksContainer");

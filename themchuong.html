@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thêm Chương Mới - Website Truyện Chữ</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary: #6f42c1;
+        --secondary: #d63384;
+        --accent: #20c997;
+        --light-bg: #f8f9fa;
+        --dark-bg: #212529;
+      }
+
+      body {
+        background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+        min-height: 100vh;
+        padding-top: 30px;
+        padding-bottom: 50px;
+        font-family: "Roboto", sans-serif;
+      }
+
+      .header {
+        background: linear-gradient(to right, var(--primary), var(--secondary));
+        color: white;
+        padding: 20px 0;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+      }
+
+      .form-container {
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        margin-bottom: 30px;
+        position: relative;
+      }
+
+      .form-title {
+        color: var(--primary);
+        font-weight: 700;
+        margin-bottom: 25px;
+        border-bottom: 3px solid var(--accent);
+        padding-bottom: 10px;
+        display: inline-block;
+      }
+
+      .form-label {
+        font-weight: 600;
+        color: #495057;
+        margin-bottom: 8px;
+      }
+
+      .required:after {
+        content: " *";
+        color: #dc3545;
+      }
+
+      .form-control,
+      .form-select {
+        border-radius: 10px;
+        padding: 12px 15px;
+        border: 2px solid #e9ecef;
+        transition: all 0.3s;
+      }
+
+      .form-control:focus,
+      .form-select:focus {
+        border-color: var(--primary);
+        box-shadow: 0 0 0 0.25rem rgba(111, 66, 193, 0.25);
+      }
+
+      .btn-primary {
+        background: linear-gradient(to right, var(--primary), var(--secondary));
+        border: none;
+        padding: 12px 30px;
+        font-weight: 600;
+        border-radius: 50px;
+        transition: all 0.3s;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: white;
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(111, 66, 193, 0.4);
+        color: white;
+      }
+
+      .footer {
+        text-align: center;
+        color: #6c757d;
+        margin-top: 30px;
+        font-size: 0.9rem;
+      }
+
+      /* CKEditor custom styling */
+      .ck-editor__editable {
+        min-height: 350px;
+        padding: 15px;
+        border-radius: 0 0 10px 10px;
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      .ck.ck-editor {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      }
+
+      .ck.ck-toolbar {
+        background-color: #f8f9fa;
+        border-bottom: 1px solid #dee2e6;
+        border-radius: 10px 10px 0 0;
+        padding: 8px;
+      }
+
+      .ck.ck-button {
+        border-radius: 5px;
+      }
+
+      .ck.ck-button:not(.ck-disabled):hover,
+      .ck.ck-button.ck-on {
+        background-color: rgba(111, 66, 193, 0.1);
+        color: var(--primary);
+      }
+
+      .ck.ck-dropdown__panel {
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .ck.ck-list__item:hover {
+        background-color: rgba(111, 66, 193, 0.1);
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .form-container {
+          padding: 20px;
+        }
+
+        .header h1 {
+          font-size: 1.8rem;
+        }
+
+        .header p {
+          font-size: 0.9rem;
+        }
+
+        .action-buttons {
+          flex-direction: column;
+          gap: 15px;
+        }
+
+        .action-buttons > div {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .btn-manage,
+        .btn-home,
+        .btn-primary {
+          width: 100%;
+          margin: 5px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <div class="header text-center mb-5">
+        <h1><i class="fas fa-plus-circle me-2"></i>THÊM CHƯƠNG MỚI</h1>
+        <p class="mb-0">Thêm chương mới vào truyện của bạn</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="form-container">
+            <form
+              id="addChapterForm"
+              method="POST"
+              enctype="multipart/form-data"
+            >
+              <h3 class="form-title">Thông Tin Chương Mới</h3>
+
+              <!-- Hidden input for story id -->
+              <input type="hidden" id="story-id" name="truyen_id" />
+
+              <!-- Chapter title -->
+              <div class="mb-4">
+                <label class="form-label required">Tên chương</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="chapter-title"
+                  name="tieu_de"
+                  required
+                  placeholder="Nhập tên chương (ví dụ: Chương 1: Khởi đầu)"
+                />
+              </div>
+
+              <!-- Chapter content -->
+              <div class="mb-4">
+                <label class="form-label required">Nội dung chương</label>
+                <div class="editor-container">
+                  <div id="editor"></div>
+                  <textarea
+                    class="d-none"
+                    id="chapter-content"
+                    name="noi_dung"
+                  ></textarea>
+                </div>
+              </div>
+
+              <!-- Action buttons -->
+              <div class="action-buttons">
+                <div class="d-flex justify-content-center gap-3">
+                  <button type="submit" class="btn btn-primary btn-lg">
+                    <i class="fas fa-plus me-2"></i>Thêm Chương
+                  </button>
+                  <a
+                    href="quan_ly_truyen.html"
+                    class="btn btn-secondary btn-lg"
+                  >
+                    <i class="fas fa-arrow-left me-2"></i>Quay lại
+                  </a>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="footer">
+            <p>© 2023 Website Truyện Chữ. Tất cả quyền được bảo lưu.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- CKEditor 5 -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.1.0/classic/ckeditor.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Lấy storyId từ URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const storyId = urlParams.get("id");
+
+        if (!storyId) {
+          alert("Thiếu ID truyện. Vui lòng truy cập từ trang quản lý.");
+          window.location.href = "quan_ly_truyen.html";
+          return;
+        }
+
+        // Đặt storyId vào hidden input
+        document.getElementById("story-id").value = storyId;
+
+        // Khởi tạo CKEditor
+        let editor;
+
+        ClassicEditor.create(document.querySelector("#editor"), {
+          toolbar: {
+            items: [
+              "heading",
+              "|",
+              "bold",
+              "italic",
+              "underline",
+              "strikethrough",
+              "|",
+              "fontFamily",
+              "fontSize",
+              "fontColor",
+              "fontBackgroundColor",
+              "|",
+              "alignment",
+              "|",
+              "numberedList",
+              "bulletedList",
+              "|",
+              "indent",
+              "outdent",
+              "|",
+              "link",
+              "blockQuote",
+              "insertTable",
+              "|",
+              "undo",
+              "redo",
+            ],
+            shouldNotGroupWhenFull: true,
+          },
+          language: "vi",
+          placeholder: "Nhập nội dung chương truyện tại đây...",
+        })
+          .then((newEditor) => {
+            editor = newEditor;
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+
+        // Xử lý sự kiện submit form
+        document
+          .getElementById("addChapterForm")
+          .addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // Lấy dữ liệu từ CKEditor
+            const content = editor.getData();
+            document.getElementById("chapter-content").value = content;
+
+            // Kiểm tra dữ liệu
+            const title = document.getElementById("chapter-title").value.trim();
+            if (!title) {
+              alert("Vui lòng nhập tên chương");
+              return;
+            }
+
+            if (!content) {
+              alert("Vui lòng nhập nội dung chương");
+              return;
+            }
+
+            // Tạo FormData
+            const formData = new FormData(this);
+
+            // Hiển thị trạng thái loading
+            const submitBtn = document.querySelector(
+              '#addChapterForm button[type="submit"]'
+            );
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML =
+              '<i class="fas fa-spinner fa-spin me-2"></i>Đang thêm...';
+            submitBtn.disabled = true;
+
+            // Gửi dữ liệu đến API
+            fetch("api/them_chuong.php", {
+              method: "POST",
+              body: formData,
+            })
+              .then((response) => response.json())
+              .then((data) => {
+                if (data.success) {
+                  alert("✅ Thêm chương mới thành công!");
+                  // Reset form
+                  document.getElementById("chapter-title").value = "";
+                  editor.setData("");
+                } else {
+                  alert("❌ Lỗi: " + data.message);
+                }
+              })
+              .catch((error) => {
+                console.error("Lỗi khi thêm chương:", error);
+                alert("❌ Có lỗi xảy ra khi thêm chương mới");
+              })
+              .finally(() => {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+              });
+          });
+      });
+    </script>
+  </body>
+</html>

@@ -186,8 +186,15 @@
               </div>
 
               <!-- Icon đăng nhập -->
-              <div class="icon-container">
+              <div type="button" class="icon-container" id="loginIcon">
                 <i class="bi bi-person header-icon"></i>
+              </div>
+              <!-- Nút Đăng xuất (ẩn/hiện bằng JS) -->
+              <div id="logoutBtn" class="icon-container" style="display: none">
+                <i
+                  class="bi bi-box-arrow-right header-icon"
+                  title="Đăng xuất"
+                ></i>
               </div>
             </div>
           </div>
@@ -668,7 +675,7 @@
       </div>
     </div>
 
-    <!-- Overlay -->
+    <!-- Overlay--->
     <div class="mega-overlay" id="megaOverlay"></div>
     <!-------------------------------- Thanh chạy chữ --------------------------->
 
@@ -824,7 +831,12 @@
         </div>
       </div>
     </section>
-
+    <!-- Nút đăng truyện nằm dưới cùng -->
+    <div class="upload-bar text-center my-4">
+      <a href="upload.html" class="btn btn-primary btn-lg">
+        <i class="fas fa-upload me-2"></i>Đăng Truyện
+      </a>
+    </div>
     <!---------------------------------------- Phần footer -------------------------------->
     <footer class="site-footer">
       <div class="footer-top">
@@ -910,9 +922,215 @@
         </div>
       </div>
     </footer>
+    <!-- =============== PHẦN FORM ĐĂNG NHẬP =============== -->
+    <!-- Thêm phần này ngay trước thẻ đóng body -->
+    <div class="auth-overlay" id="authOverlay"></div>
+
+    <!-- Modal đăng nhập, đăng ký và quên mật khẩu -->
+    <div class="auth-modal" id="authModal">
+      <div class="auth-modal__content">
+        <span class="auth-modal__close" id="closeModal">×</span>
+        <div class="auth-modal__body">
+          <!-- Form đăng nhập -->
+          <form id="authModalLoginForm" class="auth-form">
+            <h2 class="auth-form__title">Đăng nhập</h2>
+            <div class="auth-form__flex-column">
+              <label class="auth-form__label">Email</label>
+            </div>
+            <div class="auth-form__input">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="#666"
+              >
+                <path
+                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                />
+              </svg>
+              <input
+                placeholder="Nhập email của bạn"
+                class="auth-form__input-field"
+                type="email"
+                required
+              />
+            </div>
+            <div class="auth-form__flex-column">
+              <label class="auth-form__label">Mật khẩu</label>
+            </div>
+            <div class="auth-form__input password-wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="#666"
+              >
+                <path
+                  d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"
+                />
+              </svg>
+              <input
+                placeholder="Nhập mật khẩu của bạn"
+                class="auth-form__input-field"
+                type="password"
+                required
+              />
+              <button type="button" class="toggle-password">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+            <div class="auth-form__flex-row">
+              <div>
+                <input
+                  type="checkbox"
+                  class="auth-form__checkbox"
+                  id="authModalRememberMe"
+                />
+                <label
+                  class="auth-form__label--checkbox"
+                  for="authModalRememberMe"
+                  >Nhớ mật khẩu</label
+                >
+              </div>
+              <span class="auth-form__link" id="authModalForgotPasswordLink"
+                >Quên mật khẩu?</span
+              >
+            </div>
+            <button class="auth-form__submit">Đăng nhập</button>
+            <p class="auth-form__text">
+              Chưa có tài khoản?
+              <span class="auth-form__link" id="authModalShowRegister"
+                >Đăng ký</span
+              >
+            </p>
+          </form>
+
+          <!-- Form đăng ký -->
+          <form id="authModalRegisterForm" class="auth-form auth-form--hidden">
+            <h2 class="auth-form__title">Đăng ký</h2>
+            <div class="auth-form__flex-column">
+              <label class="auth-form__label">Email</label>
+            </div>
+            <div class="auth-form__input">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="#666"
+              >
+                <path
+                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                />
+              </svg>
+              <input
+                placeholder="Nhập email của bạn"
+                class="auth-form__input-field"
+                type="email"
+                required
+              />
+            </div>
+            <div class="auth-form__flex-column">
+              <label class="auth-form__label">Mật khẩu</label>
+            </div>
+            <div class="auth-form__input password-wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="#666"
+              >
+                <path
+                  d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"
+                />
+              </svg>
+              <input
+                placeholder="Nhập mật khẩu của bạn"
+                class="auth-form__input-field"
+                type="password"
+                required
+              />
+              <button type="button" class="toggle-password">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+            <div class="auth-form__flex-column">
+              <label class="auth-form__label">Xác nhận mật khẩu</label>
+            </div>
+            <div class="auth-form__input password-wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="#666"
+              >
+                <path
+                  d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"
+                />
+              </svg>
+              <input
+                placeholder="Xác nhận mật khẩu"
+                class="auth-form__input-field"
+                type="password"
+                required
+              />
+              <button type="button" class="toggle-password">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+            <button class="auth-form__submit">Đăng ký</button>
+            <p class="auth-form__text">
+              Đã có tài khoản?
+              <span class="auth-form__link" id="authModalShowLogin"
+                >Đăng nhập</span
+              >
+            </p>
+          </form>
+
+          <!-- Form quên mật khẩu -->
+          <form
+            id="authModalForgotPasswordForm"
+            class="auth-form auth-form--hidden"
+          >
+            <h2 class="auth-form__title">Quên mật khẩu</h2>
+            <div class="auth-form__flex-column">
+              <label class="auth-form__label">Email</label>
+            </div>
+            <div class="auth-form__input">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="#666"
+              >
+                <path
+                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                />
+              </svg>
+              <input
+                placeholder="Nhập email của bạn"
+                class="auth-form__input-field"
+                type="email"
+                required
+              />
+            </div>
+            <button class="auth-form__submit">Gửi yêu cầu</button>
+            <p class="auth-form__text">
+              <span class="auth-form__link" id="authModalBackToLogin"
+                >Quay lại đăng nhập</span
+              >
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
     <!-- Custom JavaScript -->
     <script src="./js/script.js"></script>
     <!-- thame js -->
@@ -925,5 +1143,9 @@
     <script src="./js/popular.js"></script>
     <!-- rating js -->
     <script src="./js/rating.js"></script>
+    <!-- form.js -->
+    <script src="./js/form.js"></script>
+    <!-- login.js -->
+    <script src="./js/login.js"></script>
   </body>
 </html>
